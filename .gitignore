@@ -1,0 +1,27 @@
+## General ###
+.env
+.DS_Store
+.AppleDouble
+.LSOverride
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.git
+# docker-compose.yml
+.dockerignore
+
+### DB files ###
+db/*
+
+### WordPress ###
+wordpress/*
+# !wordpress/wp-content
+# wordpress/wp-content/*
+# !wordpress/wp-content/themes
+# wordpress/wp-content/themes/*
+# !wordpress/wp-content/themes/igenomix_store
+# wordpress/wp-content/themes/igenomix_store/node_modules
