@@ -15,10 +15,10 @@
 .dockerignore
 
 ### DB files ###
-db/*
+db
 
 ### WordPress ###
-wordpress/*
+wordpress
 # !wordpress/wp-content
 # wordpress/wp-content/*
 # !wordpress/wp-content/themes
