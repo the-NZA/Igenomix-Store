@@ -14,6 +14,9 @@
 # docker-compose.yml
 .dockerignore
 
+dist
+node_modules
+
 ### DB files ###
 db
 
