@@ -1,10 +1,9 @@
 :root{
 	/* COLORS */
-
 	--c-white: #FFFFFF;
 	--c-black: #000000;
 
-	--c-alice-blud: #F4F6F8; 	/* Footer Background */
+	--c-alice-blue: #F4F6F8; 	/* Footer Background */
 	--c-bermuda-grey: #67839C;	/* Igenomix Brand Color */
 	--c-slate-grey: #66819B; 	/* Darker version of Igenomix Brand Color */
 
@@ -13,7 +12,28 @@
 
 	--c-pattens-blue: #DDE3E9;	/* Services Section background */
 	--c-san-juan: #3D596D;		/* Services Section button */
-
 	/* COLORS END */
 
+	/* COLORS RGB */
+	--rgb-white: 255, 255, 255;
+	--rgb-black: 0, 0, 0;
+
+	--rgb-alice-blue: 244, 246, 248;
+	--rgb-slate-grey: 102, 129, 155;
+	--rgb-bermuda-grey: 103, 131, 156;
+
+	--rgb-chablis: 255, 234, 225;
+	--rgb-mandys-pink: 255, 186, 155;
+
+	--rgb-pattens-blue: 221, 227, 233;
+	--rgb-san-juan: 61, 89, 109;
+	/* COLORS RGB END */
+
+	/* ALPHAS */
+	--alpha-100: 1;
+	--alpha-75: 0.75;
+	--alpha-50: 0.5;
+	--alpha-35: 0.35;
+	--alpha-25: 0.25;
+	/* ALPHAS END */
 }

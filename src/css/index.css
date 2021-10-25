@@ -1,14 +1,11 @@
-@import "normalize.css"; 	/* Normalize styles */
-@import url("./colors.css");	/* Import project colors */
-@import url("./sizes.css");	/* Import project sizes */
-@import url("./common.css");	/* Import common styles */
+@import "normalize.css"; 			/* Normalize styles */
+@import url("./colors.css");			/* Import project colors */
+@import url("./sizes.css");			/* Import project sizes */
+@import url("./common.css");			/* Import common styles */
 
-@import url("./parts/header.css"); /* Import Header styles */
-@import url("./parts/footer.css"); /* Import Footer styles */
+@import url("./parts/header.css");		/* Import Header styles */
+@import url("./parts/navlist.css");	/* Import Header Navlist styles */
+@import url("./parts/footer.css");		/* Import Footer styles */
 
-@import url("./utils/shadows.css"); /* Import Shadows styles */
-
-/* body { */
-	/* font-weight: bold; */
-	/* font-family: system-ui; */
-/* } */
+@import url("./utils/font.css");		/* Import font styles */
+@import url("./utils/shadows.css");	/* Import Shadows styles */

@@ -1,0 +1,27 @@
+.navlist {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+}
+
+.navlist__item {
+	margin-left: var(--offset);
+}
+
+.navlist__item a {
+	text-decoration: none;
+	text-transform: uppercase;
+
+	padding: 10px;
+	font-weight: 600;
+
+	color: rgb(var(--rgb-slate-grey));
+}
+
+.navlist__item a:hover {
+	text-decoration: underline;
+}

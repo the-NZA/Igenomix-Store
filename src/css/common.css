@@ -1,8 +1,12 @@
 .site-body {
-	background-color: var(--c-white);
-	color: var(--c-black);
+	background-color: rgb(var(--rgb-white));
+	color: rgb(var(--rgb-black));
 
-	font-family: system-ui;
+	/* font-family: system-ui; */
+	font-family: "Montserrat", sans-serif;
+	font-weight: 500;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 
 	min-height: 100vh;
 
@@ -25,15 +29,16 @@
 	/* max-width: var(--site-width); */
 	/* margin: 0 auto; */
 
-	/* background-color: var(--c-bermuda-grey); */
+	/* background-color: rgb(var(--c-bermuda-grey)); */
 }
 
 .site-main {
-	background-color: var(--c-chablis);
+	/* background-color: rgb(var(--c-chablis)); */
+	background-color: rgb(var(--rgb-chablis));
 	box-sizing: border-box;
 }
 
 .site-footer {
-	background-color: var(--c-mandys-pink);
+	background-color: rgb(var(--rgb-mandys-pink));
 	box-sizing: border-box;
 }
