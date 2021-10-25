@@ -1,0 +1,39 @@
+.site-body {
+	background-color: var(--c-white);
+	color: var(--c-black);
+
+	font-family: system-ui;
+
+	min-height: 100vh;
+
+	display: grid;
+	grid-template-rows: max-content 1fr auto;
+}
+
+.site-wrapper {
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+}
+
+.site-header {
+	box-sizing: border-box;
+
+	position: sticky;
+	top: 0;
+
+	width: 100%;
+	/* max-width: var(--site-width); */
+	/* margin: 0 auto; */
+
+	/* background-color: var(--c-bermuda-grey); */
+}
+
+.site-main {
+	background-color: var(--c-chablis);
+	box-sizing: border-box;
+}
+
+.site-footer {
+	background-color: var(--c-mandys-pink);
+	box-sizing: border-box;
+}

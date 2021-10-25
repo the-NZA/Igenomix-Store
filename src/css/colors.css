@@ -1,0 +1,19 @@
+:root{
+	/* COLORS */
+
+	--c-white: #FFFFFF;
+	--c-black: #000000;
+
+	--c-alice-blud: #F4F6F8; 	/* Footer Background */
+	--c-bermuda-grey: #67839C;	/* Igenomix Brand Color */
+	--c-slate-grey: #66819B; 	/* Darker version of Igenomix Brand Color */
+
+	--c-chablis: #FFEAE1;		/* Category Section background */
+	--c-mandys-pink: #FFBA9B;	/* Category Section button */
+
+	--c-pattens-blue: #DDE3E9;	/* Services Section background */
+	--c-san-juan: #3D596D;		/* Services Section button */
+
+	/* COLORS END */
+
+}

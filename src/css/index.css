@@ -1,21 +1,14 @@
-body {
-	font-weight: bold;
-	font-family: system-ui;
-}
+@import "normalize.css"; 	/* Normalize styles */
+@import url("./colors.css");	/* Import project colors */
+@import url("./sizes.css");	/* Import project sizes */
+@import url("./common.css");	/* Import common styles */
 
-.container {
-	display: grid;
-    transition: all .5s;
-    user-select: none;
-    background: linear-gradient(to bottom, white, black);
+@import url("./parts/header.css"); /* Import Header styles */
+@import url("./parts/footer.css"); /* Import Footer styles */
 
-    & .row {
-	    display: flex;
-    }
-}
+@import url("./utils/shadows.css"); /* Import Shadows styles */
 
-@media screen and (width <= 600px){
-	.container {
-		max-width: 350px;
-	}
-}
+/* body { */
+	/* font-weight: bold; */
+	/* font-family: system-ui; */
+/* } */

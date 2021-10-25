@@ -1,0 +1,6 @@
+.header {
+	padding: var(--offset);
+
+	background-color: var(--c-white);
+	box-shadow: var(--header-shadow);
+}
