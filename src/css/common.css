@@ -21,15 +21,9 @@
 
 .site-header {
 	box-sizing: border-box;
-
 	position: sticky;
 	top: 0;
-
 	width: 100%;
-	/* max-width: var(--site-width); */
-	/* margin: 0 auto; */
-
-	/* background-color: rgb(var(--c-bermuda-grey)); */
 }
 
 .site-main {
@@ -39,6 +33,5 @@
 }
 
 .site-footer {
-	background-color: rgb(var(--rgb-mandys-pink));
 	box-sizing: border-box;
 }

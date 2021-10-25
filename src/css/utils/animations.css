@@ -1,0 +1,10 @@
+@keyframes headerCartBtnHoverAnimation {
+	0% {
+		background-color: rgba(var(--rgb-pattens-blue), var(--alpha-50));
+		box-shadow: var(--btn-shadow) ;
+	}
+	100% {
+		background-color: rgba(var(--rgb-pattens-blue), var(--alpha-75));
+		box-shadow: var(--btn-shadow--hover) ;
+	}
+}
