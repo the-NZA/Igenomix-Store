@@ -3,6 +3,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = function (env, opt) {
 	const isProd = opt.mode === "production";
@@ -20,7 +21,13 @@ module.exports = function (env, opt) {
 		devtool: isDev ? "eval" : false,
 		devServer: {
 			port: 9090,
+			compress: true,
+			liveReload: true,
+			watchFiles: [
+				"src/**/*.html"
+			],
 		},
+		target: isDev ? "web" : "browserslist",
 		module: {
 			rules: [
 				{
@@ -51,7 +58,11 @@ module.exports = function (env, opt) {
 							}
 						}
 					]
-				}
+				},
+				{
+					test: /\.(png|svg|jpg|jpeg|gif)$/i,
+					type: 'asset/resource',
+				},
 			]
 		},
 		plugins: [
@@ -65,6 +76,14 @@ module.exports = function (env, opt) {
 				template: path.resolve(__dirname, "src/catalog.html"),
 			}),
 			new MiniCssExtractPlugin(),
+			new CopyPlugin({
+				patterns: [
+					{
+						from: "src/image",
+						to: "image",
+					},
+				]
+			})
 		]
 	};
 }

@@ -25,6 +25,7 @@
 		"autoprefixer": "^10.3.7",
 		"babel-loader": "^8.2.2",
 		"clean-webpack-plugin": "^4.0.0",
+		"copy-webpack-plugin": "^9.0.1",
 		"css-loader": "^6.4.0",
 		"cssnano": "^5.0.8",
 		"html-webpack-plugin": "^5.4.0",
@@ -33,7 +34,6 @@
 		"postcss-import": "^14.0.2",
 		"postcss-loader": "^6.2.0",
 		"postcss-media-minmax": "^5.0.0",
-		"postcss-normalize": "^10.0.1",
 		"postcss-preset-env": "^6.7.0",
 		"style-loader": "^3.3.0",
 		"webpack": "^5.58.2",
@@ -42,5 +42,8 @@
 	},
 	"browserslist": [
 		"defaults"
-	]
+	],
+	"dependencies": {
+		"normalize.css": "^8.0.1"
+	}
 }
