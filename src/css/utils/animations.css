@@ -1,3 +1,7 @@
+:root {
+	--main-transition: all 75ms linear;
+}
+
 @keyframes headerCartBtnHoverAnimation {
 	0% {
 		background-color: rgba(var(--rgb-pattens-blue), var(--alpha-50));

@@ -5,7 +5,10 @@
 
 @import url("./parts/header.css");		/* Import Header styles */
 @import url("./parts/navlist.css");	/* Import Header Navlist styles */
+@import url("./parts/showcart.css");	/* Import Header Show Cart button styles */
 @import url("./parts/footer.css");		/* Import Footer styles */
+@import url("./parts/fwidget.css");	/* Import Footer Widget styles */
+@import url("./parts/copyright.css");	/* Import Footer Copyright styles */
 
 @import url("./utils/font.css");		/* Import font styles */
 @import url("./utils/shadows.css");	/* Import Shadows styles */
