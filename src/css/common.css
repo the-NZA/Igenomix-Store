@@ -14,11 +14,6 @@
 	grid-template-rows: max-content 1fr auto;
 }
 
-.site-wrapper {
-	display: grid;
-	grid-template-rows: auto 1fr auto;
-}
-
 .site-header {
 	box-sizing: border-box;
 	position: sticky;
@@ -27,7 +22,7 @@
 }
 
 .site-main {
-	background-color: rgb(var(--rgb-chablis));
+	background-color: rgb(var(--rgb-white));
 	box-sizing: border-box;
 }
 

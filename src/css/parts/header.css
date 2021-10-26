@@ -1,14 +1,16 @@
 .header {
-	padding: var(--offset-half) var(--offset);
-
-	background-color: rgb(var(--c-white));
+	background-color: rgb(var(--rgb-white));
 	box-shadow: var(--header-shadow);
 }
 
 .header__container {
 	display: grid;
-	grid-template-columns: 200px 1fr auto;
+	grid-template-columns: auto 1fr auto;
 	gap: var(--offset);
+
+	box-sizing: border-box;
+
+	padding: var(--offset-half) var(--offset) !important;
 
 	align-items: center;
 }
@@ -16,18 +18,32 @@
 .header__logo {
 	display: flex;
 	align-content: center;
-	/* border: 1px solid #000; */
 }
 
+
 .header__logo a {
-	display: block;
+	display: flex;
 	width: 100%;
 	height: auto;
+
+	text-decoration: none;
+	font-weight: bold;
+	color: rgb(var(--rgb-mandys-pink));
+	font-size: 2.2rem;
 }
 
 .header__logo a img {
 	display: block;
 	max-width: 100%;
+	min-width: 200px;
+	margin-right: calc(var(--offset-half) / 2);
+}
+
+.header__logo a::after {
+	content: "Shop";
+	display: block;
+	position: relative;
+	top: -4px;
 }
 
 .header__mobmenu {

@@ -14,7 +14,7 @@
 <body class="site-body">
 	<!--Site header-->
 	<header class="site-header header">
-		<div class="header__container">
+		<div class="wrapper header__container">
 
 			<div class="header__logo">
 				<a href="/">
@@ -46,10 +46,7 @@
 			<div class="header__cart">
 				<button class="showcart__btn" title="Просмотр корзины">
 					<span class="showcart__icon">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-							<path
-								d="M22 8.5h-2.465l-3.7-5.555a1 1 0 0 0-1.664 1.11L17.132 8.5H6.868l2.964-4.445a1 1 0 0 0-1.664-1.11L4.465 8.5H2a1 1 0 0 0 0 2h1v8a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-8h1a1 1 0 0 0 0-2zm-3 10a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-8h14zM7 17v-4a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0zm4 0v-4a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0zm4 0v-4a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0z" />
-						</svg>
+						<i class="lni lni-shopping-basket"></i>
 					</span>
 					<span class="showcart__amount">
 						12345 <span class="showcart__cur_symbol">₽</span>
@@ -61,14 +58,101 @@
 	<!--Site header END-->
 
 	<!--Site main-->
-	<main class="site-main">
-		Основная часть
+	<main class="site-main homepage">
+		<section class="homepage__hero">
+			<div class="wrapper">
+				<h1>Hero section</h1>
+			</div>
+		</section>
+
+		<section class="homepage__categories">
+			<div class="wrapper">
+				<h2 class="homepage__title">Категории</h2>
+				<p class="homepage__subtitle">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum excepturi
+					iure, quam vel ipsa culpa aliquid quo nam ipsum dignissimos veniam sunt dolorem quibusdam!</p>
+
+				<div class="homepage__cards">
+					<article class="categorycard">
+						<img class="categorycard__icon" src="image/sample_category_icon.svg" alt="Категория №">
+						<h4 class="categorycard__title">Название категории</h4>
+						<p class="categorycard__snippet">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quo,
+							consequuntur undedoloribus ad ipsa!</p>
+						<button class="button_rounded categorycard__button">Смотреть</button>
+					</article>
+
+					<article class="categorycard">
+						<img class="categorycard__icon" src="image/sample_category_icon.svg" alt="Категория №">
+						<h4 class="categorycard__title">Длинное Название категории</h4>
+						<p class="categorycard__snippet">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quo,
+							consequuntur undedoloribus ad ipsa!</p>
+						<button class="button_rounded categorycard__button">Смотреть</button>
+					</article>
+
+					<article class="categorycard">
+						<img class="categorycard__icon" src="image/sample_category_icon.svg" alt="Категория №">
+						<h4 class="categorycard__title">Очень длинное Название категории</h4>
+						<p class="categorycard__snippet">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quo,
+							consequuntur undedoloribus ad ipsa!</p>
+						<button class="button_rounded categorycard__button">Смотреть</button>
+					</article>
+
+					<article class="categorycard">
+						<img class="categorycard__icon" src="image/sample_category_icon.svg" alt="Категория №">
+						<h4 class="categorycard__title">Название категории</h4>
+						<p class="categorycard__snippet">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quo,
+							consequuntur undedoloribus ad ipsa!</p>
+						<button class="button_rounded categorycard__button">Смотреть</button>
+					</article>
+
+					<article class="categorycard">
+						<img class="categorycard__icon" src="image/sample_category_icon.svg" alt="Категория №">
+						<h4 class="categorycard__title">Название категории</h4>
+						<p class="categorycard__snippet">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quo,
+							consequuntur undedoloribus ad ipsa!</p>
+						<button class="button_rounded categorycard__button">Смотреть</button>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section class="homepage__popular_products">
+			<div class="wrapper">
+				<h2 class="homepage__title">Популярные продукты</h2>
+				<p class="homepage__subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+					reprehenderit minima impedit omnis alias cupiditate.</p>
+
+				<div class="homepage__cards homepage__cards--mb">
+					<article class="productcard">
+						<img src="image/sample_product_icon.svg" alt="Продукт №" class="productcard__icon">
+						<h4 class="productcard__title">Название продукта</h4>
+						<p class="productcard__snippet">Мини-описание продукта для быстрого завлечения клиента</p>
+						<button class="button_rounded productcard__button">Заказать</button>
+					</article>
+
+					<article class="productcard">
+						<img src="image/sample_product_icon.svg" alt="Продукт №" class="productcard__icon">
+						<h4 class="productcard__title">Длинное Название продукта</h4>
+						<p class="productcard__snippet">Мини-описание продукта для быстрого завлечения клиента</p>
+						<button class="button_rounded productcard__button">Заказать</button>
+					</article>
+
+					<article class="productcard">
+						<img src="image/sample_product_icon.svg" alt="Продукт №" class="productcard__icon">
+						<h4 class="productcard__title">Очень длинное название продукта</h4>
+						<p class="productcard__snippet">Мини-описание продукта для быстрого завлечения клиента</p>
+						<button class="button_rounded productcard__button">Заказать</button>
+					</article>
+				</div>
+
+				<button class="homepage__showall button_rounded ">Все продукты</button>
+			</div>
+		</section>
 	</main>
 	<!--Site main END-->
 
 	<!--Site footer-->
 	<footer class="site-footer footer">
-		<div class="footer__container">
+		<div class="wrapper footer__container">
 			<div class="footer__logo">
 				<a href="/">
 					<img src="./image/logo_igenomix.svg" alt="Igenomix Store">
@@ -78,7 +162,7 @@
 			<div class="footer__widgets">
 				<div class="fwidget">
 					<h4 class="fwidget__header">Наши цели</h4>
-					
+
 					<ul class="fwidget__links">
 						<li><a href="#">Снижение рисков рождения ребенка с наследственными заболеваниями</a></li>
 						<li><a href="#">Для спокойствия будущих мам</a></li>
@@ -103,8 +187,27 @@
 				<div class="fwidget">
 					<h4 class="fwidget__header">Igenomix в социальных сетях</h4>
 
-					<ul class="fwidget__links">
-						<li><a href="#">Иконки соцсетей</a></li>
+					<ul class="fwidget__socials">
+						<li class="fwidget__socicon">
+							<a href="#">
+								<i class="lni lni-instagram-original"></i>
+							</a>
+						</li>
+						<li class="fwidget__socicon">
+							<a href="#">
+								<i class="lni lni-youtube"></i>
+							</a>
+						</li>
+						<li class="fwidget__socicon">
+							<a href="#">
+								<i class="lni lni-twitter-original"></i>
+							</a>
+						</li>
+						<li class="fwidget__socicon">
+							<a href="#">
+								<i class="lni lni-linkedin-original"></i>
+							</a>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -112,24 +215,15 @@
 			<div class="footer__contacts">
 				<a href="#" class="footerContacts__item">
 					<span class="footerContacts__icon">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.731 29.731"
-							style="enable-background:new 0 0 29.731 29.731" xml:space="preserve">
-							<path
-								d="M23.895 29.731c-1.237 0-2.731-.31-4.374-.93-3.602-1.358-7.521-4.042-11.035-7.556C4.971 17.73 2.287 13.81.928 10.208-.307 6.933-.31 4.245.921 3.015c.177-.177.357-.367.543-.563C2.587 1.271 3.856-.058 5.538.002 6.697.05 7.82.77 8.97 2.201c3.398 4.226 1.866 5.732.093 7.478l-.313.31c-.29.29-.838 1.633 4.26 6.731 1.664 1.664 3.083 2.882 4.217 3.619.714.464 1.991 1.166 2.515.642l.315-.318c1.744-1.769 3.25-3.296 7.473.099 1.431 1.15 2.15 2.272 2.198 3.433.069 1.681-1.27 2.953-2.452 4.075-.195.186-.385.366-.562.542-.611.612-1.588.919-2.819.919zM5.418 1C4.223 1 3.144 2.136 2.189 3.141c-.192.202-.378.398-.561.581-.917.916-.824 3.323.236 6.134 1.31 3.472 3.913 7.266 7.33 10.683 3.416 3.415 7.208 6.018 10.681 7.327 2.811 1.062 5.218 1.152 6.133.237.183-.183.379-.369.581-.56 1.027-.976 2.192-2.082 2.141-3.309-.035-.843-.649-1.75-1.825-2.695-3.519-2.83-4.503-1.831-6.135-.176l-.32.323c-.78.781-2.047.608-3.767-.51-1.193-.776-2.667-2.038-4.379-3.751-4.231-4.23-5.584-6.819-4.26-8.146l.319-.315c1.659-1.632 2.66-2.617-.171-6.138-.947-1.175-1.853-1.789-2.696-1.825L5.418 1z" />
-						</svg>
+						<i class="lni lni-phone"></i>
 					</span>
 					8-999-888-77-66
 				</a>
 				<a href="#" class="footerContacts__item">
 					<span class="footerContacts__icon">
-						<svg data-name="Livello 1" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
-							<path
-								d="M116.73 31.83a3 3 0 0 0-4.2-.61L64.14 67.34a1 1 0 0 1-1.2 0L15.5 31.06a3 3 0 1 0-3.64 4.77l37.3 28.53-36.89 27.8A3 3 0 1 0 15.88 97l38.23-28.86 5.18 4a7 7 0 0 0 8.43.06l5.44-4.06L111.84 97a3 3 0 1 0 3.59-4.81L78.17 64.35 116.12 36a3 3 0 0 0 .61-4.17z" />
-							<path
-								d="M113 19H15A15 15 0 0 0 0 34v60a15 15 0 0 0 15 15h98a15 15 0 0 0 15-15V34a15 15 0 0 0-15-15zm9 75a9 9 0 0 1-9 9H15a9 9 0 0 1-9-9V34a9 9 0 0 1 9-9h98a9 9 0 0 1 9 9z" />
-						</svg>
+						<i class="lni lni-envelope"></i>
 					</span>
-					Наша email
+					Наш email
 				</a>
 			</div>
 

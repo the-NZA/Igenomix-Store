@@ -1,6 +1,5 @@
 .footer {
 	background-color: rgb(var(--rgb-alice-blue));
-	padding: calc(var(--offset) * 1.5) var(--offset);
 }
 
 .footer__container {
@@ -13,6 +12,9 @@
 			". fCopyright";
 
 	gap: var(--offset);
+
+	box-sizing: border-box;
+	padding: calc(var(--offset) * 1.5) var(--offset);
 }
 
 .footer__logo {

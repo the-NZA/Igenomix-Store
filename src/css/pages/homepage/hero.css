@@ -1,0 +1,19 @@
+.homepage__hero {
+	min-height: 700px;
+	background: rgb(103,131,156);
+	background: linear-gradient(160deg, rgba(103,131,156,1) 0%, rgba(255,186,155,1) 20%, rgba(221,227,233,1) 86%);
+	display: flex;
+	align-items: center;
+}
+
+.homepage__hero h1 {
+	margin: 0;
+	text-transform: uppercase;
+	font-size: 5rem;
+	font-weight: bold;
+
+	color: rgb(var(--rgb-san-juan));
+
+	text-shadow: 	4px 4px 0px rgb(var(--rgb-mandys-pink)),
+				8px 8px 0px rgb(var(--rgb-white));
+}

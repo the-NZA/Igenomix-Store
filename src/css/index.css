@@ -1,4 +1,4 @@
-@import "normalize.css"; 			/* Normalize styles */
+@import url("../../node_modules/normalize.css/normalize.css"); /* Normalize styles */
 @import url("./colors.css");			/* Import project colors */
 @import url("./sizes.css");			/* Import project sizes */
 @import url("./common.css");			/* Import common styles */
@@ -10,7 +10,11 @@
 @import url("./parts/fwidget.css");	/* Import Footer Widget styles */
 @import url("./parts/copyright.css");	/* Import Footer Copyright styles */
 
-@import url("./pages/homepage/hero.css"); /* Import Homepage styles */
+
+@import url("./pages/homepage/homepage.css"); /* Import Homepage Hero section styles */
+@import url("./pages/homepage/hero.css"); /* Import Homepage Hero section styles */
+@import url("./pages/homepage/popular_products.css"); /* Import Homepage Popular products section styles */
+@import url("./pages/homepage/categories.css"); /* Import Homepage Categories section styles */
 
 @import url("./utils/font.css");		/* Import font styles */
 @import url("./utils/shared.css"); 	/* Import shared style */
