@@ -15,7 +15,7 @@
 .dockerignore
 
 dist
-src/font
+# src/font/*
 node_modules
 
 ### DB files ###

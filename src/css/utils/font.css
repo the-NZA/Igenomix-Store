@@ -1,8 +1,2 @@
-/* @font-face {
-
-	font-family: 'Montserrat';
-	font-style: normal;
-	font-weight: 400;
-	font-display: swap;
-	src: url("./font/Montserrat-Regular.ttf") format('ttf');
-} */
+/* Import Montserrat font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=block');

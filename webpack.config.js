@@ -49,6 +49,7 @@ module.exports = function (env, opt) {
 							options: {
 								importLoaders: 1,
 								sourceMap: isDev,
+								url: false,
 							}
 						},
 						{
@@ -86,10 +87,10 @@ module.exports = function (env, opt) {
 						from: "src/image",
 						to: "image",
 					},
-					// {
-					// 	from: "src/font",
-					// 	to: "font",
-					// },
+					{
+						from: "src/font",
+						to: "font",
+					},
 				]
 			})
 		]
