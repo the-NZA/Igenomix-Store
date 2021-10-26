@@ -4,9 +4,6 @@
 }
 
 .footer__container {
-	margin: 0 auto;
-	max-width: var(--site-width);
-
 	display: grid;
 	grid-template-columns: 200px 1fr;
 	grid-auto-rows: auto;
@@ -60,11 +57,8 @@
 	display: block;
 	line-height: 0.5;
 	max-width: 25px;
+	font-size: 1.3rem;
 	padding-right: 10px;
-}
-
-.footerContacts__icon svg {
-	fill: rgb(var(--rgb-bermuda-grey));
 }
 
 .footer__copyright {

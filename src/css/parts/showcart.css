@@ -36,15 +36,13 @@
 .showcart__icon {
 	line-height: 0.5;
 	max-height: fit-content;
-}
-
-.showcart__icon svg {
-	fill: rgb(var(--rgb-bermuda-grey));
+	font-size: 1.3rem;
+	color: rgb(var(--rgb-bermuda-grey));
 }
 
 .showcart__amount {
 	color: rgb(var(--rgb-bermuda-grey));
-	font-weight: 600;
+	font-weight: 700;
 }
 
 .showcart__cur_symbol {

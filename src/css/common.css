@@ -27,7 +27,6 @@
 }
 
 .site-main {
-	/* background-color: rgb(var(--c-chablis)); */
 	background-color: rgb(var(--rgb-chablis));
 	box-sizing: border-box;
 }

@@ -10,6 +10,11 @@
 @import url("./parts/fwidget.css");	/* Import Footer Widget styles */
 @import url("./parts/copyright.css");	/* Import Footer Copyright styles */
 
+@import url("./pages/homepage/hero.css"); /* Import Homepage styles */
+
 @import url("./utils/font.css");		/* Import font styles */
+@import url("./utils/shared.css"); 	/* Import shared style */
+@import url("./utils/lineicons.css");	/* Import lineicons font styles */
+/* @import url("./utils/icofont.css");	Import Icofont styles */
 @import url("./utils/shadows.css");	/* Import Shadows styles */
 @import url("./utils/animations.css");	/* Import Animations styles */
