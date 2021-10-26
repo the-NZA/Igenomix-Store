@@ -50,4 +50,42 @@
 	display: none;
 }
 
-/* .header__cart {} */
+.header__showcart {
+	position: relative;
+}
+
+.header__cart {
+	position: absolute;
+	z-index: 2;
+
+	top: calc(var(--offset) * 2.3);
+	right: 50%;
+	transform: translateX(50%);
+
+	min-width: calc(var(--site-width)/3);
+	min-height: calc(var(--site-width)/3);
+
+	display: grid;
+	grid-template-rows: max-content 1fr auto;
+	gap: var(--offset-half);
+
+
+	border: 1px solid rgba(var(--rgb-white), var(--alpha-50));	
+	border-radius: var(--card-border-radius);
+	box-shadow: var(--card-shadow);
+
+	background-color: rgb(var(--rgb-chablis));
+
+	box-sizing: border-box;
+	padding: var(--offset-half);
+}
+
+.header__overlay {
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background-color: rgba(var(--rgb-black), var(--alpha-35));
+}
