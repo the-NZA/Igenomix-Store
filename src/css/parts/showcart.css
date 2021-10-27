@@ -34,9 +34,8 @@
 }
 
 .showcart__icon {
-	line-height: 0.5;
 	max-height: fit-content;
-	font-size: 1.3rem;
+	font-size: 1.2rem;
 	color: rgb(var(--rgb-bermuda-grey));
 }
 

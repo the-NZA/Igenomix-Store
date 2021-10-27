@@ -39,20 +39,36 @@
 	border: 1px solid rgb(var(--rgb-slate-grey));
 	border-radius: 50%;
 
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: var(--offset);
+	height: var(--offset);
+
 	transition: var(--main-transition);
 }
 
 .fwidget__socicon a {
 	display: block;
+	box-sizing: border-box;
 	padding: 8px;
-	line-height: 0.5;
 
+	line-height: 1;
 	color: rgb(var(--rgb-slate-grey));
+
+	transition: var(--main-transition);
 }
 
 .fwidget__socicon:hover {
 	background-color: rgb(var(--rgb-slate-grey));
 }
+
 .fwidget__socicon:hover a {
 	color: rgb(var(--rgb-white));
+}
+
+.fwidget__button {
+	appearance: none;
+	bottom: none;
 }

@@ -78,6 +78,8 @@
 
 	box-sizing: border-box;
 	padding: var(--offset-half);
+
+	display: none;
 }
 
 .header__overlay {

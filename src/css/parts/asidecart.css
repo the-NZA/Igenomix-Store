@@ -8,22 +8,23 @@
 }
 
 .asidecart__close {
+	display: block;
 	appearance: none;
 	background-color: rgb(var(--rgb-chablis));
-	font-size: 1.5rem;
 	color: rgb(var(--rgb-san-juan));
+	flex-basis: 48px;
 
-	line-height: 0.5;
-
-	border: none;
+	border: 2px solid rgb(var(--rgb-san-juan));
 	border-radius: 50%;
-	padding: 8px;
+	padding: 6px;
 
 	cursor: pointer;
+	transition: var(--main-transition);
 }
 
 .asidecart__close:hover{
 	background-color: rgb(var(--rgb-mandys-pink));
+	border-color: rgb(var(--rgb-mandys-pink));
 	color: rgb(var(--rgb-alice-blue));
 }
 

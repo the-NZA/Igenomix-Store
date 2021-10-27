@@ -19,7 +19,8 @@
 
 @import url("./utils/font.css");		/* Import font styles */
 @import url("./utils/shared.css"); 	/* Import shared style */
-@import url("./utils/lineicons.css");	/* Import lineicons font styles */
-@import url("./utils/icofont.css");	/* Import Icofont styles */
+/* @import url("./utils/lineicons.css");	Import lineicons font styles */
+/* @import url("./utils/icofont.css");	Import Icofont styles */
+@import url("./utils/fa.css");		/* Import Icofont styles */
 @import url("./utils/shadows.css");	/* Import Shadows styles */
 @import url("./utils/animations.css");	/* Import Animations styles */
