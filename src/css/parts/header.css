@@ -65,7 +65,6 @@
 	min-width: calc(var(--site-width)/3);
 	min-height: calc(var(--site-width)/3);
 
-	display: grid;
 	grid-template-rows: max-content 1fr auto;
 	gap: var(--offset-half);
 
@@ -74,12 +73,17 @@
 	border-radius: var(--card-border-radius);
 	box-shadow: var(--card-shadow);
 
-	background-color: rgb(var(--rgb-chablis));
+	background-color: rgb(var(--rgb-alice-blue));
 
 	box-sizing: border-box;
 	padding: var(--offset-half);
 
 	display: none;
+	/* display: grid; */
+}
+
+.header__cart--active {
+	display: grid;
 }
 
 .header__overlay {
@@ -90,4 +94,10 @@
 	right: 0;
 	left: 0;
 	background-color: rgba(var(--rgb-black), var(--alpha-35));
+
+	display: none;
+}
+
+.header__overlay--active {
+	display: grid;
 }

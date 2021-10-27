@@ -44,3 +44,7 @@
 	color: rgb(var(--rgb-white));
 	background-color: rgb(var(--rgb-mandys-pink));
 }
+
+.categorycard__button:hover{
+	background-color: var(--c-mandys-pink-highlighted);
+}

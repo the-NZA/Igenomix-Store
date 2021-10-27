@@ -6,6 +6,7 @@
 @import url("./parts/header.css");		/* Import Header styles */
 @import url("./parts/asidecart.css");	/* Import Header Asidecart styles */
 @import url("./parts/navlist.css");	/* Import Header Navlist styles */
+@import url("./parts/cartitem.css");	/* Import Header Cart Item styles */
 @import url("./parts/showcart.css");	/* Import Header Show Cart button styles */
 @import url("./parts/footer.css");		/* Import Footer styles */
 @import url("./parts/fwidget.css");	/* Import Footer Widget styles */

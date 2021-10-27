@@ -9,9 +9,11 @@
 
 	--c-chablis: #FFEAE1;		/* Category Section background */
 	--c-mandys-pink: #FFBA9B;	/* Category Section button */
+	--c-mandys-pink-highlighted: #efaf8c; /* Category Section button highlighted version */
 
 	--c-pattens-blue: #DDE3E9;	/* Services Section background */
 	--c-san-juan: #3D596D;		/* Services Section button */
+	--c-san-juan-highlighted: #2c485c;	/* Secvices Section button highlighted version */
 	/* COLORS END */
 
 	/* COLORS RGB */
