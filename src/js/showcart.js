@@ -54,13 +54,14 @@ function HandleShowCartButton() {
 		makeAsideCartUnactive(headerCart, headerOverlay);
 	});
 
+	// Close on scroll 
 	headerOverlay.addEventListener("wheel", function (e) {
-		// e.preventDefault();
+		e.preventDefault();
 		makeAsideCartUnactive(headerCart, headerOverlay);
 	});
 
 	headerOverlay.addEventListener("touchmove", function (e) {
-		// e.preventDefault();
+		e.preventDefault();
 		makeAsideCartUnactive(headerCart, headerOverlay);
 	});
 }

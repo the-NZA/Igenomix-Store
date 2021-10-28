@@ -44,4 +44,56 @@
 .asidecart__footer {
 	border-top: 1px solid rgb(var(--rgb-slate-grey));
 	padding-top: calc(var(--offset-half) * 0.7);
+
+	display: grid;
+	grid-template-rows: repeat(2, auto);
+	gap: var(--offset-half);
+}
+
+.asidecart__summary {
+	font-size: 1.2rem;
+	text-align: center;
+	font-weight: 500;
+	padding: 10px 0;
+}
+
+.asidecart__summary span {
+	font-weight: bold;
+}
+
+.asidecart__buttons {
+	display: grid;
+	gap: var(--offset-half);
+}
+
+.asidecart__buttons button {
+	appearance: none;
+	cursor: pointer;
+	border-radius: calc(var(--offset-half) / 2);
+
+	font-size: 1.1rem;
+	display: block;
+	font-weight: bold;
+	padding: var(--offset-half);
+	transition: var(--main-transition);
+}
+
+.asidecart__showcart {
+	color: rgb(var(--rgb-white));
+	border: 1px solid rgb(var(--rgb-mandys-pink));
+	background-color: rgb(var(--rgb-mandys-pink));
+}
+
+.asidecart__showcart:hover {
+	background-color: var(--c-mandys-pink-highlighted);
+}
+
+.asidecart__checkout {
+	color: rgb(var(--rgb-alice-blue));
+	border: 1px solid rgb(var(--rgb-san-juan));
+	background-color: rgb(var(--rgb-san-juan));
+}
+
+.asidecart__checkout:hover {
+	background-color: var(--c-san-juan-highlighted);
 }

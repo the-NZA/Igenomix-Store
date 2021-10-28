@@ -109,8 +109,7 @@
 	left: 0;
 	background-color: rgba(var(--rgb-black), var(--alpha-15));
 
-	/* animation-name: overlayAnimationShow; */
-	animation-duration: 150ms;
+	animation-duration: 200ms;
 	animation-timing-function: ease-in-out;
 	animation-delay: 0ms;
 	animation-iteration-count: 1;
