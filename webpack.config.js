@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
+const FileManagerPlugin = require('filemanager-webpack-plugin');
 
 module.exports = function (env, opt) {
 	const isProd = opt.mode === "production";
@@ -92,7 +93,20 @@ module.exports = function (env, opt) {
 						to: "font",
 					},
 				]
-			})
+			}),
+			...(isProd ? [
+				new FileManagerPlugin({
+					events: {
+						onEnd: {
+							copy: [
+								{
+									source: "dist/(*.css|*.js)", destination: "igenomix_store/assets/",
+								}
+							]
+						}
+					}
+				})
+			] : [])
 		]
 	};
 }
