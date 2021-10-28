@@ -78,11 +78,25 @@
 	box-sizing: border-box;
 	padding: var(--offset-half);
 
+	animation-duration: 250ms;
+	animation-timing-function: ease-in-out;
+	animation-delay: 0ms;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: both; 
+	animation-play-state: running; 
+	
 	display: none;
 	/* display: grid; */
 }
 
 .header__cart--active {
+	animation-name: asidecartAnimationShow;
+	display: grid;
+}
+
+.header__cart--remove {
+	animation-name: asidecartAnimationRemove;
 	display: grid;
 }
 
@@ -93,11 +107,26 @@
 	bottom: 0;
 	right: 0;
 	left: 0;
-	background-color: rgba(var(--rgb-black), var(--alpha-35));
+	background-color: rgba(var(--rgb-black), var(--alpha-15));
+
+	/* animation-name: overlayAnimationShow; */
+	animation-duration: 150ms;
+	animation-timing-function: ease-in-out;
+	animation-delay: 0ms;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: both; 
+	animation-play-state: running; 
 
 	display: none;
 }
 
 .header__overlay--active {
+	animation-name: overlayAnimationShow;
+	display: grid;
+}
+
+.header__overlay--remove {
+	animation-name: overlayAnimationRemove;
 	display: grid;
 }

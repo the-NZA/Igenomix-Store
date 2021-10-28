@@ -2,6 +2,16 @@
 	--main-transition: all 75ms linear;
 }
 
+.animated {
+	animation-duration: 200ms;
+	animation-timing-function: ease-in-out;
+	animation-delay: 0ms;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: both; 
+	animation-play-state: running; 
+}
+
 @keyframes headerCartBtnHoverAnimation {
 	0% {
 		background-color: rgba(var(--rgb-pattens-blue), var(--alpha-50));
@@ -10,5 +20,83 @@
 	100% {
 		background-color: rgba(var(--rgb-pattens-blue), var(--alpha-75));
 		box-shadow: var(--btn-shadow--hover) ;
+	}
+}
+
+@keyframes overlayAnimationShow {
+	0% {
+		opacity: 0;
+		display: none;
+	}
+	1% {
+		opacity: 0;
+		display: grid;
+	}
+	100% {
+		opacity: 1;
+		display: grid;
+	}
+}
+
+@keyframes overlayAnimationRemove {
+	0% {
+		opacity: 1;
+		display: grid;
+	}
+	30% {
+		opacity: 0.8;
+	}
+	60%{
+		opacity: 0.6;
+	}
+	90%{
+		opacity: 0.3;
+	}
+	100% {
+		opacity: 0;
+		display: none;
+	}
+}
+
+@keyframes asidecartAnimationShow {
+	0% {
+		opacity: 0;
+		transform: translateX(100%);
+		display: none;
+	}
+	1% {
+		opacity: 0;
+		transform: translateX(100%);
+		display: grid;
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(50%);
+		display: grid;
+	}
+}
+
+@keyframes asidecartAnimationRemove {
+	0% {
+		opacity: 1;
+		transform: translateX(50%);
+		display: grid;
+	}
+	30% {
+		opacity: 0.6;
+		transform: translateX(60%);
+	}
+	60% {
+		opacity: 0.3;
+		transform: translateX(80%);
+	}
+	99% {
+		opacity: 0;
+		transform: translateX(100%);
+	}
+	100% {
+		opacity: 0;
+		transform: translateX(120%);
+		display: none;
 	}
 }

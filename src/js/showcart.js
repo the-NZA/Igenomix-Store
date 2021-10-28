@@ -1,13 +1,24 @@
-function makeActive(headerCart, headerOverlay) {
+function makeAsideCartActive(headerCart, headerOverlay) {
 	document.body.style.overflow = "hidden"; // Prevent scrolling
 	headerCart.classList.add("header__cart--active");
 	headerOverlay.classList.add("header__overlay--active")
 }
 
-function makeUnactive(headerCart, headerOverlay) {
+function makeAsideCartUnactive(headerCart, headerOverlay) {
 	// Remove active class otherwise
-	headerCart.classList.remove("header__cart--active");
-	headerOverlay.classList.remove("header__overlay--active")
+	// Register on animation end handlers
+	headerCart.addEventListener("animationend", function (e) {
+		headerCart.classList.remove("header__cart--active", "header__cart--remove");
+	}, { once: true });
+
+	headerOverlay.addEventListener("animationend", function (e) {
+		headerOverlay.classList.remove("header__overlay--active", "header__overlay--remove");
+	}, { once: true });
+
+	// Add classes with remove animations
+	headerCart.classList.add("header__cart--remove");
+	headerOverlay.classList.add("header__overlay--remove")
+
 	document.body.style.overflow = ""; // Turn scrolling on
 }
 
@@ -24,33 +35,33 @@ function HandleShowCartButton() {
 
 		if (!headerCart.classList.contains("header__cart--active")) {
 			// If not shown add active class
-			makeActive(headerCart, headerOverlay);
+			makeAsideCartActive(headerCart, headerOverlay);
 		} else {
 			// remove active class otherwise
-			makeUnactive(headerCart, headerOverlay);
+			makeAsideCartUnactive(headerCart, headerOverlay);
 		}
 	});
 
 	// Close by clicking close cart button
 	closecartButton.addEventListener("click", function (e) {
 		e.preventDefault();
-		makeUnactive(headerCart, headerOverlay);
+		makeAsideCartUnactive(headerCart, headerOverlay);
 	});
 
 	// Close on click or mouse scroll under overlay
 	headerOverlay.addEventListener("click", function (e) {
 		e.preventDefault();
-		makeUnactive(headerCart, headerOverlay);
+		makeAsideCartUnactive(headerCart, headerOverlay);
 	});
 
 	headerOverlay.addEventListener("wheel", function (e) {
-		e.preventDefault();
-		makeUnactive(headerCart, headerOverlay);
+		// e.preventDefault();
+		makeAsideCartUnactive(headerCart, headerOverlay);
 	});
 
 	headerOverlay.addEventListener("touchmove", function (e) {
-		e.preventDefault();
-		makeUnactive(headerCart, headerOverlay);
+		// e.preventDefault();
+		makeAsideCartUnactive(headerCart, headerOverlay);
 	});
 }
 

@@ -6,7 +6,7 @@
 
 	background-color: rgb(var(--rgb-white));
 	/* box-shadow: var(--card-shadow); */
-	border: 1px solid rgb(var(--rgb-chablis));
+	border: 1px solid rgb(var(--rgb-san-juan));
 	border-radius: var(--card-border-radius);
 
 	display: grid;
