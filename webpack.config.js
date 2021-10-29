@@ -5,6 +5,10 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const FileManagerPlugin = require('filemanager-webpack-plugin');
+const WebpackShellPluginNext = require('webpack-shell-plugin-next');
+
+const publicPath = "/wp-content/themes/igenomix_store/";
+const publicPathEscaped = "\/wp-content\/themes\/igenomix_store\/";
 
 module.exports = function (env, opt) {
 	const isProd = opt.mode === "production";
@@ -18,6 +22,9 @@ module.exports = function (env, opt) {
 		output: {
 			filename: "[name].js",
 			path: path.resolve(__dirname, "dist"),
+			...(isProd ? {
+				publicPath: publicPath,
+			} : {}),
 		},
 		devtool: isDev ? "eval" : false,
 		devServer: {
@@ -105,12 +112,25 @@ module.exports = function (env, opt) {
 							copy: [
 								{
 									source: "dist/(*.css|*.js)", destination: "igenomix_store/assets/",
+								},
+								{
+									source: "dist/font/webfonts/*", destination: "igenomix_store/assets/font/webfonts/",
+								},
+								{
+									source: "dist/image/*", destination: "igenomix_store/assets/image/",
 								}
 							]
 						}
 					}
-				})
-			] : [])
+				}),
+				new WebpackShellPluginNext({
+					onBuildEnd: {
+						scripts: ["./font_path_replacement.sh igenomix_store/assets/main.css"],
+						blocking: true,
+						parallel: false,
+					}
+				}),
+			] : []),
 		]
 	};
 }
