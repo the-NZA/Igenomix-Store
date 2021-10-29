@@ -14,6 +14,7 @@
 @import url("./parts/pagetitle.css");	/* Import Page title styles */
 @import url("./parts/pagilist.css");	/* Import Pagination styles */
 @import url("./parts/productcard.css");	/* Import Productcard styles */
+@import url("./parts/asidenav.css");	/* Import Asidenav styles */
 
 
 @import url("./pages/homepage/homepage.css"); /* Import Homepage styles */

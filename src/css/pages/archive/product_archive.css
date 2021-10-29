@@ -3,7 +3,7 @@
 
 	display: grid;
 	grid-template-rows: 1fr max-content;
-	grid-template-columns: calc(var(--site-width) / 4) 1fr;
+	grid-template-columns: calc(var(--site-width) / 4.5) 1fr;
 	grid-template-areas: 
 		"arAside arMain"
 		"arPagi arPagi";
@@ -11,9 +11,10 @@
 }
 
 .prodarchive__aside {
-	border: 1px solid #000;
 	grid-area: arAside;
 }
+
+/* .prodarchive__asidenav {} */
 
 .prodarchive__main {
 	grid-area: arMain;

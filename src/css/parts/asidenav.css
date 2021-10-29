@@ -1,0 +1,36 @@
+.asidenav {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	border-radius: var(--card-border-radius);
+	background-color: rgb(var(--rgb-alice-blue));
+	box-shadow: var(--card-shadow);
+	overflow: hidden;
+}
+
+
+.asidenav__item a {
+	display: block;
+	text-decoration: none;
+	cursor: pointer;
+	color: rgb(var(--rgb-san-juan));
+	font-weight: bold;
+	padding: var(--offset-half);
+	background-color: rgb(var(--rgb-alice-blue));
+	transition: var(--main-transition);
+}
+
+.asidenav__item a:hover {
+	background-color: rgb(var(--rgb-slate-grey));
+	color: rgb(var(--rgb-white));
+}
+
+.asidenav__item a.active {
+	background-color: rgba(var(--rgb-slate-grey), var(--alpha-15));
+	color: rgba(var(--rgb-black), var(--alpha-75));
+}
+
+.asidenav__item a.active:hover {
+	background-color: rgba(var(--rgb-slate-grey), var(--alpha-10));
+	color: rgb(var(--rgb-black));
+}
