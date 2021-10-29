@@ -11,12 +11,16 @@
 @import url("./parts/footer.css");		/* Import Footer styles */
 @import url("./parts/fwidget.css");	/* Import Footer Widget styles */
 @import url("./parts/copyright.css");	/* Import Footer Copyright styles */
+@import url("./parts/pagetitle.css");	/* Import Page title styles */
+@import url("./parts/pagilist.css");	/* Import Pagination styles */
+@import url("./parts/productcard.css");	/* Import Productcard styles */
 
 
-@import url("./pages/homepage/homepage.css"); /* Import Homepage Hero section styles */
+@import url("./pages/homepage/homepage.css"); /* Import Homepage styles */
 @import url("./pages/homepage/hero.css"); /* Import Homepage Hero section styles */
 @import url("./pages/homepage/popular_products.css"); /* Import Homepage Popular products section styles */
 @import url("./pages/homepage/categories.css"); /* Import Homepage Categories section styles */
+@import url("./pages/archive/product_archive.css"); /* Import Archive styles */
 
 @import url("./utils/font.css");		/* Import font styles */
 @import url("./utils/shared.css"); 	/* Import shared style */

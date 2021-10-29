@@ -14,11 +14,20 @@
 	grid-template-rows: max-content 1fr auto;
 }
 
+.site-body--archive {
+	grid-template-rows: max-content max-content 1fr auto;
+}
+
 .site-header {
 	box-sizing: border-box;
 	position: sticky;
 	top: 0;
 	width: 100%;
+}
+
+.site-title {
+	box-sizing: border-box;
+	background-color: rgb(var(--rgb-alice-blue));
 }
 
 .site-main {

@@ -1,0 +1,56 @@
+.pagilist {
+	list-style: none;
+	margin: 0;
+	padding: calc(var(--offset-half)) var(--offset-half);
+
+	display: flex;
+	max-width: max-content;
+
+	background-color: rgb(var(--rgb-alice-blue));
+	border-radius: calc(var(--offset-half) / 2);
+	box-shadow: var(--card-shadow);
+
+}
+
+.pagilist__item {
+	margin-right: var(--offset-half);
+}
+
+.pagilist__item:last-of-type {
+	margin-right: 0;
+}
+
+.pagilist__button {
+	box-sizing: border-box;
+	padding: 5px 10px;
+	min-width: var(--offset);
+	min-height: var(--offset);
+	cursor: pointer;
+	background-color: rgb(var(--rgb-white));
+	border: none;
+	border-radius: calc(var(--offset-half) / 3);
+	font-weight: bold;
+	box-shadow: var(--card-shadow);
+	color: rgb(var(--rgb-slate-grey));
+	transition: var(--main-transition);
+}
+
+.pagilist__button:hover {
+	background-color: rgb(var(--rgb-chablis));
+}
+
+.pagilist__button a {
+	text-decoration: none;
+	color: rgb(var(--rgb-slate-grey));
+}
+
+.pagilist__button.current {
+	background-color: rgba(var(--rgb-slate-grey), var(--alpha-15));
+	color: rgb(var(--rgb-black));
+	pointer-events: none;
+	cursor: crosshair;
+}
+
+.pagilist__button.current a {
+	color: rgb(var(--rgb-black));
+}

@@ -1,0 +1,33 @@
+.prodarchive {
+	width: 100%;
+
+	display: grid;
+	grid-template-rows: 1fr max-content;
+	grid-template-columns: calc(var(--site-width) / 4) 1fr;
+	grid-template-areas: 
+		"arAside arMain"
+		"arPagi arPagi";
+	gap: var(--offset);
+}
+
+.prodarchive__aside {
+	border: 1px solid #000;
+	grid-area: arAside;
+}
+
+.prodarchive__main {
+	grid-area: arMain;
+}
+
+.prodarchive__list	{
+	height: 100%;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: var(--offset);
+}
+
+.prodarchive__pagination {
+	max-width: fit-content;
+	margin: auto auto 0 auto;
+	grid-area: arPagi;
+}

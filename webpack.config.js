@@ -81,6 +81,10 @@ module.exports = function (env, opt) {
 				filename: "catalog.html",
 				template: path.resolve(__dirname, "src/catalog.html"),
 			}),
+			new HtmlWebpackPlugin({
+				filename: "catalog2.html",
+				template: path.resolve(__dirname, "src/catalog2.html"),
+			}),
 			new MiniCssExtractPlugin(),
 			new CopyPlugin({
 				patterns: [

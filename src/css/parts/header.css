@@ -63,11 +63,11 @@
 	transform: translateX(50%);
 
 	min-width: calc(var(--site-width)/3);
-	min-height: calc(var(--site-width)/3);
+	min-height: calc(var(--site-width)/4);
+	max-height: 85vh;
 
 	grid-template-rows: max-content 1fr auto;
 	gap: var(--offset-half);
-
 
 	border: 1px solid rgba(var(--rgb-white), var(--alpha-50));	
 	border-radius: var(--card-border-radius);
