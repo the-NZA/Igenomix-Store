@@ -69,9 +69,8 @@ function add_additional_class_on_li($classes, $item, $args) {
 }
 add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
 
-
 /**
- * Show cart contents / total Ajax
+ * * Update mini cart summary on ajax request
  */
 add_filter( 'woocommerce_add_to_cart_fragments', 'ignx_update_minicart_total' );
 function ignx_update_minicart_total( $fragments ) {
@@ -88,17 +87,8 @@ function ignx_update_minicart_total( $fragments ) {
 	return $fragments;
 }
 
-add_filter( 'woocommerce_add_to_cart_fragments', 'ignx_update_minicart_footer' );
-function ignx_update_minicart_footer( $fragments ) {
-	global $woocommerce;
-
-	ob_start();
-?>
-	<div class="asidecart__summary">
-		<span><?php echo esc_html__( 'Subtotal:', 'woocommerce' ); ?></span> <?php echo WC()->cart->subtotal . get_woocommerce_currency_symbol();?> 
-	</div>
-
-<?php
-	$fragments['div.asidecart__summary'] = ob_get_clean();
-	return $fragments;
+// * Show mini cart at cart and checkout pages
+add_filter( 'woocommerce_widget_cart_is_hidden', 'filter_function_name_4461' );
+function filter_function_name_4461( $args_l ){
+	return false;
 }
