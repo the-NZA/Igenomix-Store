@@ -26,7 +26,6 @@ function HandleShowCartButton() {
 	const header = document.querySelector(".header");
 	const showcartButton = header.querySelector(".showcart__btn");
 	const headerCart = header.querySelector(".header__cart");
-	// const asidecartFooter = header.querySelector(".asidecart__footer");
 	const headerOverlay = header.querySelector(".header__overlay");
 	const closecartButton = header.querySelector(".asidecart__close");
 
@@ -41,13 +40,6 @@ function HandleShowCartButton() {
 			// remove active class otherwise
 			makeAsideCartUnactive(headerCart, headerOverlay);
 		}
-
-		// const cartListWrapper = header.querySelector(".asidecart__cartlist");
-		// if (cartListWrapper.querySelectorAll(".cartitem").length !== 0) {
-		// 	asidecartFooter.classList.add("asidecart__footer--visible");
-		// } else {
-		// 	asidecartFooter.classList.remove("asidecart__footer--visible");
-		// }
 	});
 
 	// Close by clicking close cart button
