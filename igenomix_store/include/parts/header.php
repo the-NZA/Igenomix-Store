@@ -61,7 +61,7 @@ function storefront_primary_navigation() {
 
 function ignx_header_cart_wrapper() {
 	if ( storefront_is_woocommerce_activated() ) {
-		echo '<div class="header__showcart">';
+		echo '<div class="header__showcart" id="site-header-cart">';
 	}
 }
 
@@ -71,31 +71,84 @@ function ignx_header_cart_wrapper_close() {
 	}
 }
 
-function showcartAmount() {
+function tss() {
+?>
+	<button class="showcart__btn" title="<?php esc_attr_e( 'View your shopping cart', 'storefront' ); ?>">
+		<span class="showcart__icon">
+			<i class="far fa-shopping-basket"></i>
+		</span>
+		<span class="showcart__amount">
+			<?php echo WC()->cart->total; ?> <span class="showcart__cur_symbol"><?php echo get_woocommerce_currency_symbol();?></span>
+		</span>
+	</button>
+
+	<a class="cart-contents" title="<?php esc_attr_e( 'View your shopping cart', 'storefront' ); ?>">
+		<span class="showcart__icon">
+			<i class="far fa-shopping-basket"></i>
+		</span>
+
+		<?php echo wp_kses_post( WC()->cart->get_cart_subtotal() ); ?>
+	</a>
+<?php
 }
-
 function storefront_cart_link() {
-	?>
+?>
+	<a class="cart-contents" title="<?php esc_attr_e( 'View your shopping cart', 'storefront' ); ?>">
+		<span class="showcart__icon">
+			<i class="far fa-shopping-basket"></i>
+		</span>
 
-		<button class="showcart__btn" title="<?php esc_attr_e( 'View your shopping cart', 'storefront' ); ?>">
-			<span class="showcart__icon">
-				<i class="far fa-shopping-basket"></i>
-			</span>
-			<span class="showcart__amount">
-				<?php echo WC()->cart->total; ?> <span class="showcart__cur_symbol"><?php echo get_woocommerce_currency_symbol();?></span>
-			</span>
-		</button>
-	<?php
+		<?php echo wp_kses_post( WC()->cart->get_cart_subtotal() ); ?>
+	</a>
+<?php
 }
 
 function storefront_header_cart() {
 	if ( storefront_is_woocommerce_activated() ) {
-		storefront_cart_link();
+	?>
+		<button class="showcart__btn" title="<?php esc_attr_e( 'View your shopping cart', 'storefront' ); ?>">
+			<?php storefront_cart_link(); ?>
+		</button>
+	<?php
 	}
 }
 
 function ignx_header_cart_aside() {
 	if ( storefront_is_woocommerce_activated() ) {
-		// echo 'This is aside';
+		?>
+		<aside class="header__cart">
+			<div class="asidecart__header">
+				<button class="asidecart__close">
+					<i class="far fa-times fa-2x"></i>
+				</button>
+				<h2 class="asidecart__title">Корзина</h2>
+			</div>
+
+		<?php
+			echo the_widget( 'WC_Widget_Cart', 'title=' );
+		?>
+
+		</aside>
+		<?php
 	}
+}
+
+function woocommerce_widget_shopping_cart_subtotal() {
+	echo '<span>' . esc_html__( 'Subtotal:', 'woocommerce' ) . '</span> ' . WC()->cart->subtotal . get_woocommerce_currency_symbol(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+}
+
+function woocommerce_widget_shopping_cart_button_view_cart() {
+	?>
+	<button class="asidecart__showcart">
+		<a href="<?php echo esc_url( wc_get_cart_url());?>" class="button wc-forward"><?php echo esc_html__( 'View cart', 'woocommerce' ); ?></a>
+	</button>
+	<?php
+}
+
+function woocommerce_widget_shopping_cart_proceed_to_checkout() {
+	?>
+	<button class="asidecart__checkout">
+		<a href="<?php echo esc_url( wc_get_checkout_url());?>" class="button checkout wc-forward"><?php echo esc_html__( 'Checkout', 'woocommerce' ); ?></a>
+	</button>
+	<?php
 }

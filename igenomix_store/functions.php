@@ -6,6 +6,13 @@ add_action( 'wp_print_styles', function(){
     wp_deregister_style('storefront-style');
 }, 100 );
 
+// * Remove Storefront scripts
+add_action( 'wp_print_scripts', function(){
+	wp_dequeue_script( 'storefront-header-cart' );
+	wp_deregister_script( 'storefront-header-cart' );
+});
+
+
 // * Add Theme Styles and Scripts
 add_action("wp_enqueue_scripts", function(){
 	// wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
@@ -41,8 +48,8 @@ add_action("init", function (){
 	add_filter("storefront_header", "storefront_primary_navigation_wrapper_close", 50);
 	add_filter("storefront_header", "ignx_header_cart_wrapper", 59);
 	add_filter("storefront_header", "storefront_header_cart", 60);
-	add_filter("storefront_header", "ignx_header_cart_aside", 61);
-	add_filter("storefront_header", "ignx_header_cart_wrapper_close", 62);
+	add_filter("storefront_header", "ignx_header_cart_wrapper_close", 61);
+	add_filter("storefront_header", "ignx_header_cart_aside", 62);
 	add_filter("storefront_header", "storefront_header_container_close", 68);
 });
 
@@ -61,3 +68,37 @@ function add_additional_class_on_li($classes, $item, $args) {
     return $classes;
 }
 add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
+
+
+/**
+ * Show cart contents / total Ajax
+ */
+add_filter( 'woocommerce_add_to_cart_fragments', 'ignx_update_minicart_total' );
+function ignx_update_minicart_total( $fragments ) {
+	global $woocommerce;
+
+	ob_start();
+?>
+	<div class="asidecart__summary">
+		<span><?php echo esc_html__( 'Subtotal:', 'woocommerce' ); ?></span> <?php echo WC()->cart->subtotal . get_woocommerce_currency_symbol();?> 
+	</div>
+
+<?php
+	$fragments['div.asidecart__summary'] = ob_get_clean();
+	return $fragments;
+}
+
+add_filter( 'woocommerce_add_to_cart_fragments', 'ignx_update_minicart_footer' );
+function ignx_update_minicart_footer( $fragments ) {
+	global $woocommerce;
+
+	ob_start();
+?>
+	<div class="asidecart__summary">
+		<span><?php echo esc_html__( 'Subtotal:', 'woocommerce' ); ?></span> <?php echo WC()->cart->subtotal . get_woocommerce_currency_symbol();?> 
+	</div>
+
+<?php
+	$fragments['div.asidecart__summary'] = ob_get_clean();
+	return $fragments;
+}
