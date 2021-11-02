@@ -5,3 +5,6 @@
 
 // * HEADER view functions
 require_once "parts/header.php";
+
+// * HOMEPAGE view functions
+require_once "parts/homepage.php";

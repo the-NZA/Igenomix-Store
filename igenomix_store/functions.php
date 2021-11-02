@@ -51,6 +51,14 @@ add_action("init", function (){
 	add_filter("storefront_header", "ignx_header_cart_wrapper_close", 61);
 	add_filter("storefront_header", "ignx_header_cart_aside", 62);
 	add_filter("storefront_header", "storefront_header_container_close", 68);
+
+	// * Remove homepage actions
+	remove_filter("homepage", "storefront_homepage_content", 10);
+	remove_filter("homepage", "storefront_recent_products", 30);
+	remove_filter("homepage", "storefront_featured_products", 40);
+	remove_filter("homepage", "storefront_on_sale_products", 60);
+	remove_filter("homepage", "storefront_best_selling_products", 70);
+	
 });
 
 
