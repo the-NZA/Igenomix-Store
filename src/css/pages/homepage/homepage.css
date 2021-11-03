@@ -34,7 +34,16 @@
 	background-color: transparent;
 }
 
+.homepage__showall a {
+	text-decoration: none;
+	color: rgb(var(--rgb-san-juan));
+}
+
 .homepage__showall:hover {
 	background-color: rgb(var(--rgb-san-juan));
+	color: rgb(var(--rgb-white));
+}
+
+.homepage__showall:hover a {
 	color: rgb(var(--rgb-white));
 }

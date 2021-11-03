@@ -37,6 +37,11 @@
 	background-color: rgb(var(--rgb-san-juan));
 }
 
+.productcard__button a {
+	text-decoration: none;
+	color: rgb(var(--rgb-white));
+}
+
 .productcard__button:hover {
 	background-color: var(--c-san-juan-highlighted);
 }

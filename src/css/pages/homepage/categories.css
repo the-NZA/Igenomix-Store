@@ -25,6 +25,7 @@
 
 .categorycard__title {
 	font-size: 1.3rem;
+	text-align: center;
 	margin: 0 0 var(--offset) 0;
 }
 
@@ -43,6 +44,11 @@
 	font-size: 1.2rem;
 	color: rgb(var(--rgb-white));
 	background-color: rgb(var(--rgb-mandys-pink));
+}
+
+.categorycard__button a {
+	text-decoration: none;
+	color: rgb(var(--rgb-white));
 }
 
 .categorycard__button:hover{
