@@ -77,13 +77,49 @@ function storefront_popular_products( $args ) {
 				<?php do_action( 'storefront_homepage_after_popular_products_title' );?>
 
 				<div class="homepage__cards homepage__cards--mb">
-					<?php foreach($products as $product) : 
+					<?php 
+					$currencySymbol = get_woocommerce_currency_symbol();
+
+					foreach($products as $product) : 
 						$productImage = wp_get_attachment_url( $product->image_id, 'full' );
 					?>
 						<article class="productcard">
 							<img src="<?php echo $productImage; ?>" alt="<?php echo $product->get_name(); ?>" class="productcard__icon">
 							<h4 class="productcard__title"><?php echo $product->get_name();?></h4>
 							<p class="productcard__snippet"><?php echo $product->get_short_description();?></p>
+							<p class="productcard__price">
+							<?php // If variable product then just display min and max variable prices
+							if($product instanceof WC_Product_Variable) {
+								$prices = $product->get_variation_prices()['sale_price'];
+								$minPrice = min($prices);
+								$maxPrice = max($prices);
+							?>
+								<span class="variable_price"><?php echo $minPrice; ?> – <?php echo $maxPrice; ?></span><?php echo $currencySymbol; ?>
+							<?php
+							} else {
+								if($product->is_on_sale()) {
+									$regularPrice = $product->get_regular_price();
+									$salePrice = $product->get_sale_price();
+									// Display regular and sale prices
+									?>
+
+									<span class="regular_price regular_price--onsale"><?php echo $regularPrice; ?></span> <span class="sale_price"><?php echo $salePrice; ?></span><?php echo $currencySymbol;?>
+
+									<?php
+								} else {
+									$regularPrice = $product->get_regular_price();
+									// Display only reguar price
+									?>
+
+									<span class="regular_price"><?php echo $regularPrice;?></span><?php echo $currencySymbol;?>
+
+									<?php
+								}
+							}
+							?>
+							</p>
+
+<!-- <span class="regular_price regular_price--onsale">20050</span> <span class="sale_price">18500</span>₽ -->
 							<button class="button_rounded productcard__button">
 								<a href="<?php echo $product->get_permalink(); ?>">Заказать</a>
 							</button>
