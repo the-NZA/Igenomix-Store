@@ -21,6 +21,9 @@ node_modules
 ### DB files ###
 db
 
+### Theme files ###
+igenomix_store/vendor
+
 ### WordPress ###
 wordpress
 # !wordpress/wp-content
