@@ -24,6 +24,7 @@ services:
     volumes: 
       - ./wordpress:/var/www/html
       - ./igenomix_store:/var/www/html/wp-content/themes/igenomix_store/
+      - ./etc/custom.ini:/usr/local/etc/php/conf.d/custom.ini
     env_file: .env
     environment: 
       - WORDPRESS_DB_HOST=mysql
