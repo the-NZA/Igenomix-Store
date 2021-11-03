@@ -1,4 +1,48 @@
 <?php
+use Carbon_Fields\Container;
+use Carbon_Fields\Field;
+use Carbon_Fields\Widget;
+
+// * Register theme options page
+add_action( 'carbon_fields_register_fields', 'crb_attach_theme_options' );
+function crb_attach_theme_options() {
+	Container::make( 'theme_options', __( 'Theme Options' ) )
+		->add_fields( [
+			Field::make( 'text', 'ignx_phone_number', __('Phone Number') )
+				->set_attribute('placeholder', __('Input phone number'))
+				->set_attribute('type', 'tel')
+				->set_attribute('pattern', '([\+]*[7-8]{1}\s?[\(]*9[0-9]{2}[\)]*\s?\d{3}[-]*\d{2}[-]*\d{2})')
+				->set_required( true ),
+		] );
+}
+
+add_action( 'after_setup_theme', 'crb_load' );
+function crb_load() {
+    require_once( 'vendor/autoload.php' );
+    \Carbon_Fields\Carbon_Fields::boot();
+}
+
+function load_widgets() {
+	class ThemeWidgetExample extends Widget {
+		// Register widget function. Must have the same name as the class
+		function __construct() {
+			$this->setup( 'theme_widget_example', 'Theme Widget - Example', 'Displays a block with title/text', array(
+				Field::make( 'text', 'title', 'Title' )->set_default_value( 'Hello World!') ,
+				Field::make( 'textarea', 'content', 'Content' )->set_default_value( 'Lorem Ipsum dolor sit amet' )
+			) );
+		}
+
+		// Called when rendering the widget in the front-end
+		function front_end( $args, $instance ) {
+			echo $args['before_title'] . $instance['title'] . $args['after_title'];
+			echo '<p>' . $instance['content'] . '</p>';
+		}
+	}
+
+	register_widget( 'ThemeWidgetExample' );
+}
+
+add_action( 'widgets_init', 'load_widgets' );
 
 // * Remove Storefront styles
 add_action( 'wp_print_styles', function(){
