@@ -23,7 +23,6 @@ add_action("wp_enqueue_scripts", function(){
 // * Custom view functions
 require_once "include/ignx_view_functions.php";
 
-
 // * Init actions
 add_action("init", function (){
 	// * Remove storefront's menu locations
@@ -31,7 +30,7 @@ add_action("init", function (){
 	unregister_nav_menu('secondary');
 	unregister_nav_menu('handheld');
 
-	// * Remove header actions
+	// * Remove header hooks
 	remove_filter("storefront_header", "storefront_skip_links", 5);
 	remove_filter("storefront_header", "storefront_social_icons", 10);
 	remove_filter("storefront_header", "storefront_secondary_navigation", 30);
@@ -42,7 +41,7 @@ add_action("init", function (){
 	remove_filter("storefront_header", "storefront_header_cart", 60);
 	remove_filter("storefront_header", "storefront_primary_navigation_wrapper_close", 68);
 
-	// * Add header actions
+	// * Add header hooks
 	add_filter("storefront_header", "storefront_primary_navigation_wrapper", 41);
 	add_filter("storefront_header", "storefront_primary_navigation", 42);
 	add_filter("storefront_header", "storefront_primary_navigation_wrapper_close", 50);
@@ -52,15 +51,62 @@ add_action("init", function (){
 	add_filter("storefront_header", "ignx_header_cart_aside", 62);
 	add_filter("storefront_header", "storefront_header_container_close", 68);
 
-	// * Remove homepage actions
+	// * Remove homepage hooks
 	remove_filter("homepage", "storefront_homepage_content", 10);
 	remove_filter("homepage", "storefront_recent_products", 30);
 	remove_filter("homepage", "storefront_featured_products", 40);
 	remove_filter("homepage", "storefront_on_sale_products", 60);
 	remove_filter("homepage", "storefront_best_selling_products", 70);
 	
+	// * Remove footer hooks
+	remove_filter("storefront_footer", "storefront_credit", 20);
+	remove_filter( 'storefront_after_footer', 'storefront_sticky_single_add_to_cart', 999 );
+	remove_filter( 'storefront_footer', 'storefront_handheld_footer_bar', 999 );
+
+	// * Add footer hooks
+	add_filter("storefront_footer", "ignx_footer_logo", 5);
+	add_filter("storefront_footer", "ignx_footer_contacts", 20);
+	add_filter("storefront_footer", "storefront_credit", 30);
 });
 
+// * Register custom sidebars and widgets
+add_action( 'widgets_init', function() {
+	register_sidebar(
+		array(
+			'id' => 'ignx_footer_1',
+			'name' => 'Подвал - 1',
+			'description' => 'Перетащите сюда виджеты, чтобы добавить их в первую колонку футера.',
+			'before_widget' => '<div id="%1$s" class="foot widget fwidget %2$s">',
+			'after_widget' => '</div>',
+			'before_title' => '<h4 class="fwidget__header">',
+			'after_title' => '</h4>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'id' => 'ignx_footer_2',
+			'name' => 'Подвал - 2',
+			'description' => 'Перетащите сюда виджеты, чтобы добавить их во вторую колонку футера.',
+			'before_widget' => '<div id="%1$s" class="foot widget fwidget %2$s">',
+			'after_widget' => '</div>',
+			'before_title' => '<h4 class="fwidget__header">',
+			'after_title' => '</h4>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'id' => 'ignx_footer_3',
+			'name' => 'Подвал - 3',
+			'description' => 'Перетащите сюда виджеты, чтобы добавить их в третью колонку футера.',
+			'before_widget' => '<div id="%1$s" class="foot widget fwidget %2$s">',
+			'after_widget' => '</div>',
+			'before_title' => '<h4 class="fwidget__header">',
+			'after_title' => '</h4>',
+		)
+	);
+});
 
 // * After setup theme actions
 add_action( 'after_setup_theme', function (){

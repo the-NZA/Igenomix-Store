@@ -39,7 +39,6 @@ function storefront_product_categories( $args ) {
 					</article>
 
 					<?php endforeach; ?>
-
 				</div>
 			</div>
 
@@ -61,6 +60,7 @@ function storefront_popular_products( $args ) {
 	);
 
 	$products = wc_get_products( $args );
+
 	/*
 	* If at least 1 featured product exist display this section
 	*/
@@ -88,6 +88,7 @@ function storefront_popular_products( $args ) {
 							<h4 class="productcard__title"><?php echo $product->get_name();?></h4>
 							<p class="productcard__snippet"><?php echo $product->get_short_description();?></p>
 							<p class="productcard__price">
+
 							<?php // If variable product then just display min and max variable prices
 							if($product instanceof WC_Product_Variable) {
 								$prices = $product->get_variation_prices()['sale_price'];
@@ -119,7 +120,6 @@ function storefront_popular_products( $args ) {
 							?>
 							</p>
 
-<!-- <span class="regular_price regular_price--onsale">20050</span> <span class="sale_price">18500</span>₽ -->
 							<button class="button_rounded productcard__button">
 								<a href="<?php echo $product->get_permalink(); ?>">Заказать</a>
 							</button>

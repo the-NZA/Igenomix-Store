@@ -1,10 +1,13 @@
 /* .fwidget {} */
 
+.fwidget h2,
 .fwidget__header {
+	font-size: 1rem;
 	margin: 0 0 var(--offset-half) 0;
 	color: rgb(var(--rgb-slate-grey));
 }
 
+.fwidget ul,
 .fwidget__links {
 	list-style: none;
 	margin: 0;
@@ -12,15 +15,26 @@
 	font-size: .85rem;
 }
 
+.fwidget ul li,
 .fwidget__links li {
-	margin-bottom: calc(var(--offset-half) / 2);
+	padding: 0 !important;
+	margin-bottom: calc(var(--offset-half) / 2) !important;
 }
 
+.fwidget ul li a,
 .fwidget__links li a {
 	text-decoration: none;
 	color: rgb(var(--rgb-slate-grey));
 }
 
+.fwidget ul li::before,
+.fwidget__links li::before,
+.fwidget ul li a::before,
+.fwidget__links li a::before {
+	display: none !important;
+}
+
+.fwidget ul li a:hover,
 .fwidget__links li a:hover {
 	text-decoration: underline;
 }

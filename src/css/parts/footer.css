@@ -34,6 +34,14 @@
 	justify-content: space-between;
 }
 
+.footer__widgets .wp-block-group > div > div {
+	margin-bottom: var(--offset);
+}
+
+.footer__widgets .wp-block-group > div > div:last-of-type {
+	margin-bottom: 0;
+}
+
 .footer__contacts{
 	grid-area: fContacts;
 
