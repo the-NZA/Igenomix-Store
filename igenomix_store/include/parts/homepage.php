@@ -2,9 +2,10 @@
 
 function storefront_product_categories( $args ) {
 	$categories = get_categories([
-		"taxonomy" => "product_cat",
-		"hide_empty" => 1,
-		"child_of" => 0,
+		"taxonomy" 	=> "product_cat",
+		"hide_empty" 	=> 1,
+		"parent" 	=> 0,
+		// "child_of" 	=> 0,
 	]);
 
 	/*
