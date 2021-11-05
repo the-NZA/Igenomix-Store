@@ -112,6 +112,16 @@ add_action("init", function (){
 	add_filter("storefront_footer", "ignx_footer_logo", 5);
 	add_filter("storefront_footer", "ignx_footer_contacts", 20);
 	add_filter("storefront_footer", "storefront_credit", 30);
+
+	// * Remove Woocommerce hooks
+	remove_filter( "woocommerce_before_main_content", "woocommerce_output_content_wrapper", 10);
+	remove_filter( 'woocommerce_before_main_content', 'storefront_before_content', 10); 
+	remove_filter( 'storefront_before_content', 'woocommerce_breadcrumb', 10); 	// DISABLE BREADCRUMB
+	remove_filter( "woocommerce_before_main_content", "woocommerce_breadcrumb", 20); // DISABLE BREADCRUMB
+	remove_filter( 'woocommerce_archive_description', 'woocommerce_taxonomy_archive_description', 10);
+	remove_filter( 'woocommerce_archive_description', 'woocommerce_product_archive_description', 10);
+	
+
 });
 
 // * Register custom sidebars and widgets
