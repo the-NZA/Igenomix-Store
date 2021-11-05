@@ -18,11 +18,17 @@ function ignx_footer_logo() {
 function storefront_footer_widgets() {
 ?>
 	<div class="footer__widgets">
-		<?php 
-		dynamic_sidebar( 'ignx_footer_1' );
-		dynamic_sidebar( 'ignx_footer_2' );
-		dynamic_sidebar( 'ignx_footer_3' );
-		?>
+		<div class="footer__widgets_wrapper">
+			<?php dynamic_sidebar( 'ignx_footer_1' );?>
+		</div>
+
+		<div class="footer__widgets_wrapper">
+			<?php dynamic_sidebar( 'ignx_footer_2' );?>
+		</div>
+
+		<div class="footer__widgets_wrapper">
+			<?php dynamic_sidebar( 'ignx_footer_3' );?>
+		</div>
 
 		<div class="fwidget">
 			<h4 class="fwidget__header">Igenomix в социальных сетях</h4>

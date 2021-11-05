@@ -19,10 +19,6 @@
 			 * @hooked storefront_credit         - 30
 			 */
 			do_action( 'storefront_footer' );
-
-			// echo '<pre>';
-			// print_r(wp_get_sidebars_widgets());
-			// echo '</pre>';
 			?>
 		</div>
 	</footer>

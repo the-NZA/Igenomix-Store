@@ -1,4 +1,10 @@
-/* .fwidget {} */
+.fwidget {
+	margin-bottom: var(--offset);
+}
+
+.fwidget:last-of-type {
+	margin-bottom: 0;
+}
 
 .fwidget h2,
 .fwidget__header {

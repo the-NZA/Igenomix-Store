@@ -22,20 +22,61 @@ function crb_load() {
     \Carbon_Fields\Carbon_Fields::boot();
 }
 
+function getAllMenus() {
+	$res = [
+		'ignx_is_not_set' => '-- Choose menu --', // First value as default
+	];
+	$menus = wp_get_nav_menus();
+
+	// Create dict with key == menu id (term_id) and value == menu name
+	foreach($menus as $menu) {
+		$res[$menu->term_id] = $menu->name;
+	}
+
+	return $res;
+}
+
+// * Create custom carbon widgets
 function load_widgets() {
 	class ThemeWidgetExample extends Widget {
 		// Register widget function. Must have the same name as the class
 		function __construct() {
 			$this->setup( 'theme_widget_example', 'Theme Widget - Example', 'Displays a block with title/text', array(
-				Field::make( 'text', 'title', 'Title' )->set_default_value( 'Hello World!') ,
-				Field::make( 'textarea', 'content', 'Content' )->set_default_value( 'Lorem Ipsum dolor sit amet' )
+				Field::make( 'text', 'ignx_title', __('Title') ),
+				Field::make( 'select', 'ignx_menu_select', __('Choose menu'))
+					->set_options('getAllMenus')
+						->set_help_text(__('Choose one option'))
+						->set_classes( 'my-select-class' )
+						->set_required(true)
+				// Field::make( 'complex', 'ignx_links', __('Links'))
+				// 	->add_fields([
+				// 		Field::make('text', 'url_text', __('Link URL'))
+				// 			->set_attribute('placeholder', __('https://example.com'))
+				// 			->set_attribute('pattern', 'https?://.*')
+				// 			->set_attribute('type', 'url')
+				// 			->set_required( true ),
+				// 	])
 			) );
+
+			// $this->print_wrappers = false;
 		}
 
 		// Called when rendering the widget in the front-end
 		function front_end( $args, $instance ) {
-			echo $args['before_title'] . $instance['title'] . $args['after_title'];
-			echo '<p>' . $instance['content'] . '</p>';
+			echo $args['before_title'] . $instance['ignx_title'] . $args['after_title'];
+			if($instance['ignx_menu_select'] === 'ignx_is_not_set') {
+				echo "Menu doesn't show";
+				return;
+			}
+			
+			$menu_items = wp_get_nav_menu_items( $instance['ignx_menu_select']);
+			$menu_list = '<ul class="fwidget__links">';
+			foreach($menu_items as $item) {
+				$menu_list .= sprintf('<li><a href="%s">%s</a></li>', $item->url, $item->title);
+			}
+			$menu_list .= '</ul>';
+
+			echo $menu_list;
 		}
 	}
 
@@ -56,13 +97,17 @@ add_action( 'wp_print_scripts', function(){
 	wp_deregister_script( 'storefront-header-cart' );
 });
 
-
 // * Add Theme Styles and Scripts
 add_action("wp_enqueue_scripts", function(){
 	// wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
 	wp_enqueue_style( 'ignmx-styles', get_stylesheet_directory_uri() . '/assets/main.css');
 	wp_enqueue_script( 'ignmx-scripts', get_stylesheet_directory_uri() . '/assets/main.js', array(), null, true );
 });
+
+// * Disables the block editor from managing widgets in the Gutenberg plugin.
+add_filter( 'gutenberg_use_widgets_block_editor', '__return_false' );
+// * Disables the block editor from managing widgets.
+add_filter( 'use_widgets_block_editor', '__return_false' );
 
 // * Custom view functions
 require_once "include/ignx_view_functions.php";
