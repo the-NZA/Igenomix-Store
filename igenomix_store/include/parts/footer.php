@@ -32,32 +32,6 @@ function storefront_footer_widgets() {
 
 		<div class="footer__widgets_wrapper">
 			<?php dynamic_sidebar( 'ignx_footer_4' );?>
-			<!-- <div class="fwidget">
-				<h4 class="fwidget__header">Igenomix в социальных сетях</h4>
-
-				<ul class="fwidget__socials">
-					<li class="fwidget__socicon">
-						<a href="#">
-							<i class="fab fa-instagram"></i>
-						</a>
-					</li>
-					<li class="fwidget__socicon">
-						<a href="#">
-							<i class="fab fa-youtube"></i>
-						</a>
-					</li>
-					<li class="fwidget__socicon">
-						<a href="#">
-							<i class="fab fa-twitter"></i>
-						</a>
-					</li>
-					<li class="fwidget__socicon">
-						<a href="#">
-							<i class="fab fa-linkedin"></i>
-						</a>
-					</li>
-				</ul>
-			</div> -->
 		</div>
 	</div>
 <?php
@@ -66,13 +40,14 @@ function storefront_footer_widgets() {
 function ignx_footer_contacts() {
 ?>
 	<div class="footer__contacts">
-		<a href="#" class="footerContacts__item">
+		<?php $phone_number = carbon_get_theme_option('ignx_phone_number'); ?>
+		<a href="tel:<?php echo $phone_number;?>" class="footerContacts__item">
 			<span class="footerContacts__icon">
 				<i class="far fa-phone-alt"></i>
 			</span>
-			8-999-888-77-66
+			<?php echo $phone_number; ?>
 		</a>
-		<a href="#" class="footerContacts__item">
+		<a href="mailto:<?php echo carbon_get_theme_option('ignx_email');?>" class="footerContacts__item">
 			<span class="footerContacts__icon">
 				<i class="far fa-envelope"></i>
 			</span>

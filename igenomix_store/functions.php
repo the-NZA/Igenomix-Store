@@ -10,7 +10,14 @@ function crb_attach_theme_options() {
 			Field::make( 'text', 'ignx_phone_number', __('Phone Number') )
 				->set_attribute('placeholder', __('Input phone number'))
 				->set_attribute('type', 'tel')
-				->set_attribute('pattern', '([\+]*[7-8]{1}\s?[\(]*9[0-9]{2}[\)]*\s?\d{3}[-]*\d{2}[-]*\d{2})')
+				// ->set_attribute('pattern', '([\+]*[7-8]{1}\s?[\(]*9[0-9]{2}[\)]*\s?\d{3}[-]*\d{2}[-]*\d{2})')
+				->set_width(50)
+				->set_required( true ),
+			Field::make( 'text', 'ignx_email', __('Email') )
+				->set_attribute('placeholder', __('Input email address'))
+				->set_attribute('type', 'email')
+				// ->set_attribute('pattern', '([\+]*[7-8]{1}\s?[\(]*9[0-9]{2}[\)]*\s?\d{3}[-]*\d{2}[-]*\d{2})')
+				->set_width(50)
 				->set_required( true ),
 		] );
 }
