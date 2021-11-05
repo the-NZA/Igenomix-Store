@@ -20,13 +20,14 @@ function getAllMenus() {
 class MenuWithHeaderWidget extends Widget {
 	// Register widget function. Must have the same name as the class
 	function __construct() {
-		$this->setup( 'ignx_menu_with_header', 'Меню с заголовком', 'Отоброжает заголовок и выбранное меню', array(
-			Field::make( 'text', 'title', __('Title') ),
+		$this->setup( 'ignx_menu_with_header', 'Меню с заголовком', 'Отображает заголовок и выбранное меню', array(
+			Field::make( 'text', 'title', __('Title') )
+				->set_required(true),
 			Field::make( 'select', 'menu_select', __('Choose menu'))
 				->set_options('getAllMenus')
-					->set_help_text(__('Choose one option'))
-					->set_classes( 'my-select-class' )
-					->set_required(true)
+				->set_help_text(__('Choose one option'))
+				->set_classes( 'my-select-class' )
+				->set_required(true)
 		) );
 	}
 

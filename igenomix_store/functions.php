@@ -25,8 +25,10 @@ function crb_load() {
 // * Create custom carbon widgets
 function load_custom_widgets() {
 	require_once "include/widgets/MenuWithHeaderWidget.php";
+	require_once "include/widgets/SocialLinksWidget.php";
 
 	register_widget( 'MenuWithHeaderWidget' );
+	register_widget( 'SocialLinksWidget' );
 }
 
 // * Register custom widgets
@@ -136,6 +138,18 @@ add_action( 'widgets_init', function() {
 			'id' => 'ignx_footer_3',
 			'name' => 'Подвал - 3',
 			'description' => 'Перетащите сюда виджеты, чтобы добавить их в третью колонку футера.',
+			'before_widget' => '<div id="%1$s" class="foot widget fwidget %2$s">',
+			'after_widget' => '</div>',
+			'before_title' => '<h4 class="fwidget__header">',
+			'after_title' => '</h4>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'id' => 'ignx_footer_4',
+			'name' => 'Подвал - 4',
+			'description' => 'Перетащите сюда виджеты, чтобы добавить их в четвертую колонку футера.',
 			'before_widget' => '<div id="%1$s" class="foot widget fwidget %2$s">',
 			'after_widget' => '</div>',
 			'before_title' => '<h4 class="fwidget__header">',

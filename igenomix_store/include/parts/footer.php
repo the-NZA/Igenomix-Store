@@ -30,57 +30,35 @@ function storefront_footer_widgets() {
 			<?php dynamic_sidebar( 'ignx_footer_3' );?>
 		</div>
 
-		<div class="fwidget">
-			<h4 class="fwidget__header">Igenomix в социальных сетях</h4>
+		<div class="footer__widgets_wrapper">
+			<?php dynamic_sidebar( 'ignx_footer_4' );?>
+			<!-- <div class="fwidget">
+				<h4 class="fwidget__header">Igenomix в социальных сетях</h4>
 
-			<ul class="fwidget__socials">
-				<li class="fwidget__socicon">
-					<a href="#">
-						<i class="fab fa-instagram"></i>
-					</a>
-				</li>
-				<li class="fwidget__socicon">
-					<a href="#">
-						<i class="fab fa-youtube"></i>
-					</a>
-				</li>
-				<li class="fwidget__socicon">
-					<a href="#">
-						<i class="fab fa-twitter"></i>
-					</a>
-				</li>
-				<li class="fwidget__socicon">
-					<a href="#">
-						<i class="fab fa-linkedin"></i>
-					</a>
-				</li>
-			</ul>
+				<ul class="fwidget__socials">
+					<li class="fwidget__socicon">
+						<a href="#">
+							<i class="fab fa-instagram"></i>
+						</a>
+					</li>
+					<li class="fwidget__socicon">
+						<a href="#">
+							<i class="fab fa-youtube"></i>
+						</a>
+					</li>
+					<li class="fwidget__socicon">
+						<a href="#">
+							<i class="fab fa-twitter"></i>
+						</a>
+					</li>
+					<li class="fwidget__socicon">
+						<a href="#">
+							<i class="fab fa-linkedin"></i>
+						</a>
+					</li>
+				</ul>
+			</div> -->
 		</div>
-
-		<!-- <div class="fwidget">
-			<h4 class="fwidget__header">Наши цели</h4>
-
-			<ul class="fwidget__links">
-				<li><a href="#">Снижение рисков рождения ребенка с наследственными заболеваниями</a></li>
-				<li><a href="#">Для спокойствия будущих мам</a></li>
-			</ul>
-		</div> -->
-		<!-- <div class="fwidget">
-			<h4 class="fwidget__header">Все продукты</h4>
-
-			<ul class="fwidget__links">
-				<li><a href="#">Продукты</a></li>
-			</ul>
-		</div> -->
-		<!-- <div class="fwidget">
-			<h4 class="fwidget__header">Об Igenomix</h4>
-
-			<ul class="fwidget__links">
-				<li><a href="#">О компании</a></li>
-				<li><a href="#">Контакты</a></li>
-				<li><a href="#">Работа с нами</a></li>
-			</ul>
-		</div> -->
 	</div>
 <?php
 }
