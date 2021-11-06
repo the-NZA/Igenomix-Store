@@ -120,7 +120,12 @@ add_action("init", function (){
 	remove_filter( "woocommerce_before_main_content", "woocommerce_breadcrumb", 20); // DISABLE BREADCRUMB
 	remove_filter( 'woocommerce_archive_description', 'woocommerce_taxonomy_archive_description', 10);
 	remove_filter( 'woocommerce_archive_description', 'woocommerce_product_archive_description', 10);
-	
+	// remove_filter( 'woocommerce_before_shop_loop', 'woocommerce_product_archive_description', 10);
+	remove_filter( 'woocommerce_before_shop_loop_item_title', 'woocommerce_show_product_loop_sale_flash', 10 );
+	remove_filter( 'woocommerce_after_shop_loop_item_title', 'woocommerce_show_product_loop_sale_flash', 6 );
+	add_filter( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_link_close', 11 );
+	remove_filter( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_product_link_close', 5 );
+	remove_filter( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_rating', 5 );
 
 });
 
