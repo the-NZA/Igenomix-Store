@@ -34,16 +34,13 @@ $isShop = is_shop();
 		?>
 
 		<p class="pagetitle__snippet">
-
-		<?php 
-		if($isShop) {
+		<?php if($isShop) {
 			$pageID = wc_get_page_id('shop');
 			echo carbon_get_post_meta( $pageID, 'page_description' );
 
 		} else if( $desc = get_the_archive_description()) {
 			echo $desc;
-		}
-		?>
+		} ?>
 		</p>
 	</div>
 </section>
