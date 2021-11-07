@@ -92,7 +92,7 @@ function storefront_popular_products( $args ) {
 							<h4 class="productcard__title"><?php echo $product->get_name();?></h4>
 							<p class="productcard__snippet"><?php echo $product->get_short_description();?></p>
 							<p class="productcard__price">
-								<?php displayCardPrice($product); ?>
+								<?php displayCardPrice($product, $currencySymbol); ?>
 							</p>
 
 							<button class="button_rounded productcard__button">

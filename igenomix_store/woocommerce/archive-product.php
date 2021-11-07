@@ -86,12 +86,8 @@ do_action( 'woocommerce_before_main_content' );
 		do_action( 'woocommerce_no_products_found' );
 	}
 
-	/**
-	 * Hook: woocommerce_sidebar.
-	 *
-	 * @hooked woocommerce_get_sidebar - 10
-	 */
-	do_action( 'woocommerce_sidebar' );
+	/// Get sidebar
+	get_sidebar('product-archive');
 
 	/**
 	 * Hook: woocommerce_after_main_content.

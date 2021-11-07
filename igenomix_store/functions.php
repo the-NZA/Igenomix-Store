@@ -126,6 +126,13 @@ add_action("init", function (){
 	add_filter( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_link_close', 11 );
 	remove_filter( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_product_link_close', 5 );
 	remove_filter( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_rating', 5 );
+	remove_filter( 'woocommerce_after_main_content', 'storefront_after_content', 10 );
+
+	// * Remove Storefront pagination hooks
+	remove_filter( 'woocommerce_after_shop_loop', 'storefront_sorting_wrapper', 9 );
+	remove_filter( 'woocommerce_after_shop_loop', 'woocommerce_catalog_ordering', 10 );
+	remove_filter( 'woocommerce_after_shop_loop', 'woocommerce_result_count', 20 );
+	remove_filter( 'woocommerce_after_shop_loop', 'storefront_sorting_wrapper_close', 31 );
 
 });
 

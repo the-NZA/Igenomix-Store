@@ -23,3 +23,7 @@ function ignx_display_product_description($product) {
 
 	<?php
 }
+
+function storefront_after_content() {
+	do_action( 'storefront_sidebar' );
+}

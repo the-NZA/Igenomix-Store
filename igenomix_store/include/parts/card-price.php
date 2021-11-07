@@ -1,6 +1,6 @@
 <?php
 
-function displayCardPrice($product) {
+function displayCardPrice($product, $currencySymbol) {
 	if(!$product) {
 		return;
 	}
