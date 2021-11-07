@@ -10,6 +10,13 @@
 	gap: var(--offset);
 }
 
+.prodarchive--shop{
+	grid-template-columns: 1fr;
+	grid-template-areas: 
+		"arMain"
+		"arPagi";
+}
+
 .prodarchive__aside {
 	grid-area: arAside;
 }
@@ -20,11 +27,15 @@
 	grid-area: arMain;
 }
 
-.prodarchive__list	{
+.prodarchive__list{
 	height: 100%;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: var(--offset);
+}
+
+.prodarchive__list--col3{
+	grid-template-columns: repeat(3, 1fr);
 }
 
 .prodarchive__pagination {

@@ -1,0 +1,39 @@
+.prodcategories {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: var(--offset);
+}
+
+.prodcatcard {
+	border-radius: calc(var(--offset-half) / 2);
+	box-shadow: var(--card-shadow);
+	background-color: rgb(var(--rgb-mandys-pink));
+	transition: var(--main-transition);
+}
+
+.prodcatcard:hover {
+	background-color: var(--c-mandys-pink-highlighted);
+}
+
+.prodcatcard__link {
+	color: var(--c-white);
+	/* text-shadow: 0px 0px 1px rgba(var(--rgb-san-juan), var(--alpha-50)); */
+	font-weight: bolder;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 1.2rem;
+
+	display: block;
+	text-align: center;
+	padding: calc(var(--offset) * 1.5) var(--offset);
+}
+
+.prodcatcard:first-of-type {
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+
+.prodcatcard:nth-of-type(4){
+	grid-column-start: 2;
+	grid-column-end: 4;
+}

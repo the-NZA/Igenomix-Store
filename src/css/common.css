@@ -38,3 +38,7 @@
 .site-footer {
 	box-sizing: border-box;
 }
+
+.site-prodcategories {
+	background-color: rgba(var(--rgb-mandys-pink), var(--alpha-50));
+}

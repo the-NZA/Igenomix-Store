@@ -22,10 +22,7 @@
 
 .pagilist__button {
 	box-sizing: border-box;
-	padding: 5px 10px;
-	min-width: var(--offset);
-	min-height: var(--offset);
-	cursor: pointer;
+	padding: 0;
 	background-color: rgb(var(--rgb-white));
 	border: none;
 	border-radius: calc(var(--offset-half) / 3);
@@ -40,8 +37,15 @@
 }
 
 .pagilist__button a {
+	cursor: pointer;
 	text-decoration: none;
+	box-sizing: border-box;
 	color: rgb(var(--rgb-slate-grey));
+	display: flex;
+	min-width: var(--offset);
+	min-height: var(--offset);
+	justify-content: center;
+	align-items: center;
 }
 
 .pagilist__button.current {
