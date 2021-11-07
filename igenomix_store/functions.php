@@ -22,6 +22,18 @@ function crb_attach_theme_options() {
 		] );
 }
 
+
+// * Register theme options page
+add_action( 'carbon_fields_register_fields', 'page_custom_fields' );
+function page_custom_fields() {
+	Container::make( 'post_meta', 'Дополнительные настройки' )
+		->where( 'post_type', '=', 'page' )
+		->add_fields( array(
+			Field::make( 'textarea', 'page_description', 'Описание страницы' ),
+	
+	) );
+}
+
 // * Boot Carbon Fields
 add_action( 'after_setup_theme', 'crb_load' );
 function crb_load() {

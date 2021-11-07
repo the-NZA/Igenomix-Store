@@ -15,6 +15,8 @@ get_header();
  * @hooked WC_Structured_Data::generate_website_data() - 30 ? DISABLED ?
  */
 do_action( 'woocommerce_before_main_content' );
+
+$isShop = is_shop();
 ?>
 
 <!-- Site title -->
@@ -30,19 +32,58 @@ do_action( 'woocommerce_before_main_content' );
 		 */
 		do_action( 'woocommerce_archive_description' );
 		?>
-		<?php 
-		$desc = get_the_archive_description(); 
 
-		if($desc) : ?>
 		<p class="pagetitle__snippet">
-			<?php echo $desc; ?>
+
+		<?php 
+		if($isShop) {
+			$pageID = wc_get_page_id('shop');
+			echo carbon_get_post_meta( $pageID, 'page_description' );
+
+		} else if( $desc = get_the_archive_description()) {
+			echo $desc;
+		}
+		?>
 		</p>
-		<?php endif;?>
 	</div>
 </section>
 <!-- Site title END -->
 
-<div class="wrapper prodarchive">
+<!-- Site Product categories -->
+<?php if($isShop) :
+	$categories = get_categories([
+		"taxonomy" 	=> "product_cat",
+		"hide_empty" 	=> 1,
+		"parent" 	=> 0,
+		// "child_of" 	=> 0,
+	]);
+
+	/*
+	* If at least 1 category exist display categories section
+	*/
+	if(count($categories) > 0) : ?>
+	<section class="site-prodcategories">
+		<div class="prodcategories wrapper ">
+			<?php foreach($categories as $cat) : 
+				$catLink = get_category_link( $cat->term_id );	
+			?>
+
+				<div class="prodcatcard">
+					<a href="<?php echo $catLink;?>" class="prodcatcard__link">
+						<?php echo $cat->name;?>
+					</a>
+				</div>
+
+			<?php endforeach; ?>
+		</div>
+	</section>
+	<?php endif;
+endif;
+?>
+
+<!-- Site Product categories END -->
+
+<div class="<?php echo $isShop ? 'wrapper prodarchive prodarchive--shop' : 'wrapper prodarchive';?>">
 
 	<?php if ( woocommerce_product_loop() ) {
 		/**
@@ -86,8 +127,10 @@ do_action( 'woocommerce_before_main_content' );
 		do_action( 'woocommerce_no_products_found' );
 	}
 
-	/// Get sidebar
-	get_sidebar('product-archive');
+	if(!$isShop) {
+		// Get sidebar
+		get_sidebar('product-archive');
+	}
 
 	/**
 	 * Hook: woocommerce_after_main_content.
@@ -95,7 +138,6 @@ do_action( 'woocommerce_before_main_content' );
 	 * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
 	 */
 	do_action( 'woocommerce_after_main_content' );
-
 
 	?>
 </div>
