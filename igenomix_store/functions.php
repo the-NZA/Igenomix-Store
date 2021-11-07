@@ -77,6 +77,11 @@ add_filter( 'gutenberg_use_widgets_block_editor', '__return_false' );
 // * Disables the block editor from managing widgets.
 add_filter( 'use_widgets_block_editor', '__return_false' );
 
+//* Set number of products to be displayed
+add_filter( 'loop_shop_per_page', function() {
+	return 10;
+} );
+
 // * Custom view functions
 require_once "include/ignx_view_functions.php";
 
@@ -147,6 +152,7 @@ add_action("init", function (){
 	remove_filter( 'woocommerce_after_shop_loop', 'storefront_sorting_wrapper_close', 31 );
 
 });
+
 
 // * Register custom sidebars and widgets
 add_action( 'widgets_init', function() {
