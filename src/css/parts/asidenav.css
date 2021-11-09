@@ -2,7 +2,7 @@
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	border-radius: var(--card-border-radius);
+	border-radius: calc(var(--offset-half) / 2);
 	background-color: rgb(var(--rgb-alice-blue));
 	box-shadow: var(--card-shadow);
 	overflow: hidden;
