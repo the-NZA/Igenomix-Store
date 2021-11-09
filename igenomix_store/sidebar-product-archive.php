@@ -3,32 +3,31 @@
  * The sidebar containing the main widget area.
  */
 
-if ( ! is_active_sidebar( 'sidebar-1' ) ) {
-	return;
+// if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+// 	return;
+// }
+
+if ( is_product_category() ) {
+	$currentCategory  = get_queried_object();
+	$parentCatID = $currentCategory->parent !== 0 ? $currentCategory->parent : $currentCategory->term_id;
+	$childCategories = get_terms([
+		'taxonomy' => $currentCategory->taxonomy,
+		'parent'   => $parentCatID,
+	]);
 }
 ?>
 
 <!-- Site aside -->
 <aside class="prodarchive__aside">
-	<!-- <nav class="prodarchive__asidenav">
+	<nav class="prodarchive__asidenav">
 		<ul class="asidenav">
+			<?php foreach($childCategories as $chCat) : ?>
 			<li class="asidenav__item">
-				<a class="active" href="#">Первая категория</a>
+				<a class="<?php echo $chCat->term_id === $currentCategory->term_id ? 'active' : '';?>" href="<?php echo get_category_link($chCat->term_id) ?>"><?php echo $chCat->name;?></a>
 			</li>
-			<li class="asidenav__item">
-				<a href="#">Вторая категория</a>
-			</li>
-			<li class="asidenav__item">
-				<a href="#">Категория три</a>
-			</li>
-			<li class="asidenav__item">
-				<a href="#">Новая категория</a>
-			</li>
-			<li class="asidenav__item">
-				<a href="#">Тестовая категория</a>
-			</li>
+			<?php endforeach; ?>
 		</ul>
-	</nav> -->
-	<?php dynamic_sidebar( 'sidebar-1' ); ?>
+	</nav>
+	<?php /* dynamic_sidebar( 'sidebar-1' ); */ ?>
 </aside>
 <!-- Site aside END -->

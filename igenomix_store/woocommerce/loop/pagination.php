@@ -26,6 +26,7 @@ $base = isset($base) ? str_replace('%#%', '{page_num}', $base) : str_replace(999
 $format  = isset( $format ) ? $format : '';
 
 if ( $total <= 1 ) {
+	echo '<nav class="woocommerce-pagination prodarchive__pagination"></nav>';
 	return;
 }
 
