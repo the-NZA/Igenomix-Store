@@ -21,8 +21,12 @@
 @import url("./pages/homepage/hero.css"); /* Import Homepage Hero section styles */
 @import url("./pages/homepage/popular_products.css"); /* Import Homepage Popular products section styles */
 @import url("./pages/homepage/categories.css"); /* Import Homepage Categories section styles */
+
 @import url("./pages/archive/product_archive.css"); /* Import Archive styles */
 @import url("./pages/archive/prodcategories.css"); /* Import Product Categories styles */
+
+@import url("./pages/single-product/singleprod.css"); /* Import Single Product styles */
+@import url("./pages/single-product/singlecard.css"); /* Import Single Product Card styles */
 
 @import url("./utils/font.css");		/* Import font styles */
 @import url("./utils/shared.css"); 	/* Import shared style */

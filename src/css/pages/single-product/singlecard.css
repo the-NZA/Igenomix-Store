@@ -1,0 +1,29 @@
+.singlecard {
+	padding: var(--offset);
+	display: flex;
+	flex-direction: column;
+
+}
+
+.singlecard__title {
+	margin: 0 0 var(--offset) 0;
+	color: rgb(var(--rgb-san-juan));
+
+}
+
+.singlecard__price {
+	margin: 0 0 var(--offset) 0;
+}
+
+.singlecard__snippet {
+	margin: 0;
+	margin: 0 0 var(--offset) 0;
+	color: rgb(var(--rgb-san-juan));
+	line-height: 1.5;
+	text-align: justify;
+}
+
+.singlecard__add-to-cart {
+	margin-top: auto;
+	grid-area: scAdd;
+}
