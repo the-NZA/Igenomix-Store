@@ -20,12 +20,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header(); ?>
+
+<!--Site main-->
+<main class="wrapper site-main singleprod">
 	<?php
 		/**
 		 * woocommerce_before_main_content hook.
-		 *
-		 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
-		 * @hooked woocommerce_breadcrumb - 20
+		 * @hooked woocommerce_output_content_wrapper - 10 DISABLED
+		 * @hooked woocommerce_breadcrumb - 20 DISABLED
 		 */
 		do_action( 'woocommerce_before_main_content' );
 	?>
@@ -40,8 +42,7 @@ get_header(); ?>
 	<?php
 		/**
 		 * woocommerce_after_main_content hook.
-		 *
-		 * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
+		 * @hooked woocommerce_output_content_wrapper_end - 10 DISABLED
 		 */
 		do_action( 'woocommerce_after_main_content' );
 	?>
@@ -49,11 +50,12 @@ get_header(); ?>
 	<?php
 		/**
 		 * woocommerce_sidebar hook.
-		 *
-		 * @hooked woocommerce_get_sidebar - 10
+		 * @hooked woocommerce_get_sidebar - 10 DISABLED
 		 */
 		do_action( 'woocommerce_sidebar' );
 	?>
+</main>
+<!--Site main END-->
 
 <?php
 get_footer();

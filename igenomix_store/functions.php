@@ -155,6 +155,16 @@ add_action("init", function (){
 	remove_filter( 'woocommerce_after_shop_loop', 'woocommerce_result_count', 20 );
 	remove_filter( 'woocommerce_after_shop_loop', 'storefront_sorting_wrapper_close', 31 );
 
+	// * Woocommerce notices wrapper
+	remove_filter( 'woocommerce_before_single_product', 'woocommerce_output_all_notices', 10 );
+	add_filter( 'woocommerce_before_single_product', 'ignx_output_all_notices', 10 );
+
+	// * Woocommerce single product hooks
+	remove_filter( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash', 10 );
+	remove_filter( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 20 );
+	remove_filter( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10 );
+
+
 });
 
 

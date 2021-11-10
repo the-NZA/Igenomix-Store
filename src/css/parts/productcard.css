@@ -27,6 +27,14 @@
 	line-height: 1.5;
 }
 
+.singlecard__snippet p {
+	margin-bottom: calc(var(--offset) / 2);
+}
+
+.singlecard__snippet p:last-of-type {
+    margin-bottom: 0;
+}
+
 .productcard__price {
 	text-align: center;
 	margin: auto 0 0 0;

@@ -36,6 +36,8 @@
 
 .singleprod__image img {
 	display: block;
+	max-width: 100%;
+	height: auto;
 }
 
 .singleprod__card{

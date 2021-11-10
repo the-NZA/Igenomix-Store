@@ -13,10 +13,15 @@
 
 .singlecard__price {
 	margin: 0 0 var(--offset) 0;
+	font-size: 1.4rem;
+	font-weight: bold;
+	color: rgb(var(--rgb-san-juan));
+
+	display: flex;
+	justify-content: flex-start;
 }
 
 .singlecard__snippet {
-	margin: 0;
 	margin: 0 0 var(--offset) 0;
 	color: rgb(var(--rgb-san-juan));
 	line-height: 1.5;
