@@ -67,22 +67,28 @@ if ( post_password_required() ) {
 	 */
 	do_action( 'woocommerce_single_product_summary' );
 
+	?>
+</div>
+
+<div class="singleprod__desc">
+	<?php
 	/**
 	 * Hook: woocommerce_after_single_product_summary.
 	 * @hooked woocommerce_output_product_data_tabs - 10
 	 * @hooked woocommerce_upsell_display - 15
-	 * @hooked woocommerce_output_related_products - 20
 	 */
 	do_action( 'woocommerce_after_single_product_summary' );
 	?>
 </div>
 
-<div class="singleprod__desc">
-	<h2>Описание</h2>
-	<p>Lorem ipsum dolor sit amet.</p>
-	<p>Repellendus soluta consectetur voluptatum est?</p>
-	<p>Lorem ipsum dolor sit amet.</p>
-	<p>Repellendus soluta consectetur voluptatum est?</p>
-</div>
+<section class="singleprod__related related products">
+	<?php
+	/**
+	 * Hook: ignx_dispay_related_products.
+	 * @hooked woocommerce_output_related_products - 5
+	 */
+	// do_action( 'ignx_dispay_related_products');
+	?>
+</section>
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>
