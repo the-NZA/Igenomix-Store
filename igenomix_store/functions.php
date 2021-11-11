@@ -154,6 +154,8 @@ add_action("init", function (){
 	remove_filter( 'woocommerce_after_shop_loop', 'woocommerce_catalog_ordering', 10 );
 	remove_filter( 'woocommerce_after_shop_loop', 'woocommerce_result_count', 20 );
 	remove_filter( 'woocommerce_after_shop_loop', 'storefront_sorting_wrapper_close', 31 );
+	remove_filter( 'woocommerce_before_shop_loop', 'storefront_woocommerce_pagination', 30 );
+	add_filter( 'theme_mod_storefront_product_pagination', '__return_false', 11 );
 
 	// * Woocommerce notices wrapper
 	remove_filter( 'woocommerce_before_single_product', 'woocommerce_output_all_notices', 10 );
@@ -163,6 +165,8 @@ add_action("init", function (){
 	remove_filter( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash', 10 );
 	remove_filter( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 20 );
 	remove_filter( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10 );
+	remove_filter( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+	add_action( 'ignx_dispay_related_products', 'woocommerce_output_related_products', 5 );
 
 
 });
