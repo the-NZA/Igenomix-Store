@@ -156,14 +156,32 @@
 				<span class="variable_price">20050 – 25000</span>₽
 			</p>
 
-			<p class="singlecard__snippet">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus officiis,
-				ratione culpa itaque vel eius voluptas voluptatibus fuga provident non est incidunt laborum ad. Sunt
-				sint neque suscipit delectus voluptatum, consequatur incidunt eaque sapiente quisquam, pariatur a
-				deserunt architecto obcaecati minima dolorem laudantium?
-			</p>
+			<div class="singlecard__snippet">
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, soluta.</p>
+				<p>Facere officia nam suscipit accusamus hic quasi quis vitae minima.</p>
+				<p>Repellat aliquid architecto et omnis dolorum expedita dolor nulla optio!</p>
+			</div>
 
-			<div class="singlecard__add-to-cart">Добавление в корзину</div>
+			<div class="singlecard__add-to-cart">
+				<form class="cart">
+					<div class="quantity">
+						<input type="number" name="quanitiy" id="quantity_asd234s" min="1" value="1">
+					</div>
+					<button class="single_add_to_cart_button">В корзину</button>
+				</form>
+			</div>
+
+			<div class="singlecard__meta">
+				<span class="posted_in">
+					Категория: <a href="#">Название категории</a>
+				</span>
+			</div>
+
+			<!-- * Only for admin users -->
+			<div class="edit-link">
+				<a href="#" class="post-edit-link">Изменить</a>
+			</div>
+			<!-- * Only for admin users -->
 		</div>
 
 		<div class="singleprod__desc proddesc">
@@ -178,11 +196,42 @@
 			</div>
 		</div>
 
-		<section class="singleprod__related related products">
-			<h2>Похожие товары</h2>
-			<p>Карточки товаров</p>
-			<p>Карточки товаров</p>
-			<p>Карточки товаров</p>
+		<section class="singleprod__related prodrelated related products">
+			<h2 class="prodrelated__title">Похожие товары</h2>
+			<div class="prodrelated__cards">
+				<article class="productcard">
+					<img src="/image/sample_product_icon.svg" alt="Продукт №" class="productcard__icon">
+					<h4 class="productcard__title">Название продукта</h4>
+					<p class="productcard__snippet">Мини-описание продукта для быстрого завлечения клиента</p>
+					<button class="button_rounded productcard__button">
+						<a href="#">Заказать</a>
+					</button>
+				</article>
+				<article class="productcard">
+					<img src="/image/sample_product_icon.svg" alt="Продукт №" class="productcard__icon">
+					<h4 class="productcard__title">Название продукта</h4>
+					<p class="productcard__snippet">Мини-описание продукта для быстрого завлечения клиента</p>
+					<button class="button_rounded productcard__button">
+						<a href="#">Заказать</a>
+					</button>
+				</article>
+				<article class="productcard">
+					<img src="/image/sample_product_icon.svg" alt="Продукт №" class="productcard__icon">
+					<h4 class="productcard__title">Название продукта</h4>
+					<p class="productcard__snippet">Мини-описание продукта для быстрого завлечения клиента</p>
+					<button class="button_rounded productcard__button">
+						<a href="#">Заказать</a>
+					</button>
+				</article>
+				<article class="productcard">
+					<img src="/image/sample_product_icon.svg" alt="Продукт №" class="productcard__icon">
+					<h4 class="productcard__title">Название продукта</h4>
+					<p class="productcard__snippet">Мини-описание продукта для быстрого завлечения клиента</p>
+					<button class="button_rounded productcard__button">
+						<a href="#">Заказать</a>
+					</button>
+				</article>
+			</div>
 		</section>
 
 	</main>

@@ -168,9 +168,6 @@ add_action("init", function (){
 	remove_filter( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 	add_action( 'ignx_dispay_related_products', 'woocommerce_output_related_products', 5 );
 	remove_filter( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
-
-
-
 });
 
 // * Set number of related products
