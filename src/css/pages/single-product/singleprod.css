@@ -3,10 +3,12 @@
 	display: grid;
 	gap: var(--offset);
 	grid-template-columns: calc(var(--site-width) / 4) 1fr;
+	grid-template-rows: max-content max-content 1fr max-content;
 	grid-template-areas: 
 		"sNotice sNotice"
 		"sImage sCard"
-		". sDesc";
+		". sDesc"
+		"sRelated sRelated";
 
 	align-items: baseline;
 }
@@ -56,4 +58,9 @@
 
 .singleprod__desc > h2, p {
 	margin: 0 0 var(--offset-half 0);
+}
+
+.singleprod__related {
+	grid-area: sRelated;
+
 }

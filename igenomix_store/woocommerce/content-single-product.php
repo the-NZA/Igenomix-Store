@@ -70,24 +70,25 @@ if ( post_password_required() ) {
 	?>
 </div>
 
-<div class="singleprod__desc">
+<div class="singleprod__desc proddesc">
 	<?php
 	/**
 	 * Hook: woocommerce_after_single_product_summary.
 	 * @hooked woocommerce_output_product_data_tabs - 10
-	 * @hooked woocommerce_upsell_display - 15
+	 * @hooked woocommerce_upsell_display - 15 DISABLED
 	 */
 	do_action( 'woocommerce_after_single_product_summary' );
 	?>
+
 </div>
 
-<section class="singleprod__related related products">
+<section class="singleprod__related prodrelated related products">
 	<?php
 	/**
 	 * Hook: ignx_dispay_related_products.
 	 * @hooked woocommerce_output_related_products - 5
 	 */
-	// do_action( 'ignx_dispay_related_products');
+	do_action( 'ignx_dispay_related_products');
 	?>
 </section>
 

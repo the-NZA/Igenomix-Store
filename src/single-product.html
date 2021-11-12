@@ -137,7 +137,12 @@
 	<!--Site main-->
 	<main class="wrapper site-main singleprod">
 		<div class="woocommerce-notices-wrapper singleprod__notice">
-			<p>Какое-то сообщение</p>
+			<div class="woocommerce-message">
+				<a href="/cart.html" class="button wc-forward">
+					Просмотр корзины
+				</a>
+				Вы отложили "Товар" в свою корзину
+			</div>
 		</div>
 
 		<div class="singleprod__image">
@@ -161,13 +166,24 @@
 			<div class="singlecard__add-to-cart">Добавление в корзину</div>
 		</div>
 
-		<div class="singleprod__desc">
-			<h2>Описание</h2>
-			<p>Lorem ipsum dolor sit amet.</p>
-			<p>Repellendus soluta consectetur voluptatum est?</p>
-			<p>Lorem ipsum dolor sit amet.</p>
-			<p>Repellendus soluta consectetur voluptatum est?</p>
+		<div class="singleprod__desc proddesc">
+			<h2 class="proddesc__title">Описание</h2>
+			<div class="proddesc__data">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, quam dolores animi quia
+					recusandae illum nobis dolorem labore similique maiores?</p>
+				<p>Provident natus at, repudiandae architecto tenetur porro. Totam rem corporis ab. Veniam ducimus iste
+					labore quisquam temporibus, iure et quaerat!</p>
+				<p>Aspernatur eum sint fuga vero commodi quidem ab aliquid illum distinctio enim perspiciatis reiciendis
+					dolorem, quae, delectus vel itaque molestiae!</p>
+			</div>
 		</div>
+
+		<section class="singleprod__related related products">
+			<h2>Похожие товары</h2>
+			<p>Карточки товаров</p>
+			<p>Карточки товаров</p>
+			<p>Карточки товаров</p>
+		</section>
 
 	</main>
 	<!--Site main END-->

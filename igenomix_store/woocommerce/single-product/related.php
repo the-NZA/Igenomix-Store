@@ -13,13 +13,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( $related_products ) :
 	$heading = apply_filters( 'woocommerce_product_related_products_heading', __( 'Related products', 'woocommerce' ) );
 
-	if ( $heading ) :
-		?>
-		<h2><?php echo esc_html( $heading ); ?></h2>
+	if ( $heading ) : ?>
+		<h2 class="prodrelated__title"><?php echo esc_html( $heading ); ?></h2>
 	<?php endif; ?>
 	
-	<?php woocommerce_product_loop_start(); ?>
-
+	
+	<div class="prodrelated__cards">
 		<?php foreach ( $related_products as $related_product ) : ?>
 
 				<?php
@@ -31,9 +30,8 @@ if ( $related_products ) :
 				?>
 
 		<?php endforeach; ?>
+	</div>
 
-	<?php woocommerce_product_loop_end();
-
-endif;
+<?php endif;
 
 wp_reset_postdata();

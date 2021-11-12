@@ -27,6 +27,7 @@
 
 @import url("./pages/single-product/singleprod.css"); /* Import Single Product styles */
 @import url("./pages/single-product/singlecard.css"); /* Import Single Product Card styles */
+@import url("./pages/single-product/proddesc.css"); /* Import Single Product Description styles */
 
 @import url("./utils/font.css");		/* Import font styles */
 @import url("./utils/shared.css"); 	/* Import shared style */

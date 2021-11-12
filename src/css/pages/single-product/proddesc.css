@@ -1,0 +1,22 @@
+.proddesc {
+	color: rgb(var(--rgb-san-juan));
+}
+
+.proddesc__title {
+	font-size: 2rem;
+	margin: 0;
+	padding-bottom: var(--offset-half);
+	border-bottom: 1px solid rgb(var(--rgb-san-juan));
+}
+
+.proddesc__data {
+	line-height: 1.5;
+}
+
+.proddesc__data p {
+	margin: 0 0 var(--offset-half) 0;
+}
+
+.proddesc__data p:last-of-type {
+	margin: 0;
+}
