@@ -176,7 +176,6 @@ add_filter( 'woocommerce_output_related_products_args', function($args) {
 	return $args;
 }, 20 );
 
-
 // * Register custom sidebars and widgets
 add_action( 'widgets_init', function() {
 	register_sidebar(

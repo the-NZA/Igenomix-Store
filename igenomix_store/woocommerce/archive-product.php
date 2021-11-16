@@ -6,7 +6,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-get_header();
+get_header(null, ["additional_body_classes" => "site-body--archive"]);
 
 /**
  * Hook: woocommerce_before_main_content.
