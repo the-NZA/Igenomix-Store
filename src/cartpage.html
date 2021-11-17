@@ -137,7 +137,7 @@
 	<!-- Site title -->
 	<section class="site-title">
 		<div class="wrapper">
-			<h1 class="pagetitle__title">Наши продукты</h1>
+			<h1 class="pagetitle__title">Корзина</h1>
 			<p class="pagetitle__snippet">
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quam fuga perspiciatis! Dicta vitae
 				illo
@@ -148,44 +148,35 @@
 
 	<div class="wrapper cartpage">
 		<div class="woocommerce">
-			<div class="woocommerce-notices-wrapper">
-			</div>
+			<div class="woocommerce-notices-wrapper"></div>
 
 			<main class="cartpage__main">
-				<form class="woocommerce-cart-form" action="http://ig-store.local/cart/" method="post">
+				<form class="woocommerce-cart-form cartform" action="http://ig-store.local/cart/" method="post">
 
-					<table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents"
-						cellspacing="0">
-						<thead>
+					<table class="cartform__table carttable shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
+						<thead class="carttable__thead">
 							<tr>
-								<th class="product-remove">&nbsp;</th>
 								<th class="product-thumbnail">&nbsp;</th>
 								<th class="product-name">Товар</th>
 								<th class="product-price">Цена</th>
-								<th class="product-quantity">Количество</th>
-								<th class="product-subtotal">Подытог</th>
+								<th class="product-quantity">Кол-во</th>
+								<th class="product-subtotal">Стоимость</th>
+								<th class="product-remove">&nbsp;</th>
 							</tr>
 						</thead>
-						<tbody>
-							<tr class="woocommerce-cart-form__cart-item cart_item">
 
-								<td class="product-remove">
-									<a href="http://ig-store.local/cart/?remove_item=98f13708210194c475687be6106a3b84&amp;_wpnonce=367bd98450"
-										class="remove" aria-label="Удалить эту позицию" data-product_id="20"
-										data-product_sku="woo-beanie">×</a>
-								</td>
-
+						<tbody class="carttable__tbody">
+							<tr class="carttableitem woocommerce-cart-form__cart-item cart_item">
 								<td class="product-thumbnail">
-									<a href="http://ig-store.local/product/clothing/accessories/beanie/"><img
-											src="http://ig-store.local/wp-content/uploads/2021/10/beanie-2-324x324.jpg"
+									<a href="http://ig-store.local/product/clothing/accessories/beanie/">
+										<img src="http://ig-store.local/wp-content/uploads/2021/10/beanie-2-324x324.jpg"
 											class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-											alt="Beanie Alt" loading="lazy"
-											srcset="http://ig-store.local/wp-content/uploads/2021/10/beanie-2-324x324.jpg 324w, http://ig-store.local/wp-content/uploads/2021/10/beanie-2-300x300.jpg 300w, http://ig-store.local/wp-content/uploads/2021/10/beanie-2-150x150.jpg 150w, http://ig-store.local/wp-content/uploads/2021/10/beanie-2-768x768.jpg 768w, http://ig-store.local/wp-content/uploads/2021/10/beanie-2-416x416.jpg 416w, http://ig-store.local/wp-content/uploads/2021/10/beanie-2-100x100.jpg 100w, http://ig-store.local/wp-content/uploads/2021/10/beanie-2.jpg 801w"
-											sizes="(max-width: 324px) 100vw, 324px" width="324" height="324"></a>
+											alt="Beanie Alt">
+									</a>
 								</td>
 
 								<td class="product-name" data-title="Товар">
-									<a href="http://ig-store.local/product/clothing/accessories/beanie/">Beanie</a>
+									<a href="http://ig-store.local/product/clothing/accessories/beanie/">Beanie Название</a>
 								</td>
 
 								<td class="product-price" data-title="Цена">
@@ -195,8 +186,6 @@
 
 								<td class="product-quantity" data-title="Количество">
 									<div class="quantity">
-										<label class="screen-reader-text" for="quantity_61950698ded4f">Количество
-											Beanie</label>
 										<input type="number" id="quantity_61950698ded4f" class="input-text qty text"
 											step="1" min="0" max="" name="cart[98f13708210194c475687be6106a3b84][qty]"
 											value="2" title="Кол-во" size="4" placeholder="" inputmode="numeric">
@@ -207,36 +196,121 @@
 									<span class="woocommerce-Price-amount amount"><bdi>36,00&nbsp;<span
 												class="woocommerce-Price-currencySymbol">₽</span></bdi></span>
 								</td>
+
+								<td class="product-remove">
+									<a href="http://ig-store.local/cart/?remove_item=98f13708210194c475687be6106a3b84&amp;_wpnonce=367bd98450"
+										class="remove" aria-label="Удалить эту позицию" data-product_id="20"
+										data-product_sku="woo-beanie">×</a>
+								</td>
 							</tr>
-							<tr>
-								<td colspan="6" class="actions">
 
-									<div class="coupon">
-										<label for="coupon_code">Купон:</label> <input type="text" name="coupon_code"
-											class="input-text" id="coupon_code" value="" placeholder="Код купона">
-										<button type="submit" class="button" name="apply_coupon"
-											value="Применить купон">Применить купон</button>
+							<tr class="carttableitem woocommerce-cart-form__cart-item cart_item">
+
+								<td class="product-thumbnail">
+									<a href="http://ig-store.local/product/clothing/accessories/cap/">
+										<img src="http://ig-store.local/wp-content/uploads/2021/10/cap-2-324x324.jpg"
+											class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="">
+									</a>
+								</td>
+
+								<td class="product-name" data-title="Товар">
+									<a href="http://ig-store.local/product/clothing/accessories/cap/">Cap</a>
+								</td>
+
+								<td class="product-price" data-title="Цена">
+									<span class="woocommerce-Price-amount amount"><bdi>16,00&nbsp;<span
+												class="woocommerce-Price-currencySymbol">₽</span></bdi></span>
+								</td>
+
+								<td class="product-quantity" data-title="Количество">
+									<div class="quantity">
+										<input type="number" id="quantity_61954776cf6ec" class="input-text qty text"
+											step="1" min="0" max="" name="cart[b6d767d2f8ed5d21a44b0e5886680cb9][qty]"
+											value="2" title="Кол-во" size="4" placeholder="" inputmode="numeric">
 									</div>
+								</td>
 
-									<button type="submit" class="button" name="update_cart" value="Обновить корзину"
-										disabled="" aria-disabled="true">Обновить корзину</button>
+								<td class="product-subtotal" data-title="Подытог">
+									<span class="woocommerce-Price-amount amount"><bdi>32,00&nbsp;<span
+												class="woocommerce-Price-currencySymbol">₽</span></bdi></span>
+								</td>
+
+								<td class="product-remove">
+									<a href="http://ig-store.local/cart/?remove_item=b6d767d2f8ed5d21a44b0e5886680cb9&amp;_wpnonce=367bd98450"
+										class="remove" aria-label="Удалить эту позицию" data-product_id="22"
+										data-product_sku="woo-cap">×</a>
+								</td>
+							</tr>
 
 
-									<input type="hidden" id="woocommerce-cart-nonce" name="woocommerce-cart-nonce"
-										value="367bd98450"><input type="hidden" name="_wp_http_referer" value="/cart/">
+							<tr class="carttableitem woocommerce-cart-form__cart-item cart_item">
+
+								<td class="product-thumbnail">
+									<a href="http://ig-store.local/product/clothing/accessories/cap/">
+										<img src="http://ig-store.local/wp-content/uploads/2021/10/cap-2-324x324.jpg"
+											class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="">
+									</a>
+								</td>
+
+								<td class="product-name" data-title="Товар">
+									<a href="http://ig-store.local/product/clothing/accessories/cap/">Cap</a>
+								</td>
+
+								<td class="product-price" data-title="Цена">
+									<span class="woocommerce-Price-amount amount"><bdi>16,00&nbsp;<span
+												class="woocommerce-Price-currencySymbol">₽</span></bdi></span>
+								</td>
+
+								<td class="product-quantity" data-title="Количество">
+									<div class="quantity">
+										<input type="number" id="quantity_61954776cf6ec" class="input-text qty text"
+											step="1" min="0" max="" name="cart[b6d767d2f8ed5d21a44b0e5886680cb9][qty]"
+											value="2" title="Кол-во" size="4" placeholder="" inputmode="numeric">
+									</div>
+								</td>
+
+								<td class="product-subtotal" data-title="Подытог">
+									<span class="woocommerce-Price-amount amount"><bdi>32,00&nbsp;<span
+												class="woocommerce-Price-currencySymbol">₽</span></bdi></span>
+								</td>
+
+								<td class="product-remove">
+									<a href="http://ig-store.local/cart/?remove_item=b6d767d2f8ed5d21a44b0e5886680cb9&amp;_wpnonce=367bd98450"
+										class="remove" aria-label="Удалить эту позицию" data-product_id="22"
+										data-product_sku="woo-cap">×</a>
 								</td>
 							</tr>
 
 						</tbody>
 					</table>
+
+					<div class="cartform__meta">
+						<div class="coupon">
+							<input type="text" name="coupon_code" class="input-text" id="coupon_code" value=""
+								placeholder="Код купона">
+							<button type="submit" class="button" name="apply_coupon" value="Применить купон">Применить
+								купон</button>
+						</div>
+
+						<button type="submit" class="button" name="update_cart" value="Обновить корзину" disabled=""
+							aria-disabled="true">
+							Обновить корзину
+						</button>
+
+						<input type="hidden" id="woocommerce-cart-nonce" name="woocommerce-cart-nonce"
+							value="367bd98450">
+
+						<input type="hidden" name="_wp_http_referer" value="/cart/">
+					</div>
+
 				</form>
 			</main>
 
 			<aside class="cartpage__aside cart-collaterals">
-				<div class="cart_totals">
-					<h2>Сумма заказа</h2>
+				<div class="carttotal cart_totals">
+					<h2 class="carttotal__title">Сумма заказа</h2>
 
-					<table class="shop_table shop_table_responsive">
+					<table class="carttotal__table shop_table shop_table_responsive">
 						<tbody>
 							<tr class="cart-subtotal">
 								<th>Подытог</th>
@@ -253,7 +327,8 @@
 							</tr>
 						</tbody>
 					</table>
-					<div class="wc-proceed-to-checkout">
+
+					<div class="carttotal__checkout wc-proceed-to-checkout">
 						<a href="#" class="checkout-button button alt wc-forward">Оформить заказ</a>
 					</div>
 				</div>

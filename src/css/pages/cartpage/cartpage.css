@@ -4,8 +4,10 @@
 	display: grid;
 	grid-template-areas: "cNotices cNotices" "cMain cAside";
 	grid-template-rows: max-content 1fr;
-	grid-template-columns: 1fr calc(var(--site-width)/4);
-	gap: var(--offset);
+	grid-template-columns: 1fr calc(var(--site-width)/3);
+	gap: 0 var(--offset);
+
+	min-height: calc(var(--site-width) / 4);
 }
 
 .cartpage > .woocommerce > .woocommerce-notices-wrapper{
@@ -19,7 +21,7 @@
 	border-radius: var(--card-border-radius);
 	box-shadow: var(--card-shadow);
 
-	align-self: flex-start;
+	/* align-self: flex-start; */
 
 
 	padding: var(--offset);
@@ -35,4 +37,105 @@
 	align-self: flex-start;
 
 	padding: var(--offset);
+}
+
+.cartform {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.cartform__table {
+	margin-bottom: var(--offset);
+	border-spacing: 0 var(--offset-half);
+}
+
+.cartform__meta {
+	margin-top: auto;
+
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+}
+
+.carttable {
+	/* border: 1px solid #000; */
+}
+
+.carttable__thead {
+	text-align: left;
+
+}
+
+.carttable__thead tr {
+	border-bottom: 1px solid #000;
+}
+
+.carttable__thead th {
+	padding: 0 var(--offset-half) var(--offset-half) var(--offset-half);
+	border-bottom: 1px solid #000;
+	box-sizing: border-box;
+}
+
+.carttable__thead .product-thumbnail {
+	/* border: 1px solid #000; */
+}
+
+.carttable__thead .product-remove{
+	padding: 0;
+	width: var(--offset);
+}
+
+.carttable__thead .product-quantity {
+	padding: 0 0 var(--offset-half) 0;
+}
+
+.carttable__thead .product-name {
+	width: 280px;
+}
+
+.carttable__tbody {
+
+}
+
+.carttable__tbody td {
+	padding: 0 var(--offset-half);
+	box-sizing: border-box;
+	/* vertical-align: top; */
+}
+
+.carttable__tbody .product-remove {
+	padding: 0;
+	width: var(--offset);
+	height: var(--offset);
+	text-align: center;
+}
+
+.carttable__tbody .product-quantity {
+	/* text-align: center; */
+	padding: 0;
+}
+
+.carttable__tbody .product-name {
+	width: 280px;
+}
+
+.carttableitem {
+
+	margin-bottom: var(--offset-half);
+}
+
+.carttableitem .product-thumbnail {
+	padding: 0;
+	width: 100px;
+}
+
+.carttableitem .product-thumbnail a {
+	display: block;
+}
+
+.carttableitem .product-thumbnail a img {
+	display: block;
+	max-width: 100px;
+	height: 100px;
 }
