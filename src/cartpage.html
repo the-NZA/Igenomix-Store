@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="shortcut icon" href="/image/favicon.ico" type="image/x-icon">
+
+	<title>Главная | Igenomix Store</title>
+</head>
+
+<body class="site-body site-body--cart">
+	<!--Site header-->
+	<header class="site-header header">
+		<div class="wrapper header__container">
+
+			<div class="header__logo">
+				<a href="/">
+					<img src="/image/logo_igenomix.svg" alt="Igenomix Store">
+				</a>
+			</div>
+
+			<div class="header__menu">
+				<nav class="mainnav">
+					<ul class="navlist">
+						<li class="navlist__item">
+							<a href="/">Главная</a>
+						</li>
+						<li class="navlist__item">
+							<a href="/catalog.html">Продукты</a>
+						</li>
+						<li class="navlist__item">
+							<a href="#">Контакты</a>
+						</li>
+						<li class="navlist__item">
+							<a href="#">Об IGENOMIX</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+
+			<button class="header__mobmenu">X</button>
+
+			<div class="header__showcart">
+				<button class="showcart__btn" title="Просмотр корзины">
+					<span class="showcart__icon">
+						<i class="far fa-shopping-basket"></i>
+					</span>
+					<span class="showcart__amount">
+						12345 <span class="showcart__cur_symbol">₽</span>
+					</span>
+				</button>
+
+				<aside class="header__cart">
+					<div class="asidecart__header">
+						<button class="asidecart__close">
+							<i class="far fa-times fa-2x"></i>
+						</button>
+						<h2 class="asidecart__title">Корзина</h2>
+					</div>
+
+					<div class="asidecart__cartlist">
+						<div class="asidecart__cartitem cartitem">
+							<img class="cartitem__icon" src="/image/sample_product_icon.svg" alt="Продукт №">
+							<h4 class="cartitem__title">Название продукта</h4>
+							<p class="cartitem__quantity">1 x 25000₽</p>
+							<button class="cartitem__remove">
+								<i class="far fa-times-circle"></i>
+							</button>
+						</div>
+
+						<div class="asidecart__cartitem cartitem">
+							<img class="cartitem__icon" src="/image/sample_product_icon.svg" alt="Продукт №">
+							<h4 class="cartitem__title">Длинное Название продукта</h4>
+							<p class="cartitem__quantity">2 x 125000₽</p>
+							<button class="cartitem__remove">
+								<i class="far fa-times-circle"></i>
+							</button>
+						</div>
+
+						<div class="asidecart__cartitem cartitem">
+							<img class="cartitem__icon" src="/image/sample_product_icon.svg" alt="Продукт №">
+							<h4 class="cartitem__title">Очень длинное Название продукта</h4>
+							<p class="cartitem__quantity">11 x 2500₽</p>
+							<button class="cartitem__remove">
+								<i class="far fa-times-circle"></i>
+							</button>
+						</div>
+
+						<div class="asidecart__cartitem cartitem">
+							<img class="cartitem__icon" src="/image/sample_product_icon.svg" alt="Продукт №">
+							<h4 class="cartitem__title">Очень длинное Название продукта</h4>
+							<p class="cartitem__quantity">11 x 2500₽</p>
+							<button class="cartitem__remove">
+								<i class="far fa-times-circle"></i>
+							</button>
+						</div>
+						<div class="asidecart__cartitem cartitem">
+							<img class="cartitem__icon" src="/image/sample_product_icon.svg" alt="Продукт №">
+							<h4 class="cartitem__title">Очень длинное Название продукта</h4>
+							<p class="cartitem__quantity">11 x 2500₽</p>
+							<button class="cartitem__remove">
+								<i class="far fa-times-circle"></i>
+							</button>
+						</div>
+
+						<div class="asidecart__cartitem cartitem">
+							<img class="cartitem__icon" src="/image/sample_product_icon.svg" alt="Продукт №">
+							<h4 class="cartitem__title">Очень длинное Название продукта</h4>
+							<p class="cartitem__quantity">11 x 2500₽</p>
+							<button class="cartitem__remove">
+								<i class="far fa-times-circle"></i>
+							</button>
+						</div>
+					</div>
+
+					<div class="asidecart__footer">
+						<div class="asidecart__summary">
+							<span>Сумма:</span> 24500₽
+						</div>
+						<div class="asidecart__buttons">
+							<button class="asidecart__showcart">Просмотр корзины</button>
+							<button class="asidecart__checkout">Оформление заказа</button>
+						</div>
+
+					</div>
+				</aside>
+			</div>
+
+		</div>
+		<div class="header__overlay"></div>
+	</header>
+	<!--Site header END-->
+
+	<!-- Site title -->
+	<section class="site-title">
+		<div class="wrapper">
+			<h1 class="pagetitle__title">Наши продукты</h1>
+			<p class="pagetitle__snippet">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quam fuga perspiciatis! Dicta vitae
+				illo
+			</p>
+		</div>
+	</section>
+	<!-- Site title END -->
+
+	<div class="wrapper cartpage">
+		<div class="woocommerce">
+			<div class="woocommerce-notices-wrapper">
+			</div>
+
+			<main class="cartpage__main">
+				<form class="woocommerce-cart-form" action="http://ig-store.local/cart/" method="post">
+
+					<table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents"
+						cellspacing="0">
+						<thead>
+							<tr>
+								<th class="product-remove">&nbsp;</th>
+								<th class="product-thumbnail">&nbsp;</th>
+								<th class="product-name">Товар</th>
+								<th class="product-price">Цена</th>
+								<th class="product-quantity">Количество</th>
+								<th class="product-subtotal">Подытог</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="woocommerce-cart-form__cart-item cart_item">
+
+								<td class="product-remove">
+									<a href="http://ig-store.local/cart/?remove_item=98f13708210194c475687be6106a3b84&amp;_wpnonce=367bd98450"
+										class="remove" aria-label="Удалить эту позицию" data-product_id="20"
+										data-product_sku="woo-beanie">×</a>
+								</td>
+
+								<td class="product-thumbnail">
+									<a href="http://ig-store.local/product/clothing/accessories/beanie/"><img
+											src="http://ig-store.local/wp-content/uploads/2021/10/beanie-2-324x324.jpg"
+											class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+											alt="Beanie Alt" loading="lazy"
+											srcset="http://ig-store.local/wp-content/uploads/2021/10/beanie-2-324x324.jpg 324w, http://ig-store.local/wp-content/uploads/2021/10/beanie-2-300x300.jpg 300w, http://ig-store.local/wp-content/uploads/2021/10/beanie-2-150x150.jpg 150w, http://ig-store.local/wp-content/uploads/2021/10/beanie-2-768x768.jpg 768w, http://ig-store.local/wp-content/uploads/2021/10/beanie-2-416x416.jpg 416w, http://ig-store.local/wp-content/uploads/2021/10/beanie-2-100x100.jpg 100w, http://ig-store.local/wp-content/uploads/2021/10/beanie-2.jpg 801w"
+											sizes="(max-width: 324px) 100vw, 324px" width="324" height="324"></a>
+								</td>
+
+								<td class="product-name" data-title="Товар">
+									<a href="http://ig-store.local/product/clothing/accessories/beanie/">Beanie</a>
+								</td>
+
+								<td class="product-price" data-title="Цена">
+									<span class="woocommerce-Price-amount amount"><bdi>18,00&nbsp;<span
+												class="woocommerce-Price-currencySymbol">₽</span></bdi></span>
+								</td>
+
+								<td class="product-quantity" data-title="Количество">
+									<div class="quantity">
+										<label class="screen-reader-text" for="quantity_61950698ded4f">Количество
+											Beanie</label>
+										<input type="number" id="quantity_61950698ded4f" class="input-text qty text"
+											step="1" min="0" max="" name="cart[98f13708210194c475687be6106a3b84][qty]"
+											value="2" title="Кол-во" size="4" placeholder="" inputmode="numeric">
+									</div>
+								</td>
+
+								<td class="product-subtotal" data-title="Подытог">
+									<span class="woocommerce-Price-amount amount"><bdi>36,00&nbsp;<span
+												class="woocommerce-Price-currencySymbol">₽</span></bdi></span>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="6" class="actions">
+
+									<div class="coupon">
+										<label for="coupon_code">Купон:</label> <input type="text" name="coupon_code"
+											class="input-text" id="coupon_code" value="" placeholder="Код купона">
+										<button type="submit" class="button" name="apply_coupon"
+											value="Применить купон">Применить купон</button>
+									</div>
+
+									<button type="submit" class="button" name="update_cart" value="Обновить корзину"
+										disabled="" aria-disabled="true">Обновить корзину</button>
+
+
+									<input type="hidden" id="woocommerce-cart-nonce" name="woocommerce-cart-nonce"
+										value="367bd98450"><input type="hidden" name="_wp_http_referer" value="/cart/">
+								</td>
+							</tr>
+
+						</tbody>
+					</table>
+				</form>
+			</main>
+
+			<aside class="cartpage__aside cart-collaterals">
+				<div class="cart_totals">
+					<h2>Сумма заказа</h2>
+
+					<table class="shop_table shop_table_responsive">
+						<tbody>
+							<tr class="cart-subtotal">
+								<th>Подытог</th>
+								<td data-title="Подытог"><span
+										class="woocommerce-Price-amount amount"><bdi>36,00&nbsp;<span
+												class="woocommerce-Price-currencySymbol">₽</span></bdi></span></td>
+							</tr>
+							<tr class="order-total">
+								<th>Итого</th>
+								<td data-title="Итого"><strong><span
+											class="woocommerce-Price-amount amount"><bdi>36,00&nbsp;<span
+													class="woocommerce-Price-currencySymbol">₽</span></bdi></span></strong>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="wc-proceed-to-checkout">
+						<a href="#" class="checkout-button button alt wc-forward">Оформить заказ</a>
+					</div>
+				</div>
+			</aside>
+		</div>
+	</div>
+
+	<!--Site footer-->
+	<footer class="site-footer footer">
+		<div class="wrapper footer__container">
+			<div class="footer__logo">
+				<a href="/">
+					<img src="/image/logo_igenomix.svg" alt="Igenomix Store">
+				</a>
+			</div>
+
+			<div class="footer__widgets">
+				<div class="fwidget">
+					<h4 class="fwidget__header">Наши цели</h4>
+
+					<ul class="fwidget__links">
+						<li><a href="#">Снижение рисков рождения ребенка с наследственными заболеваниями</a></li>
+						<li><a href="#">Для спокойствия будущих мам</a></li>
+					</ul>
+				</div>
+				<div class="fwidget">
+					<h4 class="fwidget__header">Все продукты</h4>
+
+					<ul class="fwidget__links">
+						<li><a href="#">Продукты</a></li>
+					</ul>
+				</div>
+				<div class="fwidget">
+					<h4 class="fwidget__header">Об Igenomix</h4>
+
+					<ul class="fwidget__links">
+						<li><a href="#">О компании</a></li>
+						<li><a href="#">Контакты</a></li>
+						<li><a href="#">Работа с нами</a></li>
+					</ul>
+				</div>
+				<div class="fwidget">
+					<h4 class="fwidget__header">Igenomix в социальных сетях</h4>
+
+					<ul class="fwidget__socials">
+						<li class="fwidget__socicon">
+							<a href="#">
+								<i class="fab fa-instagram"></i>
+							</a>
+						</li>
+						<li class="fwidget__socicon">
+							<a href="#">
+								<i class="fab fa-youtube"></i>
+							</a>
+						</li>
+						<li class="fwidget__socicon">
+							<a href="#">
+								<i class="fab fa-twitter"></i>
+							</a>
+						</li>
+						<li class="fwidget__socicon">
+							<a href="#">
+								<i class="fab fa-linkedin"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="footer__contacts">
+				<a href="#" class="footerContacts__item">
+					<span class="footerContacts__icon">
+						<i class="far fa-phone-alt"></i>
+					</span>
+					8-999-888-77-66
+				</a>
+				<a href="#" class="footerContacts__item">
+					<span class="footerContacts__icon">
+						<i class="far fa-envelope"></i>
+					</span>
+					Наш email
+				</a>
+			</div>
+
+			<div class="footer__copyright">
+				<div class="copyright__info">
+					[2021] &copy; Igenomix
+				</div>
+
+				<ul class="copyright__links">
+					<li>
+						<a href="#">Политика обработки и защиты персональных данных</a>
+					</li>
+					<li>
+						<a href="#">Правовые сведения</a>
+					</li>
+					<li>
+						<a href="#">Политика обработки cookie-файлов</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<!--Site footer END-->
+</body>
+
+</html>

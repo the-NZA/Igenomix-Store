@@ -30,6 +30,8 @@
 @import url("./pages/single-product/proddesc.css"); /* Import Single Product Description styles */
 @import url("./pages/single-product/prodrelated.css"); /* Import Single Product Related products styles */
 
+@import url("./pages/cartpage/cartpage.css"); /* Import Cartpage styles */
+
 @import url("./utils/font.css");		/* Import font styles */
 @import url("./utils/shared.css"); 	/* Import shared style */
 /* @import url("./utils/lineicons.css");	Import lineicons font styles */

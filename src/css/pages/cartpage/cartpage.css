@@ -1,0 +1,38 @@
+.cartpage {}
+
+.cartpage > .woocommerce {
+	display: grid;
+	grid-template-areas: "cNotices cNotices" "cMain cAside";
+	grid-template-rows: max-content 1fr;
+	grid-template-columns: 1fr calc(var(--site-width)/4);
+	gap: var(--offset);
+}
+
+.cartpage > .woocommerce > .woocommerce-notices-wrapper{
+	grid-area: cNotices;
+}
+
+.cartpage > .woocommerce > .cartpage__main {
+	grid-area: cMain;
+
+	background-color: rgb(var(--rgb-alice-blue));
+	border-radius: var(--card-border-radius);
+	box-shadow: var(--card-shadow);
+
+	align-self: flex-start;
+
+
+	padding: var(--offset);
+}
+
+.cartpage > .woocommerce > .cartpage__aside {
+	grid-area: cAside;
+
+	background-color: rgb(var(--rgb-alice-blue));
+	border-radius: var(--card-border-radius);
+	box-shadow: var(--card-shadow);
+
+	align-self: flex-start;
+
+	padding: var(--offset);
+}

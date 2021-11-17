@@ -18,6 +18,10 @@
 	grid-template-rows: max-content max-content 1fr auto;
 }
 
+.site-body--cart {
+	grid-template-rows: max-content max-content 1fr auto;
+}
+
 .site-header {
 	box-sizing: border-box;
 	position: sticky;
