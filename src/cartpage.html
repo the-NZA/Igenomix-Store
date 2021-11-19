@@ -149,18 +149,37 @@
 	<div class="wrapper cartpage">
 		<div class="woocommerce">
 			<div class="woocommerce-notices-wrapper">
-				<div class="woocommerce-message" role="alert">Корзина обновлена.</div>
+				<!-- <div class="woocommerce-message" role="alert">Корзина обновлена.</div> -->
 			</div>
 
 			<main class="cartpage__main">
 				<form class="woocommerce-cart-form cartform" action="http://ig-store.local/cart/" method="post">
 
-					<div
-						class="cartform__table carttable shop_table shop_table_responsive cart woocommerce-cart-form__contents">
+					<div class="cartform__table carttable shop_table shop_table_responsive cart woocommerce-cart-form__contents">
 						<h2 class="carttable__header">Выбранные продукты</h2>
 
 						<div class="carttable__body ">
+							<div class="carttableitem woocommerce-cart-form__cart-item cart_item">
 
+								<div class="carttableitem__image product-thumbnail">
+								</div>
+
+								<div class="carttableitem__name product-name" data-title="Товар">
+								</div>
+
+								<div class="carttableitem__price product-price" data-title="Цена">
+								</div>
+
+								<div class="carttableitem__quantity product-quantity" data-title="Количество">
+								</div>
+
+								<div class="carttableitem__subtotal product-subtotal" data-title="Подытог">
+								</div>
+
+								<div class="carttableitem__remove product-remove">
+								</div>
+							</div>
+<!--
 							<div class="carttableitem woocommerce-cart-form__cart-item cart_item">
 
 								<div class="carttableitem__image product-thumbnail">
@@ -283,7 +302,7 @@
 										data-product_sku="woo-sunglasses"><i class="far fa-times-circle fa-lg"></i></a>
 								</div>
 							</div>
-
+						-->
 
 						</div>
 					</div>
