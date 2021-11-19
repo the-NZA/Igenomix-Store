@@ -17,3 +17,6 @@ require_once "parts/product-archive.php";
 
 // * SHARED view functions 
 require_once "parts/shared.php";
+
+// * CART view functions
+require_once "parts/cart.php";
