@@ -92,8 +92,13 @@
 	font-size: 1.1rem;
 	display: block;
 	font-weight: bold;
-	padding: var(--offset-half);
+	padding: 0;
 	transition: var(--main-transition);
+}
+
+.asidecart__buttons button a {
+	display: block;
+	padding: var(--offset-half);
 }
 
 .asidecart__showcart {

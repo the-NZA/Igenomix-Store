@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) || exit;
 
 	<h2 class="cartaside__header"><?php esc_html_e( 'Cart totals', 'woocommerce' ); ?></h2>
 
-	<table cellspacing="0" class="shop_table shop_table_responsive">
+	<table cellspacing="0" class="cartaside__table shop_table shop_table_responsive">
 
 		<tr class="cart-subtotal">
 			<th><?php esc_html_e( 'Subtotal', 'woocommerce' ); ?></th>
@@ -95,7 +95,7 @@ defined( 'ABSPATH' ) || exit;
 
 	</table>
 
-	<div class="wc-proceed-to-checkout">
+	<div class="cartaside__checkout wc-proceed-to-checkout">
 		<?php do_action( 'woocommerce_proceed_to_checkout' ); ?>
 	</div>
 
