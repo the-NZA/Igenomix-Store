@@ -1,0 +1,38 @@
+.cartaside {
+
+}
+
+.cartaside__header {
+	margin: 0 0 var(--offset-half) 0;
+	padding-bottom: var(--offset-half);
+	font-weight: bold;
+	color: var(--c-san-juan);
+	border-bottom: 1px solid var(--c-san-juan);
+}
+
+.cartaside__checkout {
+	margin-top: var(--offset);
+}
+
+.cartaside__checkout a {
+	text-decoration: none;
+	color: var(--c-white);
+
+	background-color: rgb(var(--rgb-san-juan));
+	border: 1px solid rgb(var(--rgb-san-juan));
+	border-radius: calc(var(--offset-half)/4);
+
+	min-height: 40px;
+	cursor: pointer;
+	box-sizing: border-box;
+	font-weight: 700;
+
+	padding: calc(var(--offset-half)/2);
+	transition: var(--main-transition);
+}
+
+.cartaside__checkout a:hover {
+	cursor: pointer;
+	background-color: var(--c-san-juan-highlighted);
+	border-color: var(--c-san-juan-highlighted);
+}

@@ -65,7 +65,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 							?>
 							</div>
 
-							<div class="carttable__price_quantity">
+							<div class="carttableitem__price_quantity">
 								<div class="carttableitem__price product-price" data-title="<?php esc_attr_e( 'Price', 'woocommerce' ); ?>">
 									<?php
 										displayCartItemPrice($_product, "₽")
@@ -105,7 +105,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 									echo apply_filters( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 										'woocommerce_cart_item_remove_link',
 										sprintf(
-											'<a href="%s" class="remove" aria-label="%s" data-product_id="%s" data-product_sku="%s"><i class="far fa-times-circle fa-lg"></i></a>',
+											'<a href="%s" class="" aria-label="%s" data-product_id="%s" data-product_sku="%s"><i class="fas fa-trash-alt"></i></a>',
 											esc_url( wc_get_cart_remove_url( $cart_item_key ) ),
 											esc_html__( 'Remove this item', 'woocommerce' ),
 											esc_attr( $product_id ),

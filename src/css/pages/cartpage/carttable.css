@@ -1,0 +1,12 @@
+.carttable {
+}
+
+.carttable__header {
+	margin: 0 0 var(--offset) 0;
+	padding: 0;
+	color: rgb(var(--rgb-san-juan));
+	font-weight: bold;
+}
+
+.carttable__body {
+}

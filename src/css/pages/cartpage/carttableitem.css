@@ -1,0 +1,114 @@
+.carttableitem {
+	display: grid;
+	grid-template-columns: max-content 1fr max-content;
+	grid-template-rows: repeat(3, max-content);
+	grid-template-areas: 
+		"crImg crName crName"
+		"crImg crPnQ crPnQ"
+		"crImg crSubtotal crDel";
+
+	border-radius: calc(var(--offset-half) / 2);
+	background-color: var(--c-white);
+	box-shadow: var(--card-shadow);
+	padding: var(--offset-half);
+	gap: 0 var(--offset-half);
+}
+
+.carttableitem:not(.carttableitem:last-of-type) {
+	margin-bottom: var(--offset-half);
+}
+
+.carttableitem__image {
+	grid-area: crImg;
+	align-self: center;
+}
+
+.carttableitem__image img {
+	display: block;
+	max-width: calc(var(--offset) * 4);
+	width: 100%;
+	height: auto;
+	border-radius: calc(var(--offset-half) / 2);
+}
+
+.carttableitem__name {
+	grid-area: crName;
+	align-self: center;
+}
+
+.carttableitem__name a {
+	color: rgb(var(--rgb-san-juan));
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.carttableitem__price_quantity {
+	grid-area: crPnQ;
+
+	display: flex;
+	align-items: center;
+
+	color: rgb(var(--rgb-san-juan));
+	font-weight: 500;
+	font-size: 1.1rem;
+}
+
+.carttableitem__price {
+	display: flex;
+}
+
+.carttableitem__price .sale_price {
+	margin-left: calc(var(--offset-half) / 2);
+}
+
+.carttableitem__subtotal .regular_price,
+.carttableitem__price .regular_price,
+.carttableitem__price .sale_price {
+	font-weight: bold;
+}
+
+.carttableitem__quantity {
+	margin-left: var(--offset);
+}
+
+.carttableitem__quantity .quantity input {
+	border: 2px solid rgb(var(--rgb-san-juan));
+	border-radius: calc(var(--offset-half)/4);
+
+	background-color: rgb(var(--rgb-alice-blue));
+	color: var(--c-san-juan);
+	font-weight: 700;
+
+	max-width: calc(var(--offset)*2);
+	margin: 0;
+	padding-left: calc(var(--offset-half) / 2);
+	box-sizing: border-box;
+}
+
+.carttableitem__subtotal {
+	grid-area: crSubtotal;
+	display: flex;
+	align-items: center;
+
+	color: rgb(var(--rgb-san-juan));
+	font-weight: 500;
+	font-size: 1.1rem;
+}
+
+.carttableitem__remove {
+	grid-area: crDel;
+	background-color: coral;
+	align-self: center;
+	justify-self: end;
+}
+
+.carttableitem__remove a {
+	color: var(--c-mandys-pink);
+	background-color: var(--c-white);
+	transition: var(--main-transition);
+	font-size: 1.2rem;
+}
+
+.carttableitem__remove a:hover {
+	color: var(--c-mandys-pink-highlighted);
+}

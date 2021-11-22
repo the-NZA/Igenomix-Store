@@ -31,6 +31,10 @@
 @import url("./pages/single-product/prodrelated.css"); /* Import Single Product Related products styles */
 
 @import url("./pages/cartpage/cartpage.css"); /* Import Cartpage styles */
+@import url("./pages/cartpage/cartform.css"); /* Import Cartpage form styles */
+@import url("./pages/cartpage/carttable.css"); /* Import Cartpage table styles */
+@import url("./pages/cartpage/carttableitem.css"); /* Import Cartpage table item styles */
+@import url("./pages/cartpage/cartaside.css"); /* Import Cartpage aside styles */
 
 @import url("./utils/font.css");		/* Import font styles */
 @import url("./utils/shared.css"); 	/* Import shared style */
