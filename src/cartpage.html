@@ -155,10 +155,12 @@
 			<main class="cartpage__main">
 				<form class="woocommerce-cart-form cartform" action="http://ig-store.local/cart/" method="post">
 
-					<div class="cartform__table carttable shop_table shop_table_responsive cart woocommerce-cart-form__contents">
+					<div
+						class="cartform__table carttable shop_table shop_table_responsive cart woocommerce-cart-form__contents">
 						<h2 class="carttable__header">Выбранные продукты</h2>
 
 						<div class="carttable__body ">
+							<!--
 							<div class="carttableitem woocommerce-cart-form__cart-item cart_item">
 
 								<div class="carttableitem__image product-thumbnail">
@@ -179,7 +181,7 @@
 								<div class="carttableitem__remove product-remove">
 								</div>
 							</div>
-<!--
+-->
 							<div class="carttableitem woocommerce-cart-form__cart-item cart_item">
 
 								<div class="carttableitem__image product-thumbnail">
@@ -192,24 +194,24 @@
 								</div>
 
 								<div class="carttableitem__name product-name" data-title="Товар">
-									<a href="http://ig-store.local/product/clothing/accessories/beanie-with-logo/">Beanie
-										with Logo</a>
+									<a href="http://ig-store.local/product/clothing/accessories/beanie-with-logo/">
+										Beanie with Logo Lorem ipsum dolor sit.</a>
 								</div>
 
-								<div class="carttableitem__price product-price" data-title="Цена">
+								<div class="carttableitem__price_quantity">
+									<div class="carttableitem__price product-price" data-title="Цена">
 
-									Цена:&nbsp;<span class="regular_price regular_price--onsale">20</span> <span
-										class="sale_price">18</span>₽
-								</div>
+										Цена:&nbsp;<span class="regular_price regular_price--onsale">20</span> <span
+											class="sale_price">18</span>₽
+									</div>
 
-								<div class="carttableitem__quantity product-quantity" data-title="Количество">
-									<div class="quantity">
-										<label class="screen-reader-text" for="quantity_619763cc3dd0d">Количество Beanie
-											with
-											Logo</label>
-										<input type="number" id="quantity_619763cc3dd0d" class="input-text qty text"
-											step="1" min="0" max="" name="cart[a5bfc9e07964f8dddeb95fc584cd965d][qty]"
-											value="1" title="Кол-во" size="4" placeholder="" inputmode="numeric">
+									<div class="carttableitem__quantity product-quantity" data-title="Количество">
+										<div class="quantity">
+											<input type="number" id="quantity_619763cc3dd0d" class="input-text qty text"
+												step="1" min="0" max=""
+												name="cart[a5bfc9e07964f8dddeb95fc584cd965d][qty]" value="1"
+												title="Кол-во" size="4" placeholder="" inputmode="numeric">
+										</div>
 									</div>
 								</div>
 
@@ -219,7 +221,9 @@
 								<div class="carttableitem__remove product-remove">
 									<a href="http://ig-store.local/cart/?remove_item=a5bfc9e07964f8dddeb95fc584cd965d&amp;_wpnonce=1769acdc99"
 										class="remove" aria-label="Удалить эту позицию" data-product_id="37"
-										data-product_sku="Woo-beanie-logo"><i class="far fa-times-circle fa-lg"></i></a>
+										data-product_sku="Woo-beanie-logo">
+										<i class="fas fa-trash-alt"></i>
+									</a>
 								</div>
 							</div>
 							<div class="carttableitem woocommerce-cart-form__cart-item cart_item">
@@ -234,22 +238,24 @@
 								</div>
 
 								<div class="carttableitem__name product-name" data-title="Товар">
-									<a href="http://ig-store.local/product/clothing/accessories/cap/">Cap</a>
+									<a href="http://ig-store.local/product/clothing/accessories/cap/">Cap Lorem ipsum
+										dolor sit amet consectetur adipisicing elit. Cupiditate, possimus.</a>
 								</div>
 
-								<div class="carttableitem__price product-price" data-title="Цена">
+								<div class="carttableitem__price_quantity">
+									<div class="carttableitem__price product-price" data-title="Цена">
 
-									Цена:&nbsp;<span class="regular_price regular_price--onsale">18</span> <span
-										class="sale_price">16</span>₽
-								</div>
+										Цена:&nbsp;<span class="regular_price regular_price--onsale">18</span> <span
+											class="sale_price">16</span>₽
+									</div>
 
-								<div class="carttableitem__quantity product-quantity" data-title="Количество">
-									<div class="quantity">
-										<label class="screen-reader-text" for="quantity_619763cc38ba0">Количество
-											Cap</label>
-										<input type="number" id="quantity_619763cc38ba0" class="input-text qty text"
-											step="1" min="0" max="" name="cart[b6d767d2f8ed5d21a44b0e5886680cb9][qty]"
-											value="1" title="Кол-во" size="4" placeholder="" inputmode="numeric">
+									<div class="carttableitem__quantity product-quantity" data-title="Количество">
+										<div class="quantity">
+											<input type="number" id="quantity_619763cc38ba0" class="input-text qty text"
+												step="1" min="0" max=""
+												name="cart[b6d767d2f8ed5d21a44b0e5886680cb9][qty]" value="1"
+												title="Кол-во" size="4" placeholder="" inputmode="numeric">
+										</div>
 									</div>
 								</div>
 
@@ -259,7 +265,9 @@
 								<div class="carttableitem__remove product-remove">
 									<a href="http://ig-store.local/cart/?remove_item=b6d767d2f8ed5d21a44b0e5886680cb9&amp;_wpnonce=1769acdc99"
 										class="remove" aria-label="Удалить эту позицию" data-product_id="22"
-										data-product_sku="woo-cap"><i class="far fa-times-circle fa-lg"></i></a>
+										data-product_sku="woo-cap">
+										<i class="fas fa-trash-alt"></i>
+									</a>
 								</div>
 							</div>
 							<div class="carttableitem woocommerce-cart-form__cart-item cart_item">
@@ -278,18 +286,18 @@
 										href="http://ig-store.local/product/clothing/accessories/sunglasses/">Sunglasses</a>
 								</div>
 
-								<div class="carttableitem__price product-price" data-title="Цена">
+								<div class="carttableitem__price_quantity">
+									<div class="carttableitem__price product-price" data-title="Цена">
+										<span class="regular_price">90</span>₽
+									</div>
 
-									<span class="regular_price">90</span>₽
-								</div>
-
-								<div class="carttableitem__quantity product-quantity" data-title="Количество">
-									<div class="quantity">
-										<label class="screen-reader-text" for="quantity_619763cc3afa1">Количество
-											Sunglasses</label>
-										<input type="number" id="quantity_619763cc3afa1" class="input-text qty text"
-											step="1" min="0" max="" name="cart[37693cfc748049e45d87b8c7d8b9aacd][qty]"
-											value="1" title="Кол-во" size="4" placeholder="" inputmode="numeric">
+									<div class="carttableitem__quantity product-quantity" data-title="Количество">
+										<div class="quantity">
+											<input type="number" id="quantity_619763cc3afa1" class="input-text qty text"
+												step="1" min="0" max=""
+												name="cart[37693cfc748049e45d87b8c7d8b9aacd][qty]" value="1"
+												title="Кол-во" size="4" placeholder="" inputmode="numeric">
+										</div>
 									</div>
 								</div>
 
@@ -299,21 +307,19 @@
 								<div class="carttableitem__remove product-remove">
 									<a href="http://ig-store.local/cart/?remove_item=37693cfc748049e45d87b8c7d8b9aacd&amp;_wpnonce=1769acdc99"
 										class="remove" aria-label="Удалить эту позицию" data-product_id="23"
-										data-product_sku="woo-sunglasses"><i class="far fa-times-circle fa-lg"></i></a>
+										data-product_sku="woo-sunglasses">
+										<i class="fas fa-trash-alt"></i>
+									</a>
 								</div>
 							</div>
-						-->
-
 						</div>
 					</div>
 
 
 					<div class="cartform__meta">
 						<div class="coupon">
-							<label for="coupon_code">Купон:</label> <input type="text" name="coupon_code"
-								class="input-text" id="coupon_code" value="" placeholder="Код купона"> <button
-								type="submit" class="button" name="apply_coupon" value="Применить купон">Применить
-								купон</button>
+								<input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="Код купона">
+								<button type="submit" class="button" name="apply_coupon" value="Применить купон">Применить купон</button>
 						</div>
 
 						<button type="submit" class="button" name="update_cart" value="Обновить корзину" disabled=""
