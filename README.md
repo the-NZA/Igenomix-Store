@@ -4,8 +4,10 @@
 Built on wordpress, woocommerce, nginx, mysql and docker
 
 ## TODO
-- [ ] Homepage
-- [ ] Shop page
+- [x] Homepage
+- [x] Catalog page
+- [x] Category page
+- [x] Product page
 - [ ] Cart
 - [ ] Checkout
 - [ ] 404 page
