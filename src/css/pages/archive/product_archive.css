@@ -34,6 +34,11 @@
 	gap: var(--offset-half);
 }
 
+.prodarchive__list--single{
+	grid-template-columns: 1fr;
+	gap: var(--offset);
+}
+
 .prodarchive__list--col3{
 	grid-template-columns: repeat(3, 1fr);
 }

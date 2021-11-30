@@ -10,13 +10,27 @@
 
 	display: grid;
 	grid-template-columns: 140px 1fr 1fr;
-	grid-template-rows: max-content 1fr max-content;
+	grid-template-rows: minmax(calc(var(--offset) * 2), max-content) 1fr max-content;
 	grid-template-areas: 
-		"pIcon pTitle pTitle"
+		"pTitle pTitle pTitle"
 		"pIcon pSnippet pSnippet"
 		"pPrice pPrice pBtn";
 
 	gap: var(--offset-half) var(--offset);
+}
+
+/* When productcard used on archive page with sidebar */
+.prodarchive__list--single > .productcard {
+	grid-template-rows: repeat(3, max-content);
+	grid-template-columns: 160px repeat(2, 1fr);
+	row-gap: var(--offset);
+}
+
+.prodarchive__list--single > .productcard > .productcard__title {
+	font-size: 1.5rem;
+}
+
+.prodarchive__list--single > .productcard > .productcard__icon {
 }
 
 .productcard__icon {
@@ -98,7 +112,7 @@
 
 .productcard__button a {
 	display: block;
-	padding: calc(var(--offset-half)/2);
+	padding: calc(var(--offset-half)/1.5);
 	text-decoration: none;
 	color: rgb(var(--rgb-white));
 }
