@@ -66,7 +66,8 @@
 	/* right: 50%;
 	transform: translateX(50%); */
 
-	min-width: calc(var(--site-width)/3);
+	min-width: calc(var(--site-width)/2.5);
+	max-width: calc(var(--site-width)/2.5);
 	min-height: calc(var(--site-width)/4);
 	/* max-height: 85vh; */
 

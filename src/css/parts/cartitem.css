@@ -17,7 +17,7 @@
 		"cIcon cQuantity .";
 
 	align-items: start;
-	gap: 0 var(--offset);
+	gap: var(--offset-half) var(--offset);
 }
 
 .cartitem:last-of-type {
