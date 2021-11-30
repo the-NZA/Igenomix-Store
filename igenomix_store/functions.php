@@ -79,9 +79,9 @@ add_filter( 'use_widgets_block_editor', '__return_false' );
 
 //* Set number of products to be displayed
 add_filter( 'loop_shop_per_page', function() {
-	if(is_shop()) {
-		return 12;
-	}
+	// if(is_shop()) {
+	// 	return 12;
+	// }
 
 	return 10;
 } );

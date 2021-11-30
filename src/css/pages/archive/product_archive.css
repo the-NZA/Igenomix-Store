@@ -3,7 +3,7 @@
 
 	display: grid;
 	grid-template-rows: 1fr max-content;
-	grid-template-columns: calc(var(--site-width) / 4.5) 1fr;
+	grid-template-columns: calc(var(--site-width) / 3) 1fr;
 	grid-template-areas: 
 		"arAside arMain"
 		"arPagi arPagi";
@@ -28,7 +28,6 @@
 }
 
 .prodarchive__list{
-	height: 100%;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: var(--offset-half);
