@@ -11,6 +11,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 global $product;
 ?>
 
-<button class="button_rounded productcard__button">
+<button class="productcard__button">
 	<a href="<?php echo $product->get_permalink(); ?>">Заказать</a>
 </button>

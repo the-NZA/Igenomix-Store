@@ -31,8 +31,7 @@
 	height: 100%;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	gap: var(--offset);
-	align-items: baseline;
+	gap: var(--offset-half);
 }
 
 .prodarchive__list--col3{
