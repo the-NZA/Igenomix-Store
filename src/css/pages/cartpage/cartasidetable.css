@@ -1,0 +1,30 @@
+.cartasidetable {
+
+}
+
+.cartasidetable__item {
+	display: grid;
+	grid-template-columns: 100px 1fr;
+	align-items: baseline;
+	gap: var(--offset);
+
+	margin-bottom: var(--offset-half);
+}
+
+.cartasidetable__item:last-of-type {
+	margin-bottom: 0;
+}
+
+.cartasidetable__item h3 {
+	margin: 0;
+}
+
+.cartasidetable__item div {
+	font-weight: bold;
+	font-size: 1.1rem;
+	color: var(--c-slate-grey);
+}
+
+.cartasidetable__item div span{
+	margin-left: calc(var(--offset-half) /2 );
+}

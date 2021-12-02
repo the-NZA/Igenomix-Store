@@ -318,8 +318,10 @@
 
 					<div class="cartform__meta">
 						<div class="coupon">
-								<input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="Код купона">
-								<button type="submit" class="button" name="apply_coupon" value="Применить купон">Применить купон</button>
+							<input type="text" name="coupon_code" class="input-text" id="coupon_code" value=""
+								placeholder="Код купона">
+							<button type="submit" class="button" name="apply_coupon" value="Применить купон">Применить
+								купон</button>
 						</div>
 
 						<button type="submit" class="button" name="update_cart" value="Обновить корзину" disabled=""
@@ -333,29 +335,27 @@
 			</main>
 
 			<aside class="cartpage__aside cart-collaterals">
-				<div class="cartaside cart_totals">
-					<h2 class="cartaside__header">Сумма заказа</h2>
+				<div class="cardaside cart_totals">
+					<h2 class="cartaside__header">Сумма заказов</h2>
 
-					<table class="cartaside__table shop_table shop_table_responsive">
-						<tbody>
-							<tr class="cart-subtotal">
-								<th>Подытог</th>
-								<td data-title="Подытог"><span
-										class="woocommerce-Price-amount amount"><bdi>36,00&nbsp;<span
-												class="woocommerce-Price-currencySymbol">₽</span></bdi></span></td>
-							</tr>
-							<tr class="order-total">
-								<th>Итого</th>
-								<td data-title="Итого"><strong><span
-											class="woocommerce-Price-amount amount"><bdi>36,00&nbsp;<span
-													class="woocommerce-Price-currencySymbol">₽</span></bdi></span></strong>
-								</td>
-							</tr>
-						</tbody>
-					</table>
+					<div class="cartaside__table cartasidetable shop_table shop_table_responsive">
+
+						<div class="cartasidetable__item cart-subtotal">
+							<h3>Подытог</h3>
+							<div data-title="Подытог">69006<span>₽</span> </div>
+						</div>
+
+						<div class="cartasidetable__item order-total">
+							<h3>Итого</h3>
+							<div data-title="Итого">69006<span>₽</span> </div>
+						</div>
+
+					</div>
 
 					<div class="cartaside__checkout wc-proceed-to-checkout">
-						<a href="#" class="checkout-button button alt wc-forward">Оформить заказ</a>
+						<a href="http://ig-store.local/checkout/" class="checkout-button button alt wc-forward">
+							Оформить заказ
+						</a>
 					</div>
 				</div>
 			</aside>

@@ -35,6 +35,7 @@
 @import url("./pages/cartpage/carttable.css"); /* Import Cartpage table styles */
 @import url("./pages/cartpage/carttableitem.css"); /* Import Cartpage table item styles */
 @import url("./pages/cartpage/cartaside.css"); /* Import Cartpage aside styles */
+@import url("./pages/cartpage/cartasidetable.css"); /* Import Cartasidetable styles */
 
 @import url("./utils/font.css");		/* Import font styles */
 @import url("./utils/shared.css"); 	/* Import shared style */
