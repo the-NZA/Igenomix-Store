@@ -8,7 +8,7 @@ Built on wordpress, woocommerce, nginx, mysql and docker
 - [x] Catalog page
 - [x] Category page
 - [x] Product page
-- [ ] Cart
+- [X] Cart
 - [ ] Checkout
 - [ ] 404 page
 - [ ] Search page
