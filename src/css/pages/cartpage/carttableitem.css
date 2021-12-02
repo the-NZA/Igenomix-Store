@@ -11,7 +11,7 @@
 	background-color: var(--c-white);
 	box-shadow: var(--card-shadow);
 	padding: var(--offset-half);
-	gap: 0 var(--offset-half);
+	gap: var(--offset-half);
 }
 
 .carttableitem:not(.carttableitem:last-of-type) {
