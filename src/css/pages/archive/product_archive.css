@@ -30,7 +30,7 @@
 .prodarchive__list{
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	gap: var(--offset-half);
+	gap: var(--offset);
 }
 
 .prodarchive__list--single{

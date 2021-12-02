@@ -95,7 +95,7 @@ function storefront_popular_products( $args ) {
 								<?php displayCardPrice($product, $currencySymbol); ?>
 							</p>
 
-							<button class="button_rounded productcard__button">
+							<button class="productcard__button">
 								<a href="<?php echo $product->get_permalink(); ?>">Заказать</a>
 							</button>
 						</article>
