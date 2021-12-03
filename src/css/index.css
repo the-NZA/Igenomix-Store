@@ -36,6 +36,10 @@
 @import url("./pages/cartpage/carttableitem.css"); /* Import Cartpage table item styles */
 @import url("./pages/cartpage/cartaside.css"); /* Import Cartpage aside styles */
 @import url("./pages/cartpage/cartasidetable.css"); /* Import Cartasidetable styles */
+@import url("./pages/cartpage/cartasidecoupon.css"); /* Import Cartasidecoupon styles */
+
+@import url("./pages/checkoutpage/checkoutpage.css"); /* Import Checkoutpage styles */
+@import url("./pages/checkoutpage/checkoutform.css"); /* Import Checkoutform styles */
 
 @import url("./utils/font.css");		/* Import font styles */
 @import url("./utils/shared.css"); 	/* Import shared style */

@@ -1,0 +1,26 @@
+.cartasidecoupon {
+
+}
+
+.cartasidecoupon h3 {
+	margin: 0 0 var(--offset-half) 0;
+}
+
+.cartasidecoupon__item {
+	display: flex;
+	padding-left: var(--offset);
+	margin-bottom: var(--offset-half);
+}
+
+.cartasidecoupon__item h4 {
+	margin: 0px var(--offset) 0 0;
+	text-transform: uppercase;
+}
+
+.cartasidecoupon__item .woocommerce-remove-coupon {
+	color: var(--c-mandys-pink);
+	text-decoration: none;
+	font-weight: bold;
+
+	margin-left: var(--offset-half);
+}

@@ -28,3 +28,7 @@
 .cartasidetable__item div span{
 	margin-left: calc(var(--offset-half) /2 );
 }
+
+.cartasidetable__coupons {
+	margin-bottom: var(--offset-half);
+}
