@@ -21,7 +21,8 @@
 	color: var(--c-white);
 
 	background-color: rgb(var(--rgb-san-juan));
-	border: 1px solid rgb(var(--rgb-san-juan));
+	/* border: 1px solid rgb(var(--rgb-san-juan)); */
+	border: none;
 	border-radius: calc(var(--offset-half)/4);
 
 	min-height: 40px;
@@ -30,6 +31,7 @@
 	font-weight: 700;
 	display: block;
 	max-width: max-content;
+	line-height: 1.5;
 
 	padding: calc(var(--offset-half)/2);
 	transition: var(--main-transition);
