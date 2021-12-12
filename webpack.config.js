@@ -100,6 +100,10 @@ module.exports = function (env, opt) {
 				filename: "cartpage.html",
 				template: path.resolve(__dirname, "src/cartpage.html"),
 			}),
+			new HtmlWebpackPlugin({
+				filename: "checkoutpage.html",
+				template: path.resolve(__dirname, "src/checkoutpage.html"),
+			}),
 			new MiniCssExtractPlugin(),
 			new CopyPlugin({
 				patterns: [

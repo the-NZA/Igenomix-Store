@@ -2,14 +2,29 @@
 
 }
 
+.cartpage > .woocommerce {
+	/* display: grid;
+	grid-template-areas: "cNotices cNotices" "cMain cAside";
+	grid-template-rows: max-content 1fr;
+	grid-template-columns: 1fr calc(var(--site-width)/3);
+	gap: 0 var(--offset);
+
+	min-height: calc(var(--site-width) / 4); */
+}
+
 .woocommerce-notices-wrapper {
 
 }
 
 .checkoutpage__coupon {
-
+	/* grid-area: "chForm"; */
+	background-color: rgb(var(--rgb-alice-blue));
+	box-shadow: var(--card-shadow);
+	border-radius: var(--offset-half);
 }
 
-.checkoutpage__form {
 
+.checkoutpage__form {
+	/* grid-area: "chForm"; */
+	margin-top: var(--offset);
 }

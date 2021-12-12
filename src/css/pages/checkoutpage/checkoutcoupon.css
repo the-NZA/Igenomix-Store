@@ -1,0 +1,60 @@
+.checkoutcoupon {
+	min-width: calc(var(--site-width)/ 3);
+	max-width: max-content;
+	padding: var(--offset);
+	font-weight: 600;
+}
+
+.checkoutcoupon a.showcoupon {
+	color: var(--c-slate-grey);
+	text-decoration: none;
+}
+
+.checkoutcoupon a.showcoupon:hover {
+	color: var(--c-san-juan-highlighted);
+	/* text-decoration: underline; */
+}
+
+/* .checkoutpage__coupon .woocommerce-form-coupon-toggle {
+	margin-bottom: var(--offset-half);
+} */
+
+.checkoutcoupon .woocommerce-error {
+	box-shadow: var(--card-shadow);
+	border-radius: calc(var(--offset-half) / 2);
+	background-color: rgb(var(--rgb-mandys-pink));
+	padding: var(--offset-half) var(--offset-half) var(--offset-half) var(--offset);
+	margin: var(--offset-half) 0 0 0;
+	list-style: decimal;
+	font-weight: 700;
+	color: var(--c-white);
+}
+
+.checkoutcoupon .woocommerce-error li {
+	margin-bottom: calc(var(--offset-half) / 2);
+}
+
+.checkoutcoupon .woocommerce-error li:last-of-type {
+	margin-bottom: 0;
+}
+
+.checkoutcoupon__form {
+	min-width: calc(var(--site-width)/ 3);
+	margin-top: var(--offset);
+	padding: var(--offset-half);
+	background-color: var(--c-white);
+	box-shadow: var(--card-shadow);
+	border-radius: calc(var(--offset-half) / 2);
+	box-sizing:border-box;
+}
+
+.checkoutcouponform__inputs {
+	display: flex;
+	justify-content: space-between;
+}
+
+.checkoutcouponform__inputs input {
+	flex-grow: 1;
+	margin-right: var(--offset);
+	padding: 5px;
+}
