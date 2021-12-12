@@ -2,6 +2,30 @@
 
 }
 
+.checkoutpage .input-text, 
+.checkoutpage .button {
+	border: 2px solid var(--c-slate-grey);
+	border-radius: calc(var(--offset-half) / 4);
+}
+
+.checkoutpage .input-text {
+	padding: 5px;
+}
+
+.checkoutpage .button {
+	background-color: var(--c-slate-grey);
+	color: var(--c-white);
+	font-weight: bold;
+	padding: 10px;
+	cursor: pointer;
+	transition: var(--main-transition);
+}
+
+.checkoutpage .button:hover {
+	border-color: var(--c-san-juan);
+	background-color: var(--c-san-juan);
+}
+
 .cartpage > .woocommerce {
 	/* display: grid;
 	grid-template-areas: "cNotices cNotices" "cMain cAside";
@@ -17,7 +41,6 @@
 }
 
 .checkoutpage__coupon {
-	/* grid-area: "chForm"; */
 	background-color: rgb(var(--rgb-alice-blue));
 	box-shadow: var(--card-shadow);
 	border-radius: var(--offset-half);
@@ -25,6 +48,9 @@
 
 
 .checkoutpage__form {
-	/* grid-area: "chForm"; */
 	margin-top: var(--offset);
+
+	display: grid;
+	grid-template-columns: 1fr calc(var(--site-width) / 3);
+	gap: var(--offset);
 }

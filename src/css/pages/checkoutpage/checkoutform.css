@@ -1,11 +1,67 @@
 .checkoutform {
-
 }
 
 .checkoutform__fields {
+	background-color: rgb(var(--rgb-alice-blue));
+	border-radius: var(--card-border-radius);
+	box-shadow: var(--card-shadow);
 
+	padding: var(--offset);
 }
 
 .checkoutform__review {
+	background-color: rgb(var(--rgb-alice-blue));
+	border-radius: var(--card-border-radius);
+	box-shadow: var(--card-shadow);
+	align-self: baseline;
 
+	padding: var(--offset);
+}
+
+.checkoutform__fields h2,
+.checkoutform__review h2 {
+	border-bottom: 1px solid var(--c-san-juan);
+	color: var(--c-san-juan);
+	font-weight: 700;
+	margin: 0 0 var(--offset) 0;
+	padding-bottom: var(--offset);
+}
+
+/* .form-row 
+.form-row-wide */
+
+.checkoutform__fields .woocommerce-billing-fields__field-wrapper {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: var(--offset-half) var(--offset);
+}
+
+.checkoutform__fields .form-row{
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+}
+
+.checkoutform__fields .form-row input {
+	padding: 10px;
+}
+
+.checkoutform__fields .form-row-wide{
+	grid-column-start: 1;
+	grid-column-end: -1;
+}
+
+.checkoutform__fields .form-row label {
+	margin-bottom: calc(var(--offset-half) / 2);
+}
+
+.checkoutform__fields .form-row span.woocommerce-input-wrapper {
+	display: block;
+	width: 100%;
+}
+
+.checkoutform__fields .form-row span.woocommerce-input-wrapper input {
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
 }

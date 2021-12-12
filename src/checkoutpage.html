@@ -178,41 +178,401 @@
 			<form name="checkout" method="post" class="checkoutpage__form checkoutform checkout woocommerce-checkout"
 				action="http://ig-store.local/checkout/" enctype="multipart/form-data" novalidate="novalidate">
 
-
-
 				<div class="checkoutform__fields col2-set" id="customer_details">
-					<div class="col-1">
-						<div class="woocommerce-billing-fields">
+					<div class="woocommerce-billing-fields">
 
-							<h3>Детали оплаты</h3>
+						<h2>Детали оплаты</h2>
+
+						<div class="woocommerce-billing-fields__field-wrapper">
+							<p class="form-row form-row-first validate-required" id="billing_first_name_field"
+								data-priority="10"><label for="billing_first_name" class="">Имя&nbsp;<abbr
+										class="required" title="обязательно">*</abbr></label><span
+									class="woocommerce-input-wrapper"><input type="text" class="input-text "
+										name="billing_first_name" id="billing_first_name" placeholder="" value="test"
+										autocomplete="given-name"></span></p>
+							<p class="form-row form-row-last validate-required" id="billing_last_name_field"
+								data-priority="20"><label for="billing_last_name" class="">Фамилия&nbsp;<abbr
+										class="required" title="обязательно">*</abbr></label><span
+									class="woocommerce-input-wrapper"><input type="text" class="input-text "
+										name="billing_last_name" id="billing_last_name" placeholder="" value="test"
+										autocomplete="family-name"></span></p>
+							<p class="form-row form-row-wide" id="billing_company_field" data-priority="30"><label
+									for="billing_company" class="">Название компании&nbsp;<span
+										class="optional">(необязательно)</span></label><span
+									class="woocommerce-input-wrapper"><input type="text" class="input-text "
+										name="billing_company" id="billing_company" placeholder="" value=""
+										autocomplete="organization"></span></p>
+							<p class="form-row form-row-wide address-field update_totals_on_change validate-required"
+								id="billing_country_field" data-priority="40"><label for="billing_country"
+									class="">Страна/регион&nbsp;<abbr class="required"
+										title="обязательно">*</abbr></label><span
+									class="woocommerce-input-wrapper"><select name="billing_country"
+										id="billing_country"
+										class="country_to_state country_select select2-hidden-accessible"
+										autocomplete="country" data-placeholder="Выберите страну/регион..."
+										data-label="Страна/регион" tabindex="-1" aria-hidden="true">
+										<option value="">Выберите страну/регион...</option>
+										<option value="AU">Австралия</option>
+										<option value="AT">Австрия</option>
+										<option value="AZ">Азербайджан</option>
+										<option value="AX">Аландские острова</option>
+										<option value="AL">Албания</option>
+										<option value="DZ">Алжир</option>
+										<option value="AS">Американское Самоа</option>
+										<option value="AI">Ангилья</option>
+										<option value="AO">Ангола</option>
+										<option value="AD">Андорра</option>
+										<option value="AQ">Антарктика</option>
+										<option value="AG">Антигуа и Барбуда</option>
+										<option value="AR">Аргентина</option>
+										<option value="AM">Армения</option>
+										<option value="AW">Аруба</option>
+										<option value="AF">Афганистан</option>
+										<option value="BS">Багамы</option>
+										<option value="BD">Бангладеш</option>
+										<option value="BB">Барбадос</option>
+										<option value="BH">Бахрейн</option>
+										<option value="BY">Беларусь</option>
+										<option value="BZ">Белиз</option>
+										<option value="BE">Бельгия</option>
+										<option value="BJ">Бенин</option>
+										<option value="BM">Бермуды</option>
+										<option value="BG">Болгария</option>
+										<option value="BO">Боливия</option>
+										<option value="BQ">Бонайре, Синт-Эстатиус и Саба</option>
+										<option value="BA">Босния и Герцеговина</option>
+										<option value="BW">Ботсвана</option>
+										<option value="BR">Бразилия</option>
+										<option value="IO">Британская Территория в Индийском Океане</option>
+										<option value="VG">Британские Виргинские острова</option>
+										<option value="BN">Бруней</option>
+										<option value="BF">Буркина-Фасо</option>
+										<option value="BI">Бурунди</option>
+										<option value="BT">Бутан</option>
+										<option value="VU">Вануату</option>
+										<option value="VA">Ватикан</option>
+										<option value="GB">Великобритания</option>
+										<option value="HU">Венгрия</option>
+										<option value="VE">Венесуэла</option>
+										<option value="VI">Виргинские острова (США)</option>
+										<option value="UM">Внешние малые острова США</option>
+										<option value="TL">Восточный Тимор</option>
+										<option value="VN">Вьетнам</option>
+										<option value="GA">Габон</option>
+										<option value="HT">Гаити</option>
+										<option value="GY">Гайана</option>
+										<option value="GM">Гамбия</option>
+										<option value="GH">Гана</option>
+										<option value="GP">Гваделупа</option>
+										<option value="GT">Гватемала</option>
+										<option value="GN">Гвинея</option>
+										<option value="GW">Гвинея-Бисау</option>
+										<option value="DE">Германия</option>
+										<option value="GG">Гернси</option>
+										<option value="GI">Гибралтар</option>
+										<option value="HN">Гондурас</option>
+										<option value="HK">Гонконг</option>
+										<option value="GD">Гренада</option>
+										<option value="GL">Гренландия</option>
+										<option value="GR">Греция</option>
+										<option value="GE">Грузия</option>
+										<option value="GU">Гуам</option>
+										<option value="DK">Дания</option>
+										<option value="JE">Джерси</option>
+										<option value="DJ">Джибути</option>
+										<option value="DM">Доминика</option>
+										<option value="DO">Доминиканская Республика</option>
+										<option value="EG">Египет</option>
+										<option value="ZM">Замбия</option>
+										<option value="EH">Западная Сахара</option>
+										<option value="ZW">Зимбабве</option>
+										<option value="IL">Израиль</option>
+										<option value="IN">Индия</option>
+										<option value="ID">Индонезия</option>
+										<option value="JO">Иордания</option>
+										<option value="IQ">Ирак</option>
+										<option value="IR">Иран</option>
+										<option value="IE">Ирландия</option>
+										<option value="IS">Исландия</option>
+										<option value="ES">Испания</option>
+										<option value="IT">Италия</option>
+										<option value="YE">Йемен</option>
+										<option value="CV">Кабо-Верде</option>
+										<option value="KZ">Казахстан</option>
+										<option value="KY">Кайманские острова</option>
+										<option value="KH">Камбоджа</option>
+										<option value="CM">Камерун</option>
+										<option value="CA">Канада</option>
+										<option value="QA">Катар</option>
+										<option value="KE">Кения</option>
+										<option value="CY">Кипр</option>
+										<option value="KI">Кирибати</option>
+										<option value="CN">Китай</option>
+										<option value="CC">Кокосовые (Килинг) острова</option>
+										<option value="CO">Колумбия</option>
+										<option value="KM">Коморы</option>
+										<option value="CG">Конго (Браззавиль)</option>
+										<option value="CD">Конго (Киншаса)</option>
+										<option value="CR">Коста-Рика</option>
+										<option value="CI">Кот-д'Ивуар</option>
+										<option value="CU">Куба</option>
+										<option value="KW">Кувейт</option>
+										<option value="KG">Кыргызстан</option>
+										<option value="CW">Кюрасао</option>
+										<option value="LA">Лаос</option>
+										<option value="LV">Латвия</option>
+										<option value="LS">Лесото</option>
+										<option value="LR">Либерия</option>
+										<option value="LB">Ливан</option>
+										<option value="LY">Ливия</option>
+										<option value="LT">Литва</option>
+										<option value="LI">Лихтенштейн</option>
+										<option value="LU">Люксембург</option>
+										<option value="MU">Маврикий</option>
+										<option value="MR">Мавритания</option>
+										<option value="MG">Мадагаскар</option>
+										<option value="YT">Майотта</option>
+										<option value="MO">Макао</option>
+										<option value="MW">Малави</option>
+										<option value="MY">Малайзия</option>
+										<option value="ML">Мали</option>
+										<option value="MV">Мальдивы</option>
+										<option value="MT">Мальта</option>
+										<option value="MA">Марокко</option>
+										<option value="MQ">Мартиника</option>
+										<option value="MH">Маршалловы острова</option>
+										<option value="MX">Мексика</option>
+										<option value="FM">Микронезия</option>
+										<option value="MZ">Мозамбик</option>
+										<option value="MD">Молдова</option>
+										<option value="MC">Монако</option>
+										<option value="MN">Монголия</option>
+										<option value="MS">Монсеррат</option>
+										<option value="MM">Мьянма</option>
+										<option value="NA">Намибия</option>
+										<option value="NR">Науру</option>
+										<option value="NP">Непал</option>
+										<option value="NE">Нигер</option>
+										<option value="NG">Нигерия</option>
+										<option value="NL">Нидерланды</option>
+										<option value="NI">Никарагуа</option>
+										<option value="NU">Ниуэ</option>
+										<option value="NZ">Новая Зеландия</option>
+										<option value="NC">Новая Каледония</option>
+										<option value="NO">Норвегия</option>
+										<option value="AE">Объединённые Арабские Эмираты</option>
+										<option value="OM">Оман</option>
+										<option value="BV">Остров Буве</option>
+										<option value="IM">Остров Мэн</option>
+										<option value="NF">Остров Норфолк</option>
+										<option value="CX">Остров Рождества</option>
+										<option value="SH">Остров Святой Елены</option>
+										<option value="HM">Остров Херд и острова Макдональд</option>
+										<option value="CK">Острова Кука</option>
+										<option value="PK">Пакистан</option>
+										<option value="PW">Палау</option>
+										<option value="PS">Палестинские территории</option>
+										<option value="PA">Панама</option>
+										<option value="PG">Папуа-Новая Гвинея</option>
+										<option value="PY">Парагвай</option>
+										<option value="PE">Перу</option>
+										<option value="PN">Питкэрн</option>
+										<option value="PL">Польша</option>
+										<option value="PT">Португалия</option>
+										<option value="PR">Пуэрто-Рико</option>
+										<option value="RE">Реюньон</option>
+										<option value="RU" selected="selected">Россия</option>
+										<option value="RW">Руанда</option>
+										<option value="RO">Румыния</option>
+										<option value="US">США</option>
+										<option value="SV">Сальвадор</option>
+										<option value="WS">Самоа</option>
+										<option value="SM">Сан-Марино</option>
+										<option value="ST">Сан-Томе и Принсипи</option>
+										<option value="SA">Саудовская Аравия</option>
+										<option value="SZ">Свазиленд</option>
+										<option value="KP">Северная Корея</option>
+										<option value="MK">Северная Македония</option>
+										<option value="MP">Северные Марианские острова</option>
+										<option value="SC">Сейшельские Острова</option>
+										<option value="BL">Сен-Бартелеми</option>
+										<option value="SX">Сен-Мартен (Нидерл.)</option>
+										<option value="MF">Сен-Мартен (Фр.)</option>
+										<option value="PM">Сен-Пьер и Микелон</option>
+										<option value="SN">Сенегал</option>
+										<option value="VC">Сент-Винсент и Гренадины</option>
+										<option value="KN">Сент-Китс и Невис</option>
+										<option value="LC">Сент-Люсия</option>
+										<option value="RS">Сербия</option>
+										<option value="SG">Сингапур</option>
+										<option value="SY">Сирия</option>
+										<option value="SK">Словакия</option>
+										<option value="SI">Словения</option>
+										<option value="SB">Соломоновы Острова</option>
+										<option value="SO">Сомали</option>
+										<option value="SD">Судан</option>
+										<option value="SR">Суринам</option>
+										<option value="SL">Сьерра-Леоне</option>
+										<option value="TJ">Таджикистан</option>
+										<option value="TW">Тайвань</option>
+										<option value="TH">Тайланд</option>
+										<option value="TZ">Танзания</option>
+										<option value="TC">Теркс и Кайкос</option>
+										<option value="TG">Того</option>
+										<option value="TK">Токелау</option>
+										<option value="TO">Тонга</option>
+										<option value="TT">Тринидад и Тобаго</option>
+										<option value="TV">Тувалу</option>
+										<option value="TN">Тунис</option>
+										<option value="TM">Туркменистан</option>
+										<option value="TR">Турция</option>
+										<option value="UG">Уганда</option>
+										<option value="UZ">Узбекистан</option>
+										<option value="UA">Украина</option>
+										<option value="WF">Уоллис и Футуна</option>
+										<option value="UY">Уругвай</option>
+										<option value="FO">Фарерские острова</option>
+										<option value="FJ">Фиджи</option>
+										<option value="PH">Филиппины</option>
+										<option value="FI">Финляндия</option>
+										<option value="FK">Фолклендские острова</option>
+										<option value="FR">Франция</option>
+										<option value="GF">Французская Гвиана</option>
+										<option value="PF">Французская Полинезия</option>
+										<option value="TF">Французские южные территории</option>
+										<option value="HR">Хорватия</option>
+										<option value="CF">Центральная Африканская Республика</option>
+										<option value="TD">Чад</option>
+										<option value="ME">Черногория</option>
+										<option value="CZ">Чешская Республика</option>
+										<option value="CL">Чили</option>
+										<option value="CH">Швейцария</option>
+										<option value="SE">Швеция</option>
+										<option value="SJ">Шпицберген и Ян-Майен</option>
+										<option value="LK">Шри-Ланка</option>
+										<option value="EC">Эквадор</option>
+										<option value="GQ">Экваториальная Гвинея</option>
+										<option value="ER">Эритрея</option>
+										<option value="EE">Эстония</option>
+										<option value="ET">Эфиопия</option>
+										<option value="ZA">Южная Африка</option>
+										<option value="GS">Южная Георгия/Сандвичевы острова</option>
+										<option value="KR">Южная Корея</option>
+										<option value="SS">Южный Судан</option>
+										<option value="JM">Ямайка</option>
+										<option value="JP">Япония</option>
+									</select><span class="select2 select2-container select2-container--default"
+										dir="ltr" style="width: 100%;"><span class="selection"><span
+												class="select2-selection select2-selection--single" aria-haspopup="true"
+												aria-expanded="false" tabindex="0" aria-label="Страна/регион"
+												role="combobox"><span class="select2-selection__rendered"
+													id="select2-billing_country-container" role="textbox"
+													aria-readonly="true" title="Россия">Россия</span><span
+													class="select2-selection__arrow" role="presentation"><b
+														role="presentation"></b></span></span></span><span
+											class="dropdown-wrapper" aria-hidden="true"></span></span><noscript><button
+											type="submit" name="woocommerce_checkout_update_totals"
+											value="Обновить страну/регион">Обновить
+											страну/регион</button></noscript></span></p>
+							<p class="form-row address-field validate-required form-row-wide"
+								id="billing_address_1_field" data-priority="50"><label for="billing_address_1"
+									class="">Адрес&nbsp;<abbr class="required" title="обязательно">*</abbr></label><span
+									class="woocommerce-input-wrapper"><input type="text" class="input-text "
+										name="billing_address_1" id="billing_address_1"
+										placeholder="Номер дома и название улицы" value="pushka, 12"
+										autocomplete="address-line1"
+										data-placeholder="Номер дома и название улицы"></span></p>
+							<p class="form-row address-field form-row-wide" id="billing_address_2_field"
+								data-priority="60"><label for="billing_address_2" class="screen-reader-text">Крыло,
+									подъезд, этаж и т.д.&nbsp;<span class="optional">(необязательно)</span></label><span
+									class="woocommerce-input-wrapper"><input type="text" class="input-text "
+										name="billing_address_2" id="billing_address_2"
+										placeholder="Крыло, подъезд, этаж и т.д. (необязательно)" value=""
+										autocomplete="address-line2"
+										data-placeholder="Крыло, подъезд, этаж и т.д. (необязательно)"></span></p>
+							<p class="form-row address-field validate-required form-row-wide" id="billing_city_field"
+								data-priority="70"
+								data-o_class="form-row form-row-wide address-field validate-required"><label
+									for="billing_city" class="">Населённый пункт&nbsp;<abbr class="required"
+										title="обязательно">*</abbr></label><span
+									class="woocommerce-input-wrapper"><input type="text" class="input-text "
+										name="billing_city" id="billing_city" placeholder="" value="moskva"
+										autocomplete="address-level2"></span></p>
+							<p class="form-row address-field validate-required validate-state form-row-wide"
+								id="billing_state_field" data-priority="80"
+								data-o_class="form-row form-row-wide address-field validate-required validate-state">
+								<label for="billing_state" class="">Область / район&nbsp;<abbr class="required"
+										title="обязательно">*</abbr></label><span
+									class="woocommerce-input-wrapper"><input type="text" class="input-text "
+										value="moskva" placeholder="" name="billing_state" id="billing_state"
+										autocomplete="address-level1" data-input-classes=""></span>
+							</p>
+							<p class="form-row address-field validate-required validate-postcode form-row-wide"
+								id="billing_postcode_field" data-priority="90"
+								data-o_class="form-row form-row-wide address-field validate-required validate-postcode">
+								<label for="billing_postcode" class="">Почтовый индекс&nbsp;<abbr class="required"
+										title="обязательно">*</abbr></label><span
+									class="woocommerce-input-wrapper"><input type="text" class="input-text "
+										name="billing_postcode" id="billing_postcode" placeholder="" value="108082"
+										autocomplete="postal-code"></span>
+							</p>
+							<p class="form-row form-row-wide validate-required validate-phone" id="billing_phone_field"
+								data-priority="100"><label for="billing_phone" class="">Телефон&nbsp;<abbr
+										class="required" title="обязательно">*</abbr></label><span
+									class="woocommerce-input-wrapper"><input type="tel" class="input-text "
+										name="billing_phone" id="billing_phone" placeholder="" value="89998887766"
+										autocomplete="tel"></span></p>
+							<p class="form-row form-row-wide validate-required validate-email" id="billing_email_field"
+								data-priority="110"><label for="billing_email" class="">Email&nbsp;<abbr
+										class="required" title="обязательно">*</abbr></label><span
+									class="woocommerce-input-wrapper"><input type="email" class="input-text "
+										name="billing_email" id="billing_email" placeholder="" value="test@test.ru"
+										autocomplete="email username"></span></p>
+						</div>
+
+					</div>
 
 
+					<div class="woocommerce-shipping-fields">
 
-							<div class="woocommerce-billing-fields__field-wrapper">
-								<p class="form-row form-row-first validate-required" id="billing_first_name_field"
-									data-priority="10"><label for="billing_first_name" class="">Имя&nbsp;<abbr
+						<h3 id="ship-to-different-address">
+							<label class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox">
+								<input id="ship-to-different-address-checkbox"
+									class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox"
+									type="checkbox" name="ship_to_different_address" value="1"> <span>Доставка по
+									другому адресу?</span>
+							</label>
+						</h3>
+
+						<div class="shipping_address" style="display: none;">
+
+
+							<div class="woocommerce-shipping-fields__field-wrapper">
+								<p class="form-row form-row-first validate-required" id="shipping_first_name_field"
+									data-priority="10"><label for="shipping_first_name" class="">Имя&nbsp;<abbr
 											class="required" title="обязательно">*</abbr></label><span
 										class="woocommerce-input-wrapper"><input type="text" class="input-text "
-											name="billing_first_name" id="billing_first_name" placeholder=""
+											name="shipping_first_name" id="shipping_first_name" placeholder=""
 											value="test" autocomplete="given-name"></span></p>
-								<p class="form-row form-row-last validate-required" id="billing_last_name_field"
-									data-priority="20"><label for="billing_last_name" class="">Фамилия&nbsp;<abbr
+								<p class="form-row form-row-last validate-required" id="shipping_last_name_field"
+									data-priority="20"><label for="shipping_last_name" class="">Фамилия&nbsp;<abbr
 											class="required" title="обязательно">*</abbr></label><span
 										class="woocommerce-input-wrapper"><input type="text" class="input-text "
-											name="billing_last_name" id="billing_last_name" placeholder="" value="test"
-											autocomplete="family-name"></span></p>
-								<p class="form-row form-row-wide" id="billing_company_field" data-priority="30"><label
-										for="billing_company" class="">Название компании&nbsp;<span
+											name="shipping_last_name" id="shipping_last_name" placeholder=""
+											value="test" autocomplete="family-name"></span></p>
+								<p class="form-row form-row-wide" id="shipping_company_field" data-priority="30">
+									<label for="shipping_company" class="">Название компании&nbsp;<span
 											class="optional">(необязательно)</span></label><span
 										class="woocommerce-input-wrapper"><input type="text" class="input-text "
-											name="billing_company" id="billing_company" placeholder="" value=""
-											autocomplete="organization"></span></p>
+											name="shipping_company" id="shipping_company" placeholder="" value=""
+											autocomplete="organization"></span>
+								</p>
 								<p class="form-row form-row-wide address-field update_totals_on_change validate-required"
-									id="billing_country_field" data-priority="40"><label for="billing_country"
+									id="shipping_country_field" data-priority="40"><label for="shipping_country"
 										class="">Страна/регион&nbsp;<abbr class="required"
 											title="обязательно">*</abbr></label><span
-										class="woocommerce-input-wrapper"><select name="billing_country"
-											id="billing_country"
+										class="woocommerce-input-wrapper"><select name="shipping_country"
+											id="shipping_country"
 											class="country_to_state country_select select2-hidden-accessible"
 											autocomplete="country" data-placeholder="Выберите страну/регион..."
 											data-label="Страна/регион" tabindex="-1" aria-hidden="true">
@@ -472,7 +832,7 @@
 													aria-haspopup="true" aria-expanded="false" tabindex="0"
 													aria-label="Страна/регион" role="combobox"><span
 														class="select2-selection__rendered"
-														id="select2-billing_country-container" role="textbox"
+														id="select2-shipping_country-container" role="textbox"
 														aria-readonly="true" title="Россия">Россия</span><span
 														class="select2-selection__arrow" role="presentation"><b
 															role="presentation"></b></span></span></span><span
@@ -482,456 +842,73 @@
 												value="Обновить страну/регион">Обновить
 												страну/регион</button></noscript></span></p>
 								<p class="form-row address-field validate-required form-row-wide"
-									id="billing_address_1_field" data-priority="50"><label for="billing_address_1"
+									id="shipping_address_1_field" data-priority="50"><label for="shipping_address_1"
 										class="">Адрес&nbsp;<abbr class="required"
 											title="обязательно">*</abbr></label><span
 										class="woocommerce-input-wrapper"><input type="text" class="input-text "
-											name="billing_address_1" id="billing_address_1"
+											name="shipping_address_1" id="shipping_address_1"
 											placeholder="Номер дома и название улицы" value="pushka, 12"
 											autocomplete="address-line1"
 											data-placeholder="Номер дома и название улицы"></span></p>
-								<p class="form-row address-field form-row-wide" id="billing_address_2_field"
-									data-priority="60"><label for="billing_address_2" class="screen-reader-text">Крыло,
+								<p class="form-row address-field form-row-wide" id="shipping_address_2_field"
+									data-priority="60"><label for="shipping_address_2" class="screen-reader-text">Крыло,
 										подъезд, этаж и т.д.&nbsp;<span
 											class="optional">(необязательно)</span></label><span
 										class="woocommerce-input-wrapper"><input type="text" class="input-text "
-											name="billing_address_2" id="billing_address_2"
+											name="shipping_address_2" id="shipping_address_2"
 											placeholder="Крыло, подъезд, этаж и т.д. (необязательно)" value=""
 											autocomplete="address-line2"
-											data-placeholder="Крыло, подъезд, этаж и т.д. (необязательно)"></span></p>
+											data-placeholder="Крыло, подъезд, этаж и т.д. (необязательно)"></span>
+								</p>
 								<p class="form-row address-field validate-required form-row-wide"
-									id="billing_city_field" data-priority="70"
+									id="shipping_city_field" data-priority="70"
 									data-o_class="form-row form-row-wide address-field validate-required"><label
-										for="billing_city" class="">Населённый пункт&nbsp;<abbr class="required"
+										for="shipping_city" class="">Населённый пункт&nbsp;<abbr class="required"
 											title="обязательно">*</abbr></label><span
 										class="woocommerce-input-wrapper"><input type="text" class="input-text "
-											name="billing_city" id="billing_city" placeholder="" value="moskva"
+											name="shipping_city" id="shipping_city" placeholder="" value="moskva"
 											autocomplete="address-level2"></span></p>
 								<p class="form-row address-field validate-required validate-state form-row-wide"
-									id="billing_state_field" data-priority="80"
+									id="shipping_state_field" data-priority="80"
 									data-o_class="form-row form-row-wide address-field validate-required validate-state">
-									<label for="billing_state" class="">Область / район&nbsp;<abbr class="required"
+									<label for="shipping_state" class="">Область / район&nbsp;<abbr class="required"
 											title="обязательно">*</abbr></label><span
 										class="woocommerce-input-wrapper"><input type="text" class="input-text "
-											value="moskva" placeholder="" name="billing_state" id="billing_state"
+											value="moskva" placeholder="" name="shipping_state" id="shipping_state"
 											autocomplete="address-level1" data-input-classes=""></span>
 								</p>
 								<p class="form-row address-field validate-required validate-postcode form-row-wide"
-									id="billing_postcode_field" data-priority="90"
+									id="shipping_postcode_field" data-priority="90"
 									data-o_class="form-row form-row-wide address-field validate-required validate-postcode">
-									<label for="billing_postcode" class="">Почтовый индекс&nbsp;<abbr class="required"
+									<label for="shipping_postcode" class="">Почтовый индекс&nbsp;<abbr class="required"
 											title="обязательно">*</abbr></label><span
 										class="woocommerce-input-wrapper"><input type="text" class="input-text "
-											name="billing_postcode" id="billing_postcode" placeholder="" value="108082"
-											autocomplete="postal-code"></span>
+											name="shipping_postcode" id="shipping_postcode" placeholder=""
+											value="108082" autocomplete="postal-code"></span>
 								</p>
-								<p class="form-row form-row-wide validate-required validate-phone"
-									id="billing_phone_field" data-priority="100"><label for="billing_phone"
-										class="">Телефон&nbsp;<abbr class="required"
-											title="обязательно">*</abbr></label><span
-										class="woocommerce-input-wrapper"><input type="tel" class="input-text "
-											name="billing_phone" id="billing_phone" placeholder="" value="89998887766"
-											autocomplete="tel"></span></p>
-								<p class="form-row form-row-wide validate-required validate-email"
-									id="billing_email_field" data-priority="110"><label for="billing_email"
-										class="">Email&nbsp;<abbr class="required"
-											title="обязательно">*</abbr></label><span
-										class="woocommerce-input-wrapper"><input type="email" class="input-text "
-											name="billing_email" id="billing_email" placeholder="" value="test@test.ru"
-											autocomplete="email username"></span></p>
 							</div>
 
 						</div>
 
 					</div>
+					<div class="woocommerce-additional-fields">
 
-					<div class="col-2">
-						<div class="woocommerce-shipping-fields">
-
-							<h3 id="ship-to-different-address">
-								<label class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox">
-									<input id="ship-to-different-address-checkbox"
-										class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox"
-										type="checkbox" name="ship_to_different_address" value="1"> <span>Доставка по
-										другому адресу?</span>
-								</label>
-							</h3>
-
-							<div class="shipping_address" style="display: none;">
-
-
-								<div class="woocommerce-shipping-fields__field-wrapper">
-									<p class="form-row form-row-first validate-required" id="shipping_first_name_field"
-										data-priority="10"><label for="shipping_first_name" class="">Имя&nbsp;<abbr
-												class="required" title="обязательно">*</abbr></label><span
-											class="woocommerce-input-wrapper"><input type="text" class="input-text "
-												name="shipping_first_name" id="shipping_first_name" placeholder=""
-												value="test" autocomplete="given-name"></span></p>
-									<p class="form-row form-row-last validate-required" id="shipping_last_name_field"
-										data-priority="20"><label for="shipping_last_name" class="">Фамилия&nbsp;<abbr
-												class="required" title="обязательно">*</abbr></label><span
-											class="woocommerce-input-wrapper"><input type="text" class="input-text "
-												name="shipping_last_name" id="shipping_last_name" placeholder=""
-												value="test" autocomplete="family-name"></span></p>
-									<p class="form-row form-row-wide" id="shipping_company_field" data-priority="30">
-										<label for="shipping_company" class="">Название компании&nbsp;<span
-												class="optional">(необязательно)</span></label><span
-											class="woocommerce-input-wrapper"><input type="text" class="input-text "
-												name="shipping_company" id="shipping_company" placeholder="" value=""
-												autocomplete="organization"></span>
-									</p>
-									<p class="form-row form-row-wide address-field update_totals_on_change validate-required"
-										id="shipping_country_field" data-priority="40"><label for="shipping_country"
-											class="">Страна/регион&nbsp;<abbr class="required"
-												title="обязательно">*</abbr></label><span
-											class="woocommerce-input-wrapper"><select name="shipping_country"
-												id="shipping_country"
-												class="country_to_state country_select select2-hidden-accessible"
-												autocomplete="country" data-placeholder="Выберите страну/регион..."
-												data-label="Страна/регион" tabindex="-1" aria-hidden="true">
-												<option value="">Выберите страну/регион...</option>
-												<option value="AU">Австралия</option>
-												<option value="AT">Австрия</option>
-												<option value="AZ">Азербайджан</option>
-												<option value="AX">Аландские острова</option>
-												<option value="AL">Албания</option>
-												<option value="DZ">Алжир</option>
-												<option value="AS">Американское Самоа</option>
-												<option value="AI">Ангилья</option>
-												<option value="AO">Ангола</option>
-												<option value="AD">Андорра</option>
-												<option value="AQ">Антарктика</option>
-												<option value="AG">Антигуа и Барбуда</option>
-												<option value="AR">Аргентина</option>
-												<option value="AM">Армения</option>
-												<option value="AW">Аруба</option>
-												<option value="AF">Афганистан</option>
-												<option value="BS">Багамы</option>
-												<option value="BD">Бангладеш</option>
-												<option value="BB">Барбадос</option>
-												<option value="BH">Бахрейн</option>
-												<option value="BY">Беларусь</option>
-												<option value="BZ">Белиз</option>
-												<option value="BE">Бельгия</option>
-												<option value="BJ">Бенин</option>
-												<option value="BM">Бермуды</option>
-												<option value="BG">Болгария</option>
-												<option value="BO">Боливия</option>
-												<option value="BQ">Бонайре, Синт-Эстатиус и Саба</option>
-												<option value="BA">Босния и Герцеговина</option>
-												<option value="BW">Ботсвана</option>
-												<option value="BR">Бразилия</option>
-												<option value="IO">Британская Территория в Индийском Океане</option>
-												<option value="VG">Британские Виргинские острова</option>
-												<option value="BN">Бруней</option>
-												<option value="BF">Буркина-Фасо</option>
-												<option value="BI">Бурунди</option>
-												<option value="BT">Бутан</option>
-												<option value="VU">Вануату</option>
-												<option value="VA">Ватикан</option>
-												<option value="GB">Великобритания</option>
-												<option value="HU">Венгрия</option>
-												<option value="VE">Венесуэла</option>
-												<option value="VI">Виргинские острова (США)</option>
-												<option value="UM">Внешние малые острова США</option>
-												<option value="TL">Восточный Тимор</option>
-												<option value="VN">Вьетнам</option>
-												<option value="GA">Габон</option>
-												<option value="HT">Гаити</option>
-												<option value="GY">Гайана</option>
-												<option value="GM">Гамбия</option>
-												<option value="GH">Гана</option>
-												<option value="GP">Гваделупа</option>
-												<option value="GT">Гватемала</option>
-												<option value="GN">Гвинея</option>
-												<option value="GW">Гвинея-Бисау</option>
-												<option value="DE">Германия</option>
-												<option value="GG">Гернси</option>
-												<option value="GI">Гибралтар</option>
-												<option value="HN">Гондурас</option>
-												<option value="HK">Гонконг</option>
-												<option value="GD">Гренада</option>
-												<option value="GL">Гренландия</option>
-												<option value="GR">Греция</option>
-												<option value="GE">Грузия</option>
-												<option value="GU">Гуам</option>
-												<option value="DK">Дания</option>
-												<option value="JE">Джерси</option>
-												<option value="DJ">Джибути</option>
-												<option value="DM">Доминика</option>
-												<option value="DO">Доминиканская Республика</option>
-												<option value="EG">Египет</option>
-												<option value="ZM">Замбия</option>
-												<option value="EH">Западная Сахара</option>
-												<option value="ZW">Зимбабве</option>
-												<option value="IL">Израиль</option>
-												<option value="IN">Индия</option>
-												<option value="ID">Индонезия</option>
-												<option value="JO">Иордания</option>
-												<option value="IQ">Ирак</option>
-												<option value="IR">Иран</option>
-												<option value="IE">Ирландия</option>
-												<option value="IS">Исландия</option>
-												<option value="ES">Испания</option>
-												<option value="IT">Италия</option>
-												<option value="YE">Йемен</option>
-												<option value="CV">Кабо-Верде</option>
-												<option value="KZ">Казахстан</option>
-												<option value="KY">Кайманские острова</option>
-												<option value="KH">Камбоджа</option>
-												<option value="CM">Камерун</option>
-												<option value="CA">Канада</option>
-												<option value="QA">Катар</option>
-												<option value="KE">Кения</option>
-												<option value="CY">Кипр</option>
-												<option value="KI">Кирибати</option>
-												<option value="CN">Китай</option>
-												<option value="CC">Кокосовые (Килинг) острова</option>
-												<option value="CO">Колумбия</option>
-												<option value="KM">Коморы</option>
-												<option value="CG">Конго (Браззавиль)</option>
-												<option value="CD">Конго (Киншаса)</option>
-												<option value="CR">Коста-Рика</option>
-												<option value="CI">Кот-д'Ивуар</option>
-												<option value="CU">Куба</option>
-												<option value="KW">Кувейт</option>
-												<option value="KG">Кыргызстан</option>
-												<option value="CW">Кюрасао</option>
-												<option value="LA">Лаос</option>
-												<option value="LV">Латвия</option>
-												<option value="LS">Лесото</option>
-												<option value="LR">Либерия</option>
-												<option value="LB">Ливан</option>
-												<option value="LY">Ливия</option>
-												<option value="LT">Литва</option>
-												<option value="LI">Лихтенштейн</option>
-												<option value="LU">Люксембург</option>
-												<option value="MU">Маврикий</option>
-												<option value="MR">Мавритания</option>
-												<option value="MG">Мадагаскар</option>
-												<option value="YT">Майотта</option>
-												<option value="MO">Макао</option>
-												<option value="MW">Малави</option>
-												<option value="MY">Малайзия</option>
-												<option value="ML">Мали</option>
-												<option value="MV">Мальдивы</option>
-												<option value="MT">Мальта</option>
-												<option value="MA">Марокко</option>
-												<option value="MQ">Мартиника</option>
-												<option value="MH">Маршалловы острова</option>
-												<option value="MX">Мексика</option>
-												<option value="FM">Микронезия</option>
-												<option value="MZ">Мозамбик</option>
-												<option value="MD">Молдова</option>
-												<option value="MC">Монако</option>
-												<option value="MN">Монголия</option>
-												<option value="MS">Монсеррат</option>
-												<option value="MM">Мьянма</option>
-												<option value="NA">Намибия</option>
-												<option value="NR">Науру</option>
-												<option value="NP">Непал</option>
-												<option value="NE">Нигер</option>
-												<option value="NG">Нигерия</option>
-												<option value="NL">Нидерланды</option>
-												<option value="NI">Никарагуа</option>
-												<option value="NU">Ниуэ</option>
-												<option value="NZ">Новая Зеландия</option>
-												<option value="NC">Новая Каледония</option>
-												<option value="NO">Норвегия</option>
-												<option value="AE">Объединённые Арабские Эмираты</option>
-												<option value="OM">Оман</option>
-												<option value="BV">Остров Буве</option>
-												<option value="IM">Остров Мэн</option>
-												<option value="NF">Остров Норфолк</option>
-												<option value="CX">Остров Рождества</option>
-												<option value="SH">Остров Святой Елены</option>
-												<option value="HM">Остров Херд и острова Макдональд</option>
-												<option value="CK">Острова Кука</option>
-												<option value="PK">Пакистан</option>
-												<option value="PW">Палау</option>
-												<option value="PS">Палестинские территории</option>
-												<option value="PA">Панама</option>
-												<option value="PG">Папуа-Новая Гвинея</option>
-												<option value="PY">Парагвай</option>
-												<option value="PE">Перу</option>
-												<option value="PN">Питкэрн</option>
-												<option value="PL">Польша</option>
-												<option value="PT">Португалия</option>
-												<option value="PR">Пуэрто-Рико</option>
-												<option value="RE">Реюньон</option>
-												<option value="RU" selected="selected">Россия</option>
-												<option value="RW">Руанда</option>
-												<option value="RO">Румыния</option>
-												<option value="US">США</option>
-												<option value="SV">Сальвадор</option>
-												<option value="WS">Самоа</option>
-												<option value="SM">Сан-Марино</option>
-												<option value="ST">Сан-Томе и Принсипи</option>
-												<option value="SA">Саудовская Аравия</option>
-												<option value="SZ">Свазиленд</option>
-												<option value="KP">Северная Корея</option>
-												<option value="MK">Северная Македония</option>
-												<option value="MP">Северные Марианские острова</option>
-												<option value="SC">Сейшельские Острова</option>
-												<option value="BL">Сен-Бартелеми</option>
-												<option value="SX">Сен-Мартен (Нидерл.)</option>
-												<option value="MF">Сен-Мартен (Фр.)</option>
-												<option value="PM">Сен-Пьер и Микелон</option>
-												<option value="SN">Сенегал</option>
-												<option value="VC">Сент-Винсент и Гренадины</option>
-												<option value="KN">Сент-Китс и Невис</option>
-												<option value="LC">Сент-Люсия</option>
-												<option value="RS">Сербия</option>
-												<option value="SG">Сингапур</option>
-												<option value="SY">Сирия</option>
-												<option value="SK">Словакия</option>
-												<option value="SI">Словения</option>
-												<option value="SB">Соломоновы Острова</option>
-												<option value="SO">Сомали</option>
-												<option value="SD">Судан</option>
-												<option value="SR">Суринам</option>
-												<option value="SL">Сьерра-Леоне</option>
-												<option value="TJ">Таджикистан</option>
-												<option value="TW">Тайвань</option>
-												<option value="TH">Тайланд</option>
-												<option value="TZ">Танзания</option>
-												<option value="TC">Теркс и Кайкос</option>
-												<option value="TG">Того</option>
-												<option value="TK">Токелау</option>
-												<option value="TO">Тонга</option>
-												<option value="TT">Тринидад и Тобаго</option>
-												<option value="TV">Тувалу</option>
-												<option value="TN">Тунис</option>
-												<option value="TM">Туркменистан</option>
-												<option value="TR">Турция</option>
-												<option value="UG">Уганда</option>
-												<option value="UZ">Узбекистан</option>
-												<option value="UA">Украина</option>
-												<option value="WF">Уоллис и Футуна</option>
-												<option value="UY">Уругвай</option>
-												<option value="FO">Фарерские острова</option>
-												<option value="FJ">Фиджи</option>
-												<option value="PH">Филиппины</option>
-												<option value="FI">Финляндия</option>
-												<option value="FK">Фолклендские острова</option>
-												<option value="FR">Франция</option>
-												<option value="GF">Французская Гвиана</option>
-												<option value="PF">Французская Полинезия</option>
-												<option value="TF">Французские южные территории</option>
-												<option value="HR">Хорватия</option>
-												<option value="CF">Центральная Африканская Республика</option>
-												<option value="TD">Чад</option>
-												<option value="ME">Черногория</option>
-												<option value="CZ">Чешская Республика</option>
-												<option value="CL">Чили</option>
-												<option value="CH">Швейцария</option>
-												<option value="SE">Швеция</option>
-												<option value="SJ">Шпицберген и Ян-Майен</option>
-												<option value="LK">Шри-Ланка</option>
-												<option value="EC">Эквадор</option>
-												<option value="GQ">Экваториальная Гвинея</option>
-												<option value="ER">Эритрея</option>
-												<option value="EE">Эстония</option>
-												<option value="ET">Эфиопия</option>
-												<option value="ZA">Южная Африка</option>
-												<option value="GS">Южная Георгия/Сандвичевы острова</option>
-												<option value="KR">Южная Корея</option>
-												<option value="SS">Южный Судан</option>
-												<option value="JM">Ямайка</option>
-												<option value="JP">Япония</option>
-											</select><span class="select2 select2-container select2-container--default"
-												dir="ltr" style="width: 100%;"><span class="selection"><span
-														class="select2-selection select2-selection--single"
-														aria-haspopup="true" aria-expanded="false" tabindex="0"
-														aria-label="Страна/регион" role="combobox"><span
-															class="select2-selection__rendered"
-															id="select2-shipping_country-container" role="textbox"
-															aria-readonly="true" title="Россия">Россия</span><span
-															class="select2-selection__arrow" role="presentation"><b
-																role="presentation"></b></span></span></span><span
-													class="dropdown-wrapper"
-													aria-hidden="true"></span></span><noscript><button type="submit"
-													name="woocommerce_checkout_update_totals"
-													value="Обновить страну/регион">Обновить
-													страну/регион</button></noscript></span></p>
-									<p class="form-row address-field validate-required form-row-wide"
-										id="shipping_address_1_field" data-priority="50"><label for="shipping_address_1"
-											class="">Адрес&nbsp;<abbr class="required"
-												title="обязательно">*</abbr></label><span
-											class="woocommerce-input-wrapper"><input type="text" class="input-text "
-												name="shipping_address_1" id="shipping_address_1"
-												placeholder="Номер дома и название улицы" value="pushka, 12"
-												autocomplete="address-line1"
-												data-placeholder="Номер дома и название улицы"></span></p>
-									<p class="form-row address-field form-row-wide" id="shipping_address_2_field"
-										data-priority="60"><label for="shipping_address_2"
-											class="screen-reader-text">Крыло,
-											подъезд, этаж и т.д.&nbsp;<span
-												class="optional">(необязательно)</span></label><span
-											class="woocommerce-input-wrapper"><input type="text" class="input-text "
-												name="shipping_address_2" id="shipping_address_2"
-												placeholder="Крыло, подъезд, этаж и т.д. (необязательно)" value=""
-												autocomplete="address-line2"
-												data-placeholder="Крыло, подъезд, этаж и т.д. (необязательно)"></span>
-									</p>
-									<p class="form-row address-field validate-required form-row-wide"
-										id="shipping_city_field" data-priority="70"
-										data-o_class="form-row form-row-wide address-field validate-required"><label
-											for="shipping_city" class="">Населённый пункт&nbsp;<abbr class="required"
-												title="обязательно">*</abbr></label><span
-											class="woocommerce-input-wrapper"><input type="text" class="input-text "
-												name="shipping_city" id="shipping_city" placeholder="" value="moskva"
-												autocomplete="address-level2"></span></p>
-									<p class="form-row address-field validate-required validate-state form-row-wide"
-										id="shipping_state_field" data-priority="80"
-										data-o_class="form-row form-row-wide address-field validate-required validate-state">
-										<label for="shipping_state" class="">Область / район&nbsp;<abbr class="required"
-												title="обязательно">*</abbr></label><span
-											class="woocommerce-input-wrapper"><input type="text" class="input-text "
-												value="moskva" placeholder="" name="shipping_state" id="shipping_state"
-												autocomplete="address-level1" data-input-classes=""></span>
-									</p>
-									<p class="form-row address-field validate-required validate-postcode form-row-wide"
-										id="shipping_postcode_field" data-priority="90"
-										data-o_class="form-row form-row-wide address-field validate-required validate-postcode">
-										<label for="shipping_postcode" class="">Почтовый индекс&nbsp;<abbr
-												class="required" title="обязательно">*</abbr></label><span
-											class="woocommerce-input-wrapper"><input type="text" class="input-text "
-												name="shipping_postcode" id="shipping_postcode" placeholder=""
-												value="108082" autocomplete="postal-code"></span>
-									</p>
-								</div>
-
-
-							</div>
-
+						<div class="woocommerce-additional-fields__field-wrapper">
+							<p class="form-row notes" id="order_comments_field" data-priority=""><label
+									for="order_comments" class="">Примечание к заказу&nbsp;<span
+										class="optional">(необязательно)</span></label><span
+									class="woocommerce-input-wrapper"><textarea name="order_comments"
+										class="input-text " id="order_comments"
+										placeholder="Примечания к вашему заказу, например, особые пожелания отделу доставки."
+										rows="2" cols="5"></textarea></span></p>
 						</div>
-						<div class="woocommerce-additional-fields">
 
-
-
-							<div class="woocommerce-additional-fields__field-wrapper">
-								<p class="form-row notes" id="order_comments_field" data-priority=""><label
-										for="order_comments" class="">Примечание к заказу&nbsp;<span
-											class="optional">(необязательно)</span></label><span
-										class="woocommerce-input-wrapper"><textarea name="order_comments"
-											class="input-text " id="order_comments"
-											placeholder="Примечания к вашему заказу, например, особые пожелания отделу доставки."
-											rows="2" cols="5"></textarea></span></p>
-							</div>
-
-
-						</div>
 					</div>
 				</div>
 
-
-
-
 				<div class="checkoutform__review">
 
-					<h3 id="order_review_heading">Ваш заказ</h3>
-
+					<h2 id="order_review_heading">Ваш заказ</h2>
 
 					<div id="order_review" class="woocommerce-checkout-review-order">
 						<table class="shop_table woocommerce-checkout-review-order-table" style="position: static;">
@@ -988,18 +965,12 @@
 									</td>
 								</tr>
 
-
-
-
-
-
 								<tr class="order-total">
 									<th>Итого</th>
 									<td><strong><span class="woocommerce-Price-amount amount"><bdi>45890,00&nbsp;<span
 														class="woocommerce-Price-currencySymbol">₽</span></bdi></span></strong>
 									</td>
 								</tr>
-
 
 							</tfoot>
 						</table>
@@ -1039,7 +1010,6 @@
 									</div>
 								</div>
 
-
 								<button type="submit" class="button alt" name="woocommerce_checkout_place_order"
 									id="place_order" value="Подтвердить заказ"
 									data-value="Подтвердить заказ">Подтвердить
@@ -1050,16 +1020,10 @@
 									name="_wp_http_referer" value="/?wc-ajax=update_order_review">
 							</div>
 						</div>
-
 					</div>
-
 				</div>
-
 			</form>
-
 		</div>
-
-
 	</div>
 
 	<!--Site footer-->

@@ -56,5 +56,5 @@
 .checkoutcouponform__inputs input {
 	flex-grow: 1;
 	margin-right: var(--offset);
-	padding: 5px;
+	padding: 10px;
 }
