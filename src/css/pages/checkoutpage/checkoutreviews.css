@@ -1,0 +1,38 @@
+:root {
+	--prod_grid_size: 260px;
+}
+
+.chouttable {}
+
+.chouttable__header {
+	display: grid;
+	grid-template-columns: var(--prod_grid_size) 1fr;
+	margin-bottom: var(--offset-half);
+	font-weight: bold;
+}
+
+.chouttable__body {
+	margin-bottom: var(--offset-half);
+}
+
+.chouttable__body > .chouttable__prodrow {
+	display: grid;
+	grid-template-columns: var(--prod_grid_size) 1fr;
+	gap: var(--offset-half) 0
+}
+
+.chouttable__footer {
+
+}
+
+.chouttable__footer .cart-subtotal {
+	display: grid;
+	grid-template-columns: var(--prod_grid_size) 1fr;
+	margin-bottom: var(--offset-half);
+}
+
+.chouttable__footer .order-total {
+	display: grid;
+	grid-template-columns: var(--prod_grid_size) 1fr;
+	margin-bottom: var(--offset-half);
+}

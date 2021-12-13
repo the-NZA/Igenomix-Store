@@ -41,6 +41,7 @@
 @import url("./pages/checkoutpage/checkoutpage.css"); /* Import Checkoutpage styles */
 @import url("./pages/checkoutpage/checkoutform.css"); /* Import Checkoutform styles */
 @import url("./pages/checkoutpage/checkoutcoupon.css"); /* Import Checkoutcoupon styles */
+@import url("./pages/checkoutpage/checkoutreviews.css"); /* Import Checkoutreviews styles */
 
 @import url("./utils/font.css");		/* Import font styles */
 @import url("./utils/shared.css"); 	/* Import shared style */
