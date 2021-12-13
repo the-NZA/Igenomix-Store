@@ -1,6 +1,29 @@
 .checkoutform {
 }
 
+.checkoutform .woocommerce-NoticeGroup.woocommerce-NoticeGroup-checkout {
+	grid-column: 1/-1;
+}
+
+.checkoutform .woocommerce-error {
+	box-shadow: var(--card-shadow);
+	border-radius: calc(var(--offset-half) / 2);
+	background-color: rgb(var(--rgb-mandys-pink));
+	padding: var(--offset-half) var(--offset-half) var(--offset-half) var(--offset);
+	margin: 0;
+	list-style: decimal;
+	font-weight: 500;
+	color: var(--c-white);
+}
+
+.checkoutform .woocommerce-error li {
+	margin-bottom: calc(var(--offset-half) / 2);
+}
+
+.checkoutform .woocommerce-error li:last-of-type {
+	margin-bottom: 0;
+}
+
 .checkoutform__fields {
 	background-color: rgb(var(--rgb-alice-blue));
 	border-radius: var(--card-border-radius);
@@ -30,10 +53,15 @@
 /* .form-row 
 .form-row-wide */
 
-.checkoutform__fields .woocommerce-billing-fields__field-wrapper {
+.checkoutform__fields .woocommerce-billing-fields__field-wrapper,
+.checkoutform__fields .woocommerce-shipping-fields__field-wrapper {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: var(--offset-half) var(--offset);
+}
+
+.checkoutform__fields .woocommerce-shipping-fields h3 {
+	margin: var(--offset) 0;
 }
 
 .checkoutform__fields .form-row{
@@ -64,4 +92,36 @@
 	display: block;
 	box-sizing: border-box;
 	width: 100%;
+}
+
+.checkoutform__fields .form-row span.woocommerce-input-wrapper .select2-container--default .select2-selection--single {
+	border: 2px solid var(--c-slate-grey);
+	padding: 10px;
+	box-sizing: border-box;
+
+	height: unset;
+}
+
+.checkoutform__fields .form-row span.woocommerce-input-wrapper .select2-container--default .select2-selection--single .select2-selection__rendered {
+	line-height: 1.15;
+	padding-left: 0;
+}
+
+.checkoutform__fields .form-row span.woocommerce-input-wrapper .select2-container--default .select2-selection--single .select2-selection__arrow {
+	height: 100%;
+	top: 2px;
+	right: 7px;
+	bottom: 0;
+}
+
+.checkoutform__fields .woocommerce-additional-fields {
+	margin-top: var(--offset);
+}
+
+.checkoutform__fields .woocommerce-additional-fields textarea{
+	width: 100%;
+	resize: vertical;
+	height: 200px;
+	box-sizing: border-box;
+	padding: 10px;
 }
