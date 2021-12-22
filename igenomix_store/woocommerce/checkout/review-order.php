@@ -29,21 +29,21 @@ defined('ABSPATH') || exit;
 		?>
 				<div class="chouttable__prodrow <?php echo esc_attr(apply_filters('woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key)); ?>">
 					<div class="product-name">
-					<?php 
-						echo wp_kses_post(apply_filters('woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key)) . '&nbsp;'; 
-					?>
-					<?php
+						<?php
+						echo wp_kses_post(apply_filters('woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key)) . '&nbsp;';
+						?>
+						<?php
 						echo apply_filters('woocommerce_checkout_cart_item_quantity', ' <strong class="product-quantity">' . sprintf('&times;&nbsp;%s', $cart_item['quantity']) . '</strong>', $cart_item, $cart_item_key); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
-					?>
-					<?php 
+						?>
+						<?php
 						echo wc_get_formatted_cart_item_data($cart_item); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
-					?>
+						?>
 					</div>
 
 					<div class="product-total">
-					<?php
+						<?php
 						echo apply_filters('woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal($_product, $cart_item['quantity']), $cart_item, $cart_item_key); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
-					?>
+						?>
 					</div>
 				</div>
 		<?php
@@ -55,18 +55,23 @@ defined('ABSPATH') || exit;
 	</div>
 
 	<div class="chouttable__footer">
-
 		<div class="cart-subtotal">
 			<div><?php esc_html_e('Subtotal', 'woocommerce'); ?></div>
 			<div><?php wc_cart_totals_subtotal_html(); ?></div>
 		</div>
 
-		<?php foreach (WC()->cart->get_coupons() as $code => $coupon) : ?>
-			<div class="cart-discount coupon-<?php echo esc_attr(sanitize_title($code)); ?>">
-				<div><?php wc_cart_totals_coupon_label($coupon); ?></div>
-				<div><?php wc_cart_totals_coupon_html($coupon); ?></div>
+		<?php if (WC()->cart->get_coupons()) : ?>
+			<div class="chouttable__coupons">
+				<h4>Примененные купоны</h4>
+
+				<?php foreach (WC()->cart->get_coupons() as $code => $coupon) : ?>
+					<div class="cart-discount coupon-<?php echo esc_attr(sanitize_title($code)); ?>">
+						<div class="coupon-name"><?php echo $coupon->code; ?></div>
+						<div><?php wc_cart_totals_coupon_html($coupon); ?></div>
+					</div>
+				<?php endforeach; ?>
 			</div>
-		<?php endforeach; ?>
+		<?php endif; ?>
 
 		<?php if (WC()->cart->needs_shipping() && WC()->cart->show_shipping()) : ?>
 
@@ -92,23 +97,23 @@ defined('ABSPATH') || exit;
 					<div class="tax-rate tax-rate-<?php echo esc_attr(sanitize_title($code)); ?>">
 						<div><?php echo esc_html($tax->label); ?></div>
 						<div><?php echo wp_kses_post($tax->formatted_amount); ?></div>
-					</d>
-				<?php endforeach; ?>
-			<?php else : ?>
-				<div class="tax-total">
-					<div><?php echo esc_html(WC()->countries->tax_or_vat()); ?></div>
-					<div><?php wc_cart_totals_taxes_total_html(); ?></d>
+						</d>
+					<?php endforeach; ?>
+				<?php else : ?>
+					<div class="tax-total">
+						<div><?php echo esc_html(WC()->countries->tax_or_vat()); ?></div>
+						<div><?php wc_cart_totals_taxes_total_html(); ?></d>
+						</div>
+					<?php endif; ?>
+				<?php endif; ?>
+
+				<?php do_action('woocommerce_review_order_before_order_total'); ?>
+
+				<div class="order-total">
+					<div><?php esc_html_e('Total', 'woocommerce'); ?></div>
+					<div><?php wc_cart_totals_order_total_html(); ?></div>
 				</div>
-			<?php endif; ?>
-		<?php endif; ?>
 
-		<?php do_action('woocommerce_review_order_before_order_total'); ?>
-
-		<div class="order-total">
-			<div><?php esc_html_e('Total', 'woocommerce'); ?></div>
-			<div><?php wc_cart_totals_order_total_html(); ?></div>
+				<?php do_action('woocommerce_review_order_after_order_total'); ?>
+			</div>
 		</div>
-
-		<?php do_action('woocommerce_review_order_after_order_total'); ?>
-	</div>
-</div>

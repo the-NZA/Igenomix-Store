@@ -911,69 +911,85 @@
 					<h2 id="order_review_heading">Ваш заказ</h2>
 
 					<div id="order_review" class="woocommerce-checkout-review-order">
-						<table class="shop_table woocommerce-checkout-review-order-table" style="position: static;">
-							<thead>
-								<tr>
-									<th class="product-name">Товар</th>
-									<th class="product-total">Подытог</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr class="cart_item">
-									<td class="product-name">
-										Пренатальное Полноэкзомное Секвенирование - Whole Exome Sequencing (WES)&nbsp;
-										<strong class="product-quantity">×&nbsp;1</strong>
-									</td>
-									<td class="product-total">
-										<span class="woocommerce-Price-amount amount"><bdi>45990,00&nbsp;<span
+						<div
+							class="checkoutreviews__table chouttable shop_table woocommerce-checkout-review-order-table">
+							<div class="chouttable__header">
+								<div class="product-name">Товар</div>
+								<idv class="product-total">Подытог</idv>
+							</div>
+
+
+							<div class="chouttable__body">
+								<div class="chouttable__prodrow cart_item">
+									<div class="product-name">
+										Beanie&nbsp; <strong class="product-quantity">×&nbsp;1</strong> </div>
+
+									<div class="product-total">
+										<span class="woocommerce-Price-amount amount"><bdi>18,00&nbsp;<span
 													class="woocommerce-Price-currencySymbol">₽</span></bdi></span>
-									</td>
-								</tr>
-							</tbody>
-							<tfoot>
+									</div>
+								</div>
+								<div class="chouttable__prodrow cart_item">
+									<div class="product-name">
+										Скрининг на носительство моногенных заболеваний - CGT® Bank – Genetic
+										Compatibility Test&nbsp; <strong class="product-quantity">×&nbsp;1</strong>
+									</div>
 
-								<tr class="cart-subtotal">
-									<th>Подытог</th>
-									<td><span class="woocommerce-Price-amount amount"><bdi>45990,00&nbsp;<span
-													class="woocommerce-Price-currencySymbol">₽</span></bdi></span></td>
-								</tr>
+									<div class="product-total">
+										<span class="woocommerce-Price-amount amount"><bdi>24990,00&nbsp;<span
+													class="woocommerce-Price-currencySymbol">₽</span></bdi></span>
+									</div>
+								</div>
+							</div>
 
-								<tr class="cart-discount coupon-test2">
-									<th>Купон: test2</th>
-									<td>-<span class="woocommerce-Price-amount amount">100,00&nbsp;<span
-												class="woocommerce-Price-currencySymbol">₽</span></span> <a
-											href="http://ig-store.local/checkout/?remove_coupon=test2"
-											class="woocommerce-remove-coupon" data-coupon="test2">[Убрать]</a></td>
-								</tr>
+							<div class="chouttable__footer">
+								<div class="cart-subtotal">
+									<div>Сумма</div>
+									<div><span class="woocommerce-Price-amount amount"><bdi>25008,00&nbsp;<span
+													class="woocommerce-Price-currencySymbol">₽</span></bdi></span></div>
+								</div>
 
+								<div class="chouttable__coupons">
+									<h4>Примененные купоны</h4>
 
+									<div class="cart-discount coupon-test">
+										<div class="coupon-name">test</div>
+										<div>-<span class="woocommerce-Price-amount amount">1250,40&nbsp;<span
+													class="woocommerce-Price-currencySymbol">₽</span></span> <a
+												href="http://ig-store.local/checkout/?remove_coupon=test"
+												class="woocommerce-remove-coupon" data-coupon="test">[Убрать]</a></div>
+									</div>
+									<div class="cart-discount coupon-test2">
+										<div class="coupon-name">test2</div>
+										<div>-<span class="woocommerce-Price-amount amount">100,00&nbsp;<span
+													class="woocommerce-Price-currencySymbol">₽</span></span> <a
+												href="http://ig-store.local/checkout/?remove_coupon=test2"
+												class="woocommerce-remove-coupon" data-coupon="test2">[Убрать]</a></div>
+									</div>
+								</div>
 
-								<tr class="woocommerce-shipping-totals shipping">
-									<th>Доставка</th>
-									<td data-title="Доставка">
-										<ul id="shipping_method" class="woocommerce-shipping-methods">
-											<li>
-												<input type="hidden" name="shipping_method[0]" data-index="0"
-													id="shipping_method_0_flat_rate1" value="flat_rate:1"
-													class="shipping_method"><label
-													for="shipping_method_0_flat_rate1">Единая
-													ставка</label>
-											</li>
-										</ul>
+								<div class="woocommerce-shipping-totals shipping chouttable__shipping">
+									<div class="shipping__title">Доставка</div>
 
+									<ul id="shipping_method" class="woocommerce-shipping-methods">
+										<li>
+											<input type="hidden" name="shipping_method[0]" data-index="0"
+												id="shipping_method_0_flat_rate1" value="flat_rate:1"
+												class="shipping_method"><label for="shipping_method_0_flat_rate1">Единая
+												ставка</label>
+										</li>
+									</ul>
+								</div>
 
-									</td>
-								</tr>
-
-								<tr class="order-total">
-									<th>Итого</th>
-									<td><strong><span class="woocommerce-Price-amount amount"><bdi>45890,00&nbsp;<span
+								<div class="order-total">
+									<div>Итого</div>
+									<div><strong><span class="woocommerce-Price-amount amount"><bdi>23657,60&nbsp;<span
 														class="woocommerce-Price-currencySymbol">₽</span></bdi></span></strong>
-									</td>
-								</tr>
+									</div>
+								</div>
 
-							</tfoot>
-						</table>
+							</div>
+						</div>
 
 						<div id="payment" class="woocommerce-checkout-payment" style="position: static;">
 							<ul class="wc_payment_methods payment_methods methods">
