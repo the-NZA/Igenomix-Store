@@ -175,6 +175,9 @@
 			</div>
 
 			<div class="woocommerce-notices-wrapper"></div>
+			
+			<div class="woocommerce-message" role="alert">Купон удалён.</div>
+
 			<form name="checkout" method="post" class="checkoutpage__form checkoutform checkout woocommerce-checkout"
 				action="http://ig-store.local/checkout/" enctype="multipart/form-data" novalidate="novalidate">
 
@@ -991,7 +994,7 @@
 							</div>
 						</div>
 
-						<div id="payment" class="woocommerce-checkout-payment" style="position: static;">
+						<div id="payment" class="checkoutreviews__payment woocommerce-checkout-payment">
 							<ul class="wc_payment_methods payment_methods methods">
 								<li class="wc_payment_method payment_method_cod">
 									<input id="payment_method_cod" type="radio" class="input-radio"
@@ -1008,34 +1011,36 @@
 							<div class="form-row place-order">
 								<noscript>
 									Поскольку ваш браузер не поддерживает JavaScript или в нем он отключен, просим
-									убедиться
-									в том, что вы нажали кнопку <em>Обновить итог</em> перед регистрацией заказа. Иначе,
-									есть риск неправильного подсчета стоимости. <br /><button type="submit"
-										class="button alt" name="woocommerce_checkout_update_totals"
-										value="Обновить итог">Обновить итог</button>
+									убедиться в том, что вы
+									нажали кнопку <em>Обновить итог</em> перед регистрацией заказа. Иначе, есть риск
+									неправильного подсчета
+									стоимости. <br /><button type="submit" class="button alt"
+										name="woocommerce_checkout_update_totals" value="Обновить итог">Обновить
+										итог</button>
 								</noscript>
 
 								<div class="woocommerce-terms-and-conditions-wrapper">
 									<div class="woocommerce-privacy-policy-text">
 										<p>Ваши личные данные будут использоваться для обработки ваших заказов,
-											упрощения
-											вашей работы с сайтом и для других целей, описанных в нашей <a
+											упрощения вашей работы с сайтом
+											и для других целей, описанных в нашей <a
 												href="http://ig-store.local/?page_id=3"
 												class="woocommerce-privacy-policy-link" target="_blank">политика
 												конфиденциальности</a>.</p>
 									</div>
 								</div>
 
+
 								<button type="submit" class="button alt" name="woocommerce_checkout_place_order"
 									id="place_order" value="Подтвердить заказ"
-									data-value="Подтвердить заказ">Подтвердить
-									заказ</button>
+									data-value="Подтвердить заказ">Подтвердить заказ</button>
 
 								<input type="hidden" id="woocommerce-process-checkout-nonce"
-									name="woocommerce-process-checkout-nonce" value="f3e7e3822d"><input type="hidden"
+									name="woocommerce-process-checkout-nonce" value="700f4037a5"><input type="hidden"
 									name="_wp_http_referer" value="/?wc-ajax=update_order_review">
 							</div>
 						</div>
+
 					</div>
 				</div>
 			</form>

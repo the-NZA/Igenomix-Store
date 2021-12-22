@@ -26,21 +26,42 @@
 	background-color: var(--c-san-juan);
 }
 
-.cartpage > .woocommerce {
-	/* display: grid;
-	grid-template-areas: "cNotices cNotices" "cMain cAside";
-	grid-template-rows: max-content 1fr;
-	grid-template-columns: 1fr calc(var(--site-width)/3);
-	gap: 0 var(--offset);
-
-	min-height: calc(var(--site-width) / 4); */
+.checkoutpage > .woocommerce {
+	display: grid;
+	grid-template-rows: 1fr 2fr;
+	grid-template-rows: min-content 1fr;
 }
 
 .woocommerce-notices-wrapper {
 
 }
 
+
+.checkoutpage > .woocommerce >  .woocommerce-message {
+	box-shadow: var(--card-shadow);
+	border-radius: var(--offset-half);
+	box-sizing: border-box;
+	background-color: rgb(var(--rgb-alice-blue));
+
+	padding: var(--offset);
+	margin: 0;
+
+	list-style: decimal;
+	font-weight: 600;
+	color: var(--c-san-juan-highlighted);
+
+
+	width: 100%;
+
+	align-self: start;
+	grid-column: 2/3;
+	grid-row: 1/2;
+}
+
+
 .checkoutpage__coupon {
+	grid-column: 1/3;
+	grid-row: 1/2;
 	background-color: rgb(var(--rgb-alice-blue));
 	box-shadow: var(--card-shadow);
 	border-radius: var(--offset-half);
@@ -50,7 +71,12 @@
 .checkoutpage__form {
 	margin-top: var(--offset);
 
+	grid-column: 1/3;
+	grid-row: 2/3;
+
 	display: grid;
 	grid-template-columns: 1fr calc(var(--site-width) / 3);
 	gap: var(--offset);
+
+
 }

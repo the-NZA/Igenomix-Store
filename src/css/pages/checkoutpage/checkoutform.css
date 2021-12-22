@@ -16,6 +16,7 @@
 	color: var(--c-white);
 }
 
+
 .checkoutform .woocommerce-error li {
 	margin-bottom: calc(var(--offset-half) / 2);
 }

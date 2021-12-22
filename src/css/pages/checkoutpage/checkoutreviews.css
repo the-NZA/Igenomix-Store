@@ -1,98 +1,39 @@
-:root {
-	--prod_grid_size: 260px;
-}
+.checkoutreviews {}
 
-.chouttable {}
-
-.chouttable__header {
-	display: grid;
-	grid-template-columns: var(--prod_grid_size) 1fr;
-	margin-bottom: var(--offset-half);
-	font-weight: bold;
-}
-
-.chouttable__body {
-	margin-bottom: var(--offset);
-}
-
-.chouttable__body > .chouttable__prodrow {
-	display: grid;
-	grid-template-columns: var(--prod_grid_size) 1fr;
-	gap: var(--offset-half) 0;
-	margin-bottom:  var(--offset-half)
-}
-
-.chouttable__body > .chouttable__prodrow:last-of-type {
-	margin-bottom: 0;
-}
-
-.chouttable__footer {
-	/* font-weight: bold; */
-}
-
-.chouttable__footer .cart-subtotal {
-	display: grid;
-	grid-template-columns: var(--prod_grid_size) 1fr;
-	margin-bottom: var(--offset);
-	font-weight: bold;
-}
-
-.chouttable__footer .order-total {
-	display: grid;
-	grid-template-columns: var(--prod_grid_size) 1fr;
-	margin-bottom: var(--offset);
-	font-size: 1.2rem;
-	font-weight: bold;
-}
-
-.chouttable__footer .chouttable__coupons {
-	margin-bottom: var(--offset);
-	font-weight: bold;
-}
-
-.chouttable__footer .chouttable__coupons h4 {
-	margin:  var(--offset) 0 var(--offset-half) 0;
-}
-
-.chouttable__footer .chouttable__coupons .cart-discount {
-	display: flex;
-	justify-content: space-between;
-	margin-bottom: var(--offset-half);
+.checkoutreviews__payment {
 
 }
 
-.chouttable__footer .chouttable__coupons .cart-discount:last-of-type {
-	margin-bottom: 0;
-}
-
-.chouttable__footer .chouttable__coupons .cart-discount  .coupon-name {
-	text-transform: uppercase;
-}
-
-.chouttable__footer .chouttable__coupons .cart-discount .woocommerce-remove-coupon {
-	color: var(--c-mandys-pink);
-	margin-left: var(--offset-half);
-}
-
-.chouttable__shipping {
-	margin-bottom: var(--offset);
-}
-
-.chouttable__shipping .shipping__title {
-	font-weight: bold;
-	margin-bottom: var(--offset-half);
-}
-
-.chouttable__shipping .woocommerce-shipping-methods {
+.checkoutreviews__payment .wc_payment_methods {
 	margin: 0;
-	padding: 0 0 0 var(--offset);
+	/* padding: 0 0 0 var(--offset); */
+	padding: 0;
 	list-style: none;
 }
 
-.chouttable__shipping .woocommerce-shipping-methods li {
-	margin: 0 0 var(--offset-half) 0;
+.checkoutreviews__payment .wc_payment_methods li {
+	margin-bottom: var(--offset-half);
 }
 
-.chouttable__shipping .woocommerce-shipping-methods li:last-of-type {
+.checkoutreviews__payment .wc_payment_methods li:last-of-type {
+	margin-bottom: 0;
+}
+
+.checkoutreviews__payment .wc_payment_methods li label {
+	font-weight: bold;
+	margin-bottom: calc(var(--offset-half) / 2);
+	display: block;
+}
+
+.checkoutreviews__payment .wc_payment_methods li div p {
 	margin: 0;
+	font-size: 0.9rem;
+}
+
+.checkoutreviews__payment .form-row.place-order {
+	margin-top: var(--offset);
+}
+
+.checkoutreviews__payment .form-row.place-order .woocommerce-terms-and-conditions-wrapper {
+	margin-bottom: var(--offset);
 }

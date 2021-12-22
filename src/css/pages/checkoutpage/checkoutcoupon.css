@@ -19,6 +19,10 @@
 	margin-bottom: var(--offset-half);
 } */
 
+.checkoutcoupon > .woocommerce-message {
+	margin-top: var(--offset-half);
+}
+
 .checkoutcoupon .woocommerce-error {
 	box-shadow: var(--card-shadow);
 	border-radius: calc(var(--offset-half) / 2);
