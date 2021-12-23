@@ -15,6 +15,7 @@
 @import url("./parts/pagilist.css");	/* Import Pagination styles */
 @import url("./parts/productcard.css");	/* Import Productcard styles */
 @import url("./parts/asidenav.css");	/* Import Asidenav styles */
+@import url("./parts/orderdetails.css"); /* Import Order details styles */
 
 
 @import url("./pages/homepage/homepage.css"); /* Import Homepage styles */
@@ -42,7 +43,10 @@
 @import url("./pages/checkoutpage/checkoutform.css"); /* Import Checkoutform styles */
 @import url("./pages/checkoutpage/checkoutcoupon.css"); /* Import Checkoutcoupon styles */
 @import url("./pages/checkoutpage/chouttable.css"); /* Import Chouttable styles */
-@import url("./pages//checkoutpage/checkoutreviews.css"); /* Import Checkoutreviews styles */
+@import url("./pages/checkoutpage/checkoutreviews.css"); /* Import Checkoutreviews styles */
+@import url("./pages/checkoutpage/checkoutthankyou.css"); /* Import Checkoutthankyou styles */
+@import url("./pages/checkoutpage/chthanklist.css"); /* Import Chthanklist styles */
+@import url("./pages/checkoutpage/chthanktable.css"); /* Import Chthanktable styles */
 
 @import url("./utils/font.css");		/* Import font styles */
 @import url("./utils/shared.css"); 	/* Import shared style */

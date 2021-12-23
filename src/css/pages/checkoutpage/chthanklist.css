@@ -1,0 +1,27 @@
+.chthanklist {
+
+}
+
+.chthanklist__item {
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	gap: var(--offset);
+	margin-bottom: var(--offset-half);
+}
+
+.chthanklist__item:last-of-type {
+	margin-bottom: 0;
+}
+
+.chthanklist__prodname {
+	font-weight: 600;
+}
+
+.chthanklist__prodname a {
+	text-decoration: none;
+	color: var(--c-san-juan-highlighted);
+}
+
+.chthanklist__prodname a:hover {
+	text-decoration: underline;
+}

@@ -1,0 +1,36 @@
+.chthanktable {
+}
+
+.chthanktable__header {
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	gap: var(--offset);
+	margin-bottom: var(--offset-half);
+	font-weight: bold;
+}
+
+.chthanktable__body {
+	margin-bottom: var(--offset);
+}
+
+.chthanktable__footer {
+
+}
+
+.chthankfooter {
+}
+
+.chthankfooter__item {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	gap: var(--offset);
+	margin-bottom: var(--offset-half);
+}
+
+.chthankfooter__item:last-of-type {
+	margin-bottom: 0;
+}
+
+.chthankfooter__item > .chthankfooter__title {
+	font-weight: bold;
+}
