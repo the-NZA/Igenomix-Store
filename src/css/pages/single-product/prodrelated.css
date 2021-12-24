@@ -12,11 +12,10 @@
 
 .prodrelated__cards {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	/* grid-template-rows: repeat(2, 1fr); */
+	grid-template-columns: repeat(2, 1fr);
 	gap: var(--offset);
 }
 
-.prodrelated__cards > .productcard:nth-of-type(4){
+/* .prodrelated__cards > .productcard:nth-of-type(4){
 	display: none;
-}
+} */
