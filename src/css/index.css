@@ -48,6 +48,8 @@
 @import url("./pages/checkoutpage/chthanklist.css"); /* Import Chthanklist styles */
 @import url("./pages/checkoutpage/chthanktable.css"); /* Import Chthanktable styles */
 
+@import url("./pages/singlepage/singlepage.css"); /* Import Singlepage styles */
+
 @import url("./utils/font.css");		/* Import font styles */
 @import url("./utils/shared.css"); 	/* Import shared style */
 /* @import url("./utils/lineicons.css");	Import lineicons font styles */
