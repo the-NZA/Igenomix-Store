@@ -20,3 +20,6 @@ require_once "parts/shared.php";
 
 // * CART view functions
 require_once "parts/cart.php";
+
+// * SINGLEPAGE view functions
+require_once "parts/singlepage.php";

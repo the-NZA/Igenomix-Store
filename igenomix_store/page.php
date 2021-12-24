@@ -8,7 +8,7 @@
 
 get_header(); ?>
 
-<main id="main" class="site-main singlepage" role="main">
+<main id="main" class="site-main wrapper singlepage" role="main">
 
 	<?php
 	while (have_posts()) :
