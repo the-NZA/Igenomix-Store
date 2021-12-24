@@ -9,6 +9,6 @@ Built on wordpress, woocommerce, nginx, mysql and docker
 - [x] Category page
 - [x] Product page
 - [X] Cart
-- [ ] Checkout
+- [X] Checkout
 - [ ] 404 page
 - [ ] Search page
