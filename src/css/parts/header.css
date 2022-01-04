@@ -75,13 +75,6 @@
 	width: var(--offset);
 	height: var(--offset);
 
-	animation-duration: 200ms;
-	animation-timing-function: ease-in-out;
-	animation-delay: 0ms;
-	animation-iteration-count: 1;
-	animation-direction: normal;
-	animation-fill-mode: both; 
-	animation-play-state: running; 
 }
 
 .header__mobmenu:hover {
@@ -160,6 +153,14 @@
 		box-shadow: var(--card-shadow);
 
 		background-color: rgb(var(--rgb-alice-blue));
+
+		animation-duration: 200ms;
+		animation-timing-function: ease-in-out;
+		animation-delay: 0ms;
+		animation-iteration-count: 1;
+		animation-direction: normal;
+		animation-fill-mode: both; 
+		animation-play-state: running; 
 	}
 
 	.header__menu--active {
