@@ -1,9 +1,9 @@
-import tester from "./js/tester.js";
 import HandleShowCartButton from "./js/showcart.js";
+import HandleMobmenuButton from "./js/showmobmenu.js";
 
 import "./css/index.css"; // Import styles
 
 window.addEventListener("DOMContentLoaded", function () {
-	tester();
-	HandleShowCartButton();	// Show and mini cart by clicking showcart button
+	HandleShowCartButton();	// Show and hide mini cart by clicking showcart button
+	HandleMobmenuButton(); 	// Show and hide mobile menu by clicking mobmenu button
 });

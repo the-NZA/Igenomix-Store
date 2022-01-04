@@ -100,3 +100,46 @@
 		display: none;
 	}
 }
+
+@keyframes mobmenuAnimationShow {
+	0% {
+		opacity: 0;
+		transform: translateX(-100%);
+		display: none;
+	}
+	1% {
+		opacity: 0;
+		transform: translateX(-100%);
+		display: block;
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0%);
+		display: block;
+	}
+}
+
+@keyframes mobmenuAnimationRemove {
+	0% {
+		opacity: 1;
+		transform: translateX(50%);
+		display: block;
+	}
+	30% {
+		opacity: 0.6;
+		transform: translateX(30%);
+	}
+	60% {
+		opacity: 0.3;
+		transform: translateX(20%);
+	}
+	99% {
+		opacity: 0;
+		transform: translateX(-50%);
+	}
+	100% {
+		opacity: 0;
+		transform: translateX(-100%);
+		display: none;
+	}
+}

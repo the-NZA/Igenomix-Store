@@ -7,19 +7,22 @@ function makeAsideCartActive(headerCart, headerOverlay) {
 function makeAsideCartUnactive(headerCart, headerOverlay) {
 	// Remove active class otherwise
 	// Register on animation end handlers
-	headerCart.addEventListener("animationend", function (e) {
-		headerCart.classList.remove("header__cart--active", "header__cart--remove");
-	}, { once: true });
 
-	headerOverlay.addEventListener("animationend", function (e) {
-		headerOverlay.classList.remove("header__overlay--active", "header__overlay--remove");
-	}, { once: true });
+	if (headerCart.classList.contains("header__cart--active")) {
+		headerCart.addEventListener("animationend", function (e) {
+			headerCart.classList.remove("header__cart--active", "header__cart--remove");
+		}, { once: true });
 
-	// Add classes with remove animations
-	headerCart.classList.add("header__cart--remove");
-	headerOverlay.classList.add("header__overlay--remove")
+		headerOverlay.addEventListener("animationend", function (e) {
+			headerOverlay.classList.remove("header__overlay--active", "header__overlay--remove");
+		}, { once: true });
 
-	document.body.style.overflow = ""; // Turn scrolling on
+		// Add classes with remove animations
+		headerCart.classList.add("header__cart--remove");
+		headerOverlay.classList.add("header__overlay--remove")
+
+		document.body.style.overflow = ""; // Turn scrolling on
+	}
 }
 
 function HandleShowCartButton() {

@@ -32,14 +32,11 @@
 		align-items: center;
 		justify-content: center;
 
-		min-width: calc(var(--site-width) / 4);
-		min-height: calc(var(--site-width) / 4);
+		max-width: calc(var(--site-width) / 4);
 		padding: var(--offset);
 
-		background-color: var(--c-white);
-
 		border-radius: var(--card-border-radius);
-		font-size: 1.1rem;
+		font-size: 1rem;
 	}
 
 	.navlist__item {
@@ -49,5 +46,9 @@
 
 	.navlist__item:last-of-type {
 		margin: 0;
+	}
+
+	.navlist__item a {
+		color: var(--c-san-juan);
 	}
 }
