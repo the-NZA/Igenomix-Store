@@ -57,12 +57,14 @@
 } */
 
 .header__cart {
-	position: absolute;
+	/* position: absolute; */
+	position: fixed;
 	z-index: 2;
 
 	top: calc(var(--offset) * 3);
-	right: 7%;
-	transform: translateX(7%);
+	/* right: 7%; */
+	right: 30%;
+	/* transform: translateX(7%); */
 	/* right: 50%;
 	transform: translateX(50%); */
 
@@ -103,6 +105,24 @@
 .header__cart--remove {
 	animation-name: asidecartAnimationRemove;
 	display: grid;
+}
+
+@media screen and (width <= 2048px){
+	.header__cart {
+		right: 20%;
+	}	
+}
+
+@media screen and (width <= 1400px){
+	.header__cart {
+		right: 30%;
+	}	
+}
+
+@media screen and (width <= 1024px){
+	.header__cart {
+		right: 50%;
+	}	
 }
 
 .header__overlay {
