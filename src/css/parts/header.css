@@ -154,7 +154,7 @@
 
 		background-color: rgb(var(--rgb-alice-blue));
 
-		animation-duration: 200ms;
+		animation-duration: 250ms;
 		animation-timing-function: ease-in-out;
 		animation-delay: 0ms;
 		animation-iteration-count: 1;
