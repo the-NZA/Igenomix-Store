@@ -26,6 +26,7 @@
 .carttableitem__image img {
 	display: block;
 	max-width: calc(var(--offset) * 4);
+	min-width: calc(var(--offset) * 4);
 	width: 100%;
 	height: auto;
 	border-radius: calc(var(--offset-half) / 2);
