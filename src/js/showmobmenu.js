@@ -30,6 +30,7 @@ function HandleMobmenuButton() {
 	const mobmenuButton = header.querySelector(".header__mobmenu");
 	const mobmenu = header.querySelector(".header__menu");
 	const headerOverlay = header.querySelector(".header__overlay");
+	const closemenuButton = header.querySelector(".header__menuclose");
 
 	mobmenuButton.addEventListener("click", function (e) {
 		e.preventDefault();
@@ -41,6 +42,12 @@ function HandleMobmenuButton() {
 			// Remove active class otherwise
 			makeMobmenuUnactive(mobmenu, headerOverlay);
 		}
+	});
+
+	// Close by clicking close cart button
+	closemenuButton.addEventListener("click", function (e) {
+		e.preventDefault();
+		makeMobmenuUnactive(mobmenu, headerOverlay);
 	});
 
 	// Close on click or mouse scroll under overlay

@@ -58,6 +58,41 @@
 	display: block;
 }
 
+.header__menuheader {
+	display: none;
+	justify-content: space-between;
+	align-items: center;
+	padding: var(--offset-half);
+	border-bottom: 1px solid var(--c-san-juan);
+}
+
+.header__menuheader h2 {
+	margin: 0;
+	font-size: 1.3rem;
+	color: var(--c-san-juan);
+}
+
+.header__menuclose {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	appearance: none;
+	background-color: rgb(var(--rgb-alice-blue));
+	color: rgb(var(--rgb-san-juan));
+	width: 32px;
+	border: 2px solid rgb(var(--rgb-san-juan));
+	border-radius: 50%;
+	padding: 6px;
+	cursor: pointer;
+	transition: var(--main-transition);
+}
+
+.header__menuclose:hover {
+	background-color: rgb(var(--rgb-mandys-pink));
+	border-color: rgb(var(--rgb-mandys-pink));
+	color: rgb(var(--rgb-alice-blue));
+}
+
 .header__mobmenu {
 	display: none;
 
@@ -87,7 +122,6 @@
 
 	background-color: var(--c-slate-grey);
 	border-radius: var(--offset-half);
-
 }
 
 .header__mobmenubar::after {
@@ -172,6 +206,10 @@
 	.header__menu--remove {
 		animation-name: mobmenuAnimationRemove;
 		display: block;
+	}
+
+	.header__menuheader{
+		display: flex;
 	}
 
 	.header__mobmenu {

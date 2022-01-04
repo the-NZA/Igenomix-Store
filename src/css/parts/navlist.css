@@ -33,7 +33,7 @@
 		justify-content: center;
 
 		max-width: calc(var(--site-width) / 4);
-		padding: var(--offset);
+		padding: var(--offset-half) var(--offset) var(--offset) var(--offset);
 
 		border-radius: var(--card-border-radius);
 		font-size: 1rem;
@@ -49,6 +49,6 @@
 	}
 
 	.navlist__item a {
-		color: var(--c-san-juan);
+		color: var(--c-slate-grey);
 	}
 }
