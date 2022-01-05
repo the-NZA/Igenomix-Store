@@ -120,3 +120,59 @@
 .productcard__button:hover {
 	background-color: var(--c-san-juan-highlighted);
 }
+
+@media screen and (width <= 750px){
+	.productcard {
+		grid-template-columns: 120px 1fr 1fr;
+		grid-template-rows: minmax(calc(var(--offset) * 2), max-content) 1fr max-content;
+	}	
+}
+
+@media screen and (width <= 660px){
+	.productcard {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+		grid-template-areas: 
+			"pIcon"
+			"pTitle"
+			"pSnippet"
+			"pPrice"
+			"pBtn";
+
+		gap: var(--offset-half);
+	}	
+
+	.productcard__icon {
+		max-width: 140px;
+		justify-self: center;
+	}
+
+	.productcard__title {
+		font-size: 1.1rem;
+		text-align: center;
+	}
+
+	.productcard__price {
+		justify-self: center;
+		font-size: 1.3rem;
+	}
+}
+
+@media screen  and (width <= 500px){
+	.productcard {
+		padding: calc(var(--offset-half) * 1.5);
+		gap: var(--offset);
+	}
+
+	.productcard__title {
+		font-size: 1.1rem;
+	}
+
+	.productcard__snippet {
+		text-align: justify;
+	}
+
+	.productcard__icon {
+		max-width: 120px;
+	}	
+}

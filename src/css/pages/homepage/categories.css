@@ -6,6 +6,12 @@
 	padding: calc(var(--offset) * 1.5) var(--offset);
 }
 
+@media screen and (width <= 1200px){
+	.homepage__categories > .wrapper {
+		padding: var(--offset);
+	}
+}
+
 .categorycard {
 	border-radius: var(--card-border-radius);
 	background-color: rgb(var(--rgb-chablis));
@@ -55,4 +61,27 @@
 
 .categorycard__button:hover{
 	background-color: var(--c-mandys-pink-highlighted);
+}
+
+@media screen and (width <= 1000px){
+	.categorycard {
+		justify-self: center;
+		max-width: 60%;
+	}
+}
+
+@media screen and (width <= 800px){
+	.categorycard {
+		max-width: 100%;
+	}
+
+	.categorycard__icon {
+		max-width: 140px;
+	}
+}
+
+@media screen and (width <= 600px){
+	.categorycard__icon {
+		max-width: 120px;
+	}
 }

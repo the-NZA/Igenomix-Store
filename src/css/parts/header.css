@@ -168,11 +168,6 @@
 		max-width: max-content;
 	}
 
-	/* ! REMOVE AFTER FINISH HEADER MEDIA QUERIES */
-	main, footer {
-		display: none;
-	}
-
 	.header__menu {
 		display: none;
 		position: fixed;

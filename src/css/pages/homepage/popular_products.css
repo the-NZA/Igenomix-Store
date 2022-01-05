@@ -5,3 +5,9 @@
 .homepage__popular_products > .wrapper {
 	padding: calc(var(--offset) * 1.5) var(--offset);
 }
+
+@media screen and (width <= 1200px){
+	.homepage__popular_products > .wrapper {
+		padding: var(--offset);
+	}	
+}

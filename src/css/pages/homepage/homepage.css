@@ -2,6 +2,11 @@
 
 }
 
+/* ! REMOVE AFTER FINISH HEADER MEDIA QUERIES */
+footer {
+	display: none;
+}
+
 .homepage__title {
 	font-size: 2.1rem;
 	margin: 0 0 var(--offset-half) 0;
@@ -48,4 +53,26 @@
 
 .homepage__showall:hover a {
 	color: rgb(var(--rgb-white));
+}
+
+@media screen and (width <= 1200px){
+	.homepage__title {
+		font-size: 1.8rem;
+	}	
+}
+
+@media screen and (width <= 1000px){
+	.homepage__cards{
+		grid-template-columns: 1fr;
+	}
+}
+
+@media screen and (width <= 800px){
+	.homepage__title {
+		font-size: 1.6rem;
+	}	
+
+	.homepage__cards--mb {
+		margin-bottom: var(--offset);
+	}
 }
