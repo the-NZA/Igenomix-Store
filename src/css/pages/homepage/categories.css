@@ -62,12 +62,13 @@
 	.categorycard {
 		justify-self: center;
 		max-width: 60%;
+		width: 100%;
 	}
 }
 
 @media screen and (width <= 800px){
 	.categorycard {
-		max-width: 100%;
+		max-width: 90%;
 	}
 
 	.categorycard__icon {
