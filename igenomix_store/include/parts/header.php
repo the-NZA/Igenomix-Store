@@ -51,7 +51,9 @@ function storefront_primary_navigation_wrapper()
 function storefront_primary_navigation_wrapper_close()
 {
 	// echo '</div></div>';
-	echo '</div><button class="header__mobmenu"><i class="far fa-bars"></i></button>';
+	echo '</div><button class="header__mobmenu">
+			<div class="header__mobmenubar"></div>
+		</button>';
 }
 
 function storefront_primary_navigation()
