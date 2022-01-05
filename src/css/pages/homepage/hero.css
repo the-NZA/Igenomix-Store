@@ -18,6 +18,12 @@
 				8px 8px 0px rgb(var(--rgb-white));
 }
 
+@media screen and (width <= 860px){
+	.homepage__hero {
+		min-height: calc(100vh - 66px);
+	}	
+}
+
 @media screen and (width <= 580px) {
 	.homepage__hero h1 {
 		font-size: 2rem;
