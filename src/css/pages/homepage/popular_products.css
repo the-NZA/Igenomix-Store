@@ -11,3 +11,9 @@
 		padding: var(--offset);
 	}	
 }
+
+@media screen and (width <= 580px){
+	.homepage__popular_products > .wrapper {
+		padding: var(--offset) var(--offset-half);
+	}	
+}

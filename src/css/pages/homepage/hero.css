@@ -17,3 +17,9 @@
 	text-shadow: 	4px 4px 0px rgb(var(--rgb-mandys-pink)),
 				8px 8px 0px rgb(var(--rgb-white));
 }
+
+@media screen and (width <= 580px) {
+	.homepage__hero h1 {
+		font-size: 2rem;
+	}
+}

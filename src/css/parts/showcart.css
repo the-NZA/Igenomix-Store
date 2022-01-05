@@ -55,3 +55,20 @@
 .woocommerce-Price-currencySymbol {
 	font-weight: bold;
 }
+
+@media screen and (width <= 1280px){
+	.showcart__btn {
+		padding: 6px;
+	}	
+}
+
+@media screen and (width <= 780px){
+	.showcart__btn > .cart-contents {
+		grid-template-columns: 1fr;
+	}
+
+	.showcart__amount,
+	.woocommerce-Price-amount.amount {
+		display: none;
+	}	
+}

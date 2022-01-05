@@ -48,6 +48,19 @@
 	overflow-x: hidden;
 }
 
+@media screen and (width <= 780px){
+	.asidecart__cartlist {
+		/* max-height: calc(var(--site-width) / 2); */
+		max-height: 65vh;
+	}
+}
+
+@media screen and (width <= 660px){
+	.asidecart__cartlist {
+		max-height: 73vh;
+	}
+}
+
 .woocommerce-mini-cart__empty-message {
 	font-weight: bold;
 	font-size: 1.2rem;

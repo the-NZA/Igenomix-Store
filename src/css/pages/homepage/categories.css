@@ -6,11 +6,6 @@
 	padding: calc(var(--offset) * 1.5) var(--offset);
 }
 
-@media screen and (width <= 1200px){
-	.homepage__categories > .wrapper {
-		padding: var(--offset);
-	}
-}
 
 .categorycard {
 	border-radius: var(--card-border-radius);
@@ -83,5 +78,29 @@
 @media screen and (width <= 600px){
 	.categorycard__icon {
 		max-width: 120px;
+	}
+}
+
+@media screen and (width <= 1200px){
+	.homepage__categories > .wrapper {
+		padding: var(--offset);
+	}
+}
+
+@media screen and (width <= 580px){
+	.homepage__categories > .wrapper {
+		padding:var(--offset) var(--offset-half);
+	}
+
+	.categorycard {
+		padding: calc(var(--offset-half) * 1.5);
+	}
+
+	.categorycard__icon {
+		max-width: 100px;
+	}
+
+	.categorycard__title {
+		font-size: 1.1rem;
 	}
 }

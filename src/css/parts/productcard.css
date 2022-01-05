@@ -158,7 +158,7 @@
 	}
 }
 
-@media screen  and (width <= 500px){
+@media screen  and (width <= 580px){
 	.productcard {
 		padding: calc(var(--offset-half) * 1.5);
 		gap: var(--offset);
