@@ -29,5 +29,3 @@ if($product) :
 
 	endif; ?>
 </div>
-
-<?php
