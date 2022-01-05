@@ -141,15 +141,14 @@
 
 @media screen and (width <= 780px){
 	.asidecart__cartlist {
-		/* max-height: calc(var(--site-width) / 2); */
 		max-height: 60vh;
 	}
 }
 
 @media screen and (width <= 660px){
-	.asidecart__cartlist {
+	/* .asidecart__cartlist { */
 		/* max-height: 70vh; */
-	}
+	/* } */
 }
 
 @media screen and (width <= 580px){
@@ -166,6 +165,6 @@
 
 @media screen and (width <= 375px){
 	.asidecart__cartlist {
-		max-height: 50vh;
+		max-height: 60vh;
 	}
 }
