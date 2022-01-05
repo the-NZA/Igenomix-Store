@@ -92,3 +92,17 @@
 	appearance: none;
 	bottom: none;
 }
+
+@media screen and (width <= 1300px){
+	.fwidget__socials{
+		justify-content: flex-start;
+	}
+
+	.fwidget__socicon {
+		margin-right: var(--offset-half);
+	}
+
+	.fwidget__socicon:last-of-type{
+		margin-right: 0;
+	}
+}

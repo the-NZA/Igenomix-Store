@@ -29,3 +29,38 @@
 .copyright__links li a:hover {
 	text-decoration: underline;
 }
+
+@media screen and (width <= 1100px){
+	.copyright__links {
+		margin-bottom: var(--offset);
+	}
+
+	.copyright__info {
+		margin: 0;
+	}
+}
+
+@media screen and (width <= 910px){
+	.copyright__links {
+		flex-direction: column;
+
+	}
+
+	.copyright__links li {
+		margin: 0 0 var(--offset-half) 0;
+	}
+
+	.copyright__links li:last-of-type {
+		margin: 0;
+	}
+
+	.copyright__info {
+		margin: 0;
+	}
+}
+
+@media screen and (width <= 400px){
+	.copyright__links {
+		align-items: flex-start;
+	}	
+}
