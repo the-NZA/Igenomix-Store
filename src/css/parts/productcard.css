@@ -179,6 +179,11 @@
 		text-align: center;
 	}
 
+	.prodarchive__list--single > .productcard > .productcard__icon {
+		max-width: 140px;
+		justify-self: center;
+	}
+
 	.productcard__price {
 		justify-self: center;
 		font-size: 1.3rem;
@@ -215,4 +220,12 @@
 	.productcard__icon {
 		max-width: 120px;
 	}	
+
+	.prodarchive__list--single > .productcard > .productcard__snippet {
+		text-align: justify;
+	}
+
+	.prodarchive__list--single > .productcard > .productcard__icon {
+		max-width: 120px;
+	}
 }

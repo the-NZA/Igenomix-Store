@@ -176,6 +176,10 @@ add_action("init", function () {
 
 	// * Woocommerce cart page hooks
 	remove_filter('woocommerce_cart_collaterals', 'woocommerce_cross_sell_display');
+
+	// * Product card hooks
+	remove_filter('woocommerce_before_shop_loop_item', 'woocommerce_template_loop_product_link_open', 10);
+	remove_filter('woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_link_close', 11);
 });
 
 // * Set number of related products
