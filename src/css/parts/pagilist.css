@@ -3,21 +3,22 @@
 	margin: 0;
 	padding: calc(var(--offset-half)) var(--offset-half);
 
-	display: flex;
+	display: grid;
+	grid-template-columns: repeat(8, max-content);
+	gap: var(--offset-half);
 	max-width: max-content;
 
 	background-color: rgb(var(--rgb-alice-blue));
 	border-radius: calc(var(--offset-half) / 2);
 	box-shadow: var(--card-shadow);
-
 }
 
 .pagilist__item {
-	margin-right: var(--offset-half);
+	/* margin-right: var(--offset-half); */
 }
 
 .pagilist__item:last-of-type {
-	margin-right: 0;
+	/* margin-right: 0; */
 }
 
 .pagilist__button {
@@ -57,4 +58,17 @@
 
 .pagilist__button.current a {
 	color: rgb(var(--rgb-black));
+}
+
+@media screen and (width <= 480px){
+	.pagilist {
+		grid-template-columns: repeat(6, max-content);
+	}
+}
+
+@media screen and (width <= 380px){
+	.pagilist {
+		width: 100%;
+		grid-template-columns: repeat(5, max-content);
+	}
 }
