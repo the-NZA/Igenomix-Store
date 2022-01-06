@@ -38,3 +38,40 @@
 	grid-column-start: 2;
 	grid-column-end: 4;
 }
+
+@media screen and (width <= 1280px){
+	.prodcategories {
+		padding: var(--offset) !important;
+
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.prodcatcard:first-of-type {
+		grid-column: auto;
+	}
+
+	.prodcatcard:nth-of-type(4){
+		grid-column: auto;
+	}
+}
+
+@media screen and (width <= 1000px){
+	.prodcategories {
+		grid-template-columns: 1fr;
+		/* grid-template-columns: repeat(4, 400px); */
+		/* overflow-x: scroll; */
+		/* max-width: 100%; */
+	}
+}
+
+@media screen and (width <= 580px){
+	.prodcategories {
+		padding: var(--offset-half) !important;
+		gap: var(--offset-half);
+	}
+
+	.prodcatcard__link {
+		padding: var(--offset);
+		font-size: 1.1rem;
+	}
+}

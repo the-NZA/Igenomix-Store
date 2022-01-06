@@ -121,11 +121,18 @@
 	background-color: var(--c-san-juan-highlighted);
 }
 
-@media screen and (width <= 750px){
+@media screen and (width <= 1000px){
 	.productcard {
 		grid-template-columns: 120px 1fr 1fr;
 		grid-template-rows: minmax(calc(var(--offset) * 2), max-content) 1fr max-content;
 	}	
+}
+
+@media screen and (width <= 750px){
+	/* .productcard {
+		grid-template-columns: 120px 1fr 1fr;
+		grid-template-rows: minmax(calc(var(--offset) * 2), max-content) 1fr max-content;
+	}	 */
 }
 
 @media screen and (width <= 660px){

@@ -106,3 +106,9 @@
 		margin-right: 0;
 	}
 }
+
+@media screen and (width <= 600px){
+	.fwidget {
+		margin-bottom: 0;
+	}
+}
