@@ -34,9 +34,9 @@
 	justify-content: space-between;
 }
 
-.footer__widgets_wrapper {
+/* .footer__widgets_wrapper {
 
-}
+} */
 
 .footer__widgets .wp-block-group > div > div {
 	margin-bottom: var(--offset);
