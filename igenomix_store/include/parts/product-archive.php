@@ -27,3 +27,14 @@ function ignx_display_product_description($product) {
 function storefront_after_content() {
 	do_action( 'storefront_sidebar' );
 }
+
+function haveChildCategories() {
+	$currentCategory  = get_queried_object();
+	$parentCatID = $currentCategory->parent !== 0 ? $currentCategory->parent : $currentCategory->term_id;
+	$childCategories = get_terms([
+		'taxonomy' => $currentCategory->taxonomy,
+		'parent'   => $parentCatID,
+	]);
+
+	return count($childCategories) > 0;
+}

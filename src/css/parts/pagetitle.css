@@ -29,3 +29,9 @@
 		padding: var(--offset);
 	}
 }
+
+@media screen and (width <= 800px){
+	.pagetitle__title {
+		font-size: 1.4rem;
+	}
+}
