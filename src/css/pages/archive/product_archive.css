@@ -48,8 +48,24 @@
 	grid-area: arPagi;
 }
 
+@media screen and (width <= 1100px){
+	.prodarchive {
+		grid-template-columns: calc(var(--site-width) / 4) 1fr;
+	}
+}
+
 @media screen and (width <= 1000px){
 	.prodarchive__list {
 		grid-template-columns: 1fr;
+	}
+}
+
+@media screen and (width <= 980px){
+	.prodarchive {
+		grid-template-columns: 1fr;
+		grid-template-areas: 
+			"arAside"
+			"arMain"
+			"arPagi";
 	}
 }
