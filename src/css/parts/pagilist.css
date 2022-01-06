@@ -5,7 +5,7 @@
 
 	display: grid;
 	grid-template-columns: repeat(8, max-content);
-	gap: var(--offset-half);
+	gap: var(--offset-half) 0;
 	max-width: max-content;
 
 	background-color: rgb(var(--rgb-alice-blue));
@@ -14,11 +14,11 @@
 }
 
 .pagilist__item {
-	/* margin-right: var(--offset-half); */
+	margin-right: var(--offset-half);
 }
 
 .pagilist__item:last-of-type {
-	/* margin-right: 0; */
+	margin-right: 0;
 }
 
 .pagilist__button {
