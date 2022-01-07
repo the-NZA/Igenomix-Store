@@ -20,3 +20,21 @@
 .proddesc__data p:last-of-type {
 	margin: 0;
 }
+
+@media screen and (width <= 1200px){
+	.proddesc__title {
+		font-size: 1.8rem;
+	}
+}
+
+@media screen and (width <= 900px) {
+	.proddesc__title {
+		font-size: 1.6rem;
+	}
+}
+
+@media screen and (width <= 600px) {
+	.proddesc__title {
+		font-size: 1.4rem;
+	}
+}

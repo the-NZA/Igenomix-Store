@@ -2,13 +2,11 @@
 	padding: var(--offset);
 	display: flex;
 	flex-direction: column;
-
 }
 
 .singlecard__title {
 	margin: 0 0 var(--offset) 0;
 	color: rgb(var(--rgb-san-juan));
-
 }
 
 .singlecard__price {
@@ -90,4 +88,35 @@
 
 .singlecard > .edit-link {
 	margin-top: var(--offset-half);
+}
+
+@media screen and (width <= 1200px){
+	.singlecard__title {
+		font-size: 1.8rem;
+	}
+
+	.singlecard__price {
+		font-size: 1.3rem;
+	}
+}
+
+@media screen and (width <= 900px) {
+	.singlecard {
+		padding: calc(var(--offset-half) * 1.5);
+	}
+
+	.singlecard__title {
+		font-size: 1.6rem;
+		margin-bottom: var(--offset-half);
+	}
+
+	.singlecard__price {
+		font-size: 1.1rem;
+	}
+}
+
+@media screen and (width <= 600px) {
+	.singlecard__title {
+		font-size: 1.4rem;
+	}
 }
