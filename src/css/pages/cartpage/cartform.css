@@ -52,3 +52,34 @@
 	background-color: rgb(var(--rgb-slate-grey));
 	border-color: rgb(var(--rgb-slate-grey));
 }
+
+@media screen and (width <= 1280px){
+	.cartform__meta {
+		flex-direction: column;
+		align-items: flex-end;
+	}
+
+	.coupon {
+		margin-bottom: var(--offset-half);
+	}
+
+	.cartform__meta .button {
+		min-width: 182px;
+	}
+}
+
+@media screen and (width <= 520px){
+	.coupon {
+		margin-bottom: var(--offset-half);
+		display: flex;
+		flex-direction: column;
+	}
+
+	.coupon > input {
+		margin-bottom: var(--offset-half);
+	}
+
+	.cartform__meta {
+		align-items: stretch;
+	}
+}

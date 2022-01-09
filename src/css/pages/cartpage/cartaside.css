@@ -42,3 +42,9 @@
 	background-color: var(--c-san-juan-highlighted);
 	border-color: var(--c-san-juan-highlighted);
 }
+
+@media screen and (width <= 600px){
+	.cartaside__header {
+		font-size: 1.4rem;
+	}
+}

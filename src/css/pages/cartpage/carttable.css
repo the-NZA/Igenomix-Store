@@ -10,3 +10,9 @@
 
 .carttable__body {
 }
+
+@media screen and (width <= 600px){
+	.carttable__header {
+		font-size: 1.4rem;
+	}
+}

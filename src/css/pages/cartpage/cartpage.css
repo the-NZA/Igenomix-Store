@@ -89,3 +89,35 @@
 .cartpage > .woocommerce > .cartpage__empty > .return-to-shop a:hover {
 	background-color: var(--c-san-juan-highlighted);
 }
+
+@media screen and (width <= 1200px){
+	.cartpage > .woocommerce {
+		grid-template-columns: 1fr calc(var(--site-width) / 3.5);
+		column-gap: var(--offset-half);
+	}
+}
+
+@media screen and (width <= 1100px){
+	.cartpage > .woocommerce > .cartpage__main,
+	.cartpage > .woocommerce > .cartpage__aside {
+		padding: calc(var(--offset-half) * 1.5);
+	}
+}
+
+@media screen and (width <= 1000px){
+	.cartpage > .woocommerce {
+		grid-template-areas: "cNotices" "cMain" "cAside";
+		grid-template-rows: auto;
+		grid-template-columns: 1fr;
+
+		row-gap: var(--offset);
+		min-height: auto;
+	}
+}
+
+@media screen and (width <= 500px){
+	.cartpage > .woocommerce > .cartpage__main,
+	.cartpage > .woocommerce > .cartpage__aside {
+		padding: calc(var(--offset-half) * 1.5) var(--offset-half);
+	}
+}
