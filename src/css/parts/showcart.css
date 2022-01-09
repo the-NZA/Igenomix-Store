@@ -67,8 +67,7 @@
 		grid-template-columns: 1fr;
 	}
 
-	.showcart__amount,
-	.woocommerce-Price-amount.amount {
+	.showcart__amount{
 		display: none;
 	}	
 }

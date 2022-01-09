@@ -96,3 +96,33 @@
 .chouttable__shipping .woocommerce-shipping-methods li:last-of-type {
 	margin: 0;
 }
+
+@media screen and (width <= 500px){
+	.chouttable__header {
+		display: none;
+	}
+
+	.chouttable__body > .chouttable__prodrow {
+		display: grid;
+		grid-template-columns: 1fr;
+		background-color: #fff;
+		padding: var(--offset-half);
+		border-radius: calc(var(--card-border-radius) / 2);
+	}
+
+	.chouttable__footer .cart-subtotal {
+		grid-template-columns: 1fr;
+	}
+
+	.chouttable__footer .cart-subtotal > div:first-of-type {
+		margin-bottom: var(--offset-half);
+	}
+
+	.chouttable__footer .order-total {
+		grid-template-columns: 1fr;
+	}
+
+	.chouttable__footer .order-total > div:first-of-type {
+		margin-bottom: var(--offset-half);
+	}
+}

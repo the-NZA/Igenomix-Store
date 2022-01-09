@@ -126,3 +126,37 @@
 	box-sizing: border-box;
 	padding: 10px;
 }
+
+@media screen and (width <=1200px){
+	.checkoutform__fields .woocommerce-billing-fields__field-wrapper,
+	.checkoutform__fields .woocommerce-shipping-fields__field-wrapper {
+		grid-template-columns: 1fr;
+		gap: var(--offset-half) var(--offset);
+	}
+}
+
+@media screen and (width <=1100px){
+	.checkoutform__fields {
+		grid-column: 1/-1;
+	}
+}
+
+@media screen and (width <=900px){
+	.checkoutform__review{
+		grid-column: 1/-1;
+	}
+}
+
+@media screen and (width <= 600px){
+	.checkoutform__review,
+	.checkoutform__fields {
+		padding: var(--offset-half);
+	}
+
+	.checkoutform__review h2,
+	.checkoutform__fields h2 {
+		margin-bottom: var(--offset-half);
+		font-size: 1.4rem;
+		padding-bottom: var(--offset-half);
+	}
+}
