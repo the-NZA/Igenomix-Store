@@ -355,7 +355,7 @@
 	}
 
 	.header__logo a {
-		font-size: 1.1rem;
+		font-size: 1.3rem;
 	}
 
 	.header__logo a::after {
@@ -364,6 +364,7 @@
 
 	.header__logo a img {
 		min-width: 90px;
+		max-width: 120px;
 		margin-right: 5px;
 	}
 }

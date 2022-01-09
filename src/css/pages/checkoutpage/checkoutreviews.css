@@ -37,3 +37,9 @@
 .checkoutreviews__payment .form-row.place-order .woocommerce-terms-and-conditions-wrapper {
 	margin-bottom: var(--offset);
 }
+
+@media screen and (width <= 460px){
+	.checkoutreviews__payment .form-row.place-order button {
+		width: 100%;
+	}
+}
