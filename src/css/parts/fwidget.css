@@ -100,7 +100,8 @@
 .fwidget .search-form .search-field {
 	max-width: 180px;
 	box-sizing: border-box;
-	padding: 5px;
+
+	padding: 5px 10px !important;
 	margin-right: 5px;
 
 	border: 2px solid rgb(var(--rgb-slate-grey));
