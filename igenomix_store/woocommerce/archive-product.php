@@ -1,10 +1,11 @@
 <?php
+
 /**
  * The Template for displaying product archives, including the main shop page which is a post type archive
  * @version 3.4.0
  */
 
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 
 get_header(null, ["additional_body_classes" => "site-body--archive"]);
 
@@ -14,7 +15,7 @@ get_header(null, ["additional_body_classes" => "site-body--archive"]);
  * @hooked woocommerce_breadcrumb - 20 DISABLED
  * @hooked WC_Structured_Data::generate_website_data() - 30 ? DISABLED ?
  */
-do_action( 'woocommerce_before_main_content' );
+do_action('woocommerce_before_main_content');
 
 $isShop = is_shop();
 ?>
@@ -30,24 +31,23 @@ $isShop = is_shop();
 		 * @hooked woocommerce_taxonomy_archive_description - 10 DISABLED
 		 * @hooked woocommerce_product_archive_description - 10  DISABLED
 		 */
-		do_action( 'woocommerce_archive_description' );
+		do_action('woocommerce_archive_description');
 		?>
 
 		<p class="pagetitle__snippet">
-		<?php if($isShop) {
-			$pageID = wc_get_page_id('shop');
-			echo carbon_get_post_meta( $pageID, 'page_description' );
-
-		} else if( $desc = get_the_archive_description()) {
-			echo $desc;
-		} ?>
+			<?php if ($isShop) {
+				$pageID = wc_get_page_id('shop');
+				echo carbon_get_post_meta($pageID, 'page_description');
+			} else if ($desc = get_the_archive_description()) {
+				echo $desc;
+			} ?>
 		</p>
 	</div>
 </section>
 <!-- Site title END -->
 
 <!-- Site Product categories -->
-<?php if($isShop) :
+<?php if ($isShop) :
 	$categories = get_categories([
 		"taxonomy" 	=> "product_cat",
 		"hide_empty" 	=> 1,
@@ -58,31 +58,31 @@ $isShop = is_shop();
 	/*
 	* If at least 1 category exist display categories section
 	*/
-	if(count($categories) > 0) : ?>
-	<section class="site-prodcategories">
-		<div class="prodcategories wrapper ">
-			<?php foreach($categories as $cat) : 
-				$catLink = get_category_link( $cat->term_id );	
-			?>
+	if (count($categories) > 0) : ?>
+		<section class="site-prodcategories">
+			<div class="prodcategories wrapper ">
+				<?php foreach ($categories as $cat) :
+					$catLink = get_category_link($cat->term_id);
+				?>
 
-				<div class="prodcatcard">
-					<a href="<?php echo $catLink;?>" class="prodcatcard__link">
-						<?php echo $cat->name;?>
-					</a>
-				</div>
+					<div class="prodcatcard">
+						<a href="<?php echo $catLink; ?>" class="prodcatcard__link">
+							<?php echo $cat->name; ?>
+						</a>
+					</div>
 
-			<?php endforeach; ?>
-		</div>
-	</section>
-	<?php endif;
+				<?php endforeach; ?>
+			</div>
+		</section>
+<?php endif;
 endif;
 ?>
 
 <!-- Site Product categories END -->
 
-<div class="<?php echo $isShop ? 'wrapper prodarchive prodarchive--shop' : 'wrapper prodarchive';?>">
+<div class="<?php echo $isShop ? 'wrapper prodarchive prodarchive--shop' : 'wrapper prodarchive'; ?>">
 
-	<?php if ( woocommerce_product_loop() ) {
+	<?php if (woocommerce_product_loop()) {
 		/**
 		 * Hook: woocommerce_before_shop_loop.
 		 *
@@ -94,16 +94,16 @@ endif;
 
 		woocommerce_product_loop_start();
 
-		if ( wc_get_loop_prop( 'total' ) ) {
-			while ( have_posts() ) {
+		if (wc_get_loop_prop('total')) {
+			while (have_posts()) {
 				the_post();
 
 				/**
 				 * Hook: woocommerce_shop_loop.
 				 */
-				do_action( 'woocommerce_shop_loop' );
+				do_action('woocommerce_shop_loop');
 
-				wc_get_template_part( 'content', 'product' );
+				wc_get_template_part('content', 'product');
 			}
 		}
 
@@ -111,18 +111,20 @@ endif;
 
 		/**
 		 * Hook: woocommerce_after_shop_loop.
-		 * @hooked woocommerce_pagination - 10
+		 * @hooked woocommerce_pagination - 30 DISABLED
 		 */
-		do_action( 'woocommerce_after_shop_loop' );
+		do_action('woocommerce_after_shop_loop');
+
+		get_template_part('include/loop/pagination');
 	} else {
 		/**
 		 * Hook: woocommerce_no_products_found.
 		 * @hooked wc_no_products_found - 10
 		 */
-		do_action( 'woocommerce_no_products_found' );
+		do_action('woocommerce_no_products_found');
 	}
 
-	if(!$isShop) {
+	if (!$isShop) {
 		// Get sidebar
 		get_sidebar('product-archive');
 	}
@@ -130,7 +132,7 @@ endif;
 	/**
 	 * Hook: woocommerce_after_main_content.
 	 */
-	do_action( 'woocommerce_after_main_content' );
+	do_action('woocommerce_after_main_content');
 
 	?>
 </div>

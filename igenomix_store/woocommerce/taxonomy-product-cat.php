@@ -87,9 +87,11 @@ $hasChildCats = haveChildCategories();
 
 		/**
 		 * Hook: woocommerce_after_shop_loop.
-		 * @hooked woocommerce_pagination - 10
+		 * @hooked woocommerce_pagination - 30 DISABLED
 		 */
 		do_action('woocommerce_after_shop_loop');
+
+		get_template_part('include/loop/pagination');
 	} else {
 		/**
 		 * Hook: woocommerce_no_products_found.

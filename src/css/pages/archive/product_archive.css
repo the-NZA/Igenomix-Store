@@ -6,7 +6,7 @@
 	grid-template-columns: calc(var(--site-width) / 3) 1fr;
 	grid-template-areas: 
 		"arAside arMain"
-		"arPagi arPagi";
+		"sitePagi sitePagi";
 	gap: var(--offset);
 }
 
@@ -14,14 +14,14 @@
 	grid-template-columns: 1fr;
 	grid-template-areas: 
 		"arMain"
-		"arPagi";
+		"sitePagi";
 }
 
 .prodarchive--nosidebar{
 	grid-template-columns: 1fr;
 	grid-template-areas: 
 		"arMain"
-		"arPagi";
+		"sitePagi";
 }
 
 .prodarchive__aside {
@@ -77,6 +77,6 @@
 		grid-template-areas: 
 			"arAside"
 			"arMain"
-			"arPagi";
+			"sitePagi";
 	}
 }

@@ -91,6 +91,21 @@ add_filter('loop_shop_per_page', function () {
 	return 10;
 });
 
+// * Custom query modifications
+add_action('pre_get_posts', 'ignx_pre_get_posts', 1);
+function ignx_pre_get_posts($query)
+{
+	// Exit if this is admin panel or not main query
+	if (is_admin() || !$query->is_main_query()) {
+		return;
+	}
+
+	if (is_search()) {
+		// Displaying only 1 post for search page
+		$query->set('posts_per_page', 1);
+	}
+}
+
 // * Custom view functions
 require_once "include/ignx_view_functions.php";
 
@@ -161,6 +176,9 @@ add_action("init", function () {
 	remove_filter('woocommerce_after_shop_loop', 'storefront_sorting_wrapper_close', 31);
 	remove_filter('woocommerce_before_shop_loop', 'storefront_woocommerce_pagination', 30);
 	add_filter('theme_mod_storefront_product_pagination', '__return_false', 11);
+
+	// * Disable woocommerce pagination
+	remove_action('woocommerce_after_shop_loop', 'woocommerce_pagination', 30);
 
 	// * Woocommerce notices wrapper
 	remove_filter('woocommerce_before_single_product', 'woocommerce_output_all_notices', 10);

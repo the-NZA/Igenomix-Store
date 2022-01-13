@@ -54,14 +54,15 @@ get_header(null, ["additional_body_classes" => "site-body--searchpage"]); ?>
 		</div>
 	<?php
 		/**
-		 * TODO Add right paging dispaying
 		 * Functions hooked in to storefront_paging_nav action
 		 *
 		 * @hooked storefront_paging_nav - 10
 		 */
-		do_action('storefront_loop_after');
-	} else {
+		// do_action('storefront_loop_after');
 
+		// * Disaply custom pagination
+		get_template_part('include/loop/pagination');
+	} else {
 		get_template_part('content', 'none');
 	}
 	?>

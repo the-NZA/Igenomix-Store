@@ -16,6 +16,7 @@
 @import url("./parts/productcard.css");	/* Import Productcard styles */
 @import url("./parts/asidenav.css");	/* Import Asidenav styles */
 @import url("./parts/orderdetails.css"); /* Import Order details styles */
+@import url("./parts/ignxpagi.css"); /* Import Pagination styles */
 
 
 @import url("./pages/homepage/homepage.css"); /* Import Homepage styles */
