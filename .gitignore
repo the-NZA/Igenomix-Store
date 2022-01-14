@@ -17,6 +17,7 @@
 dist
 # src/font/*
 node_modules
+wp-config*.php
 
 ### DB files ###
 db
