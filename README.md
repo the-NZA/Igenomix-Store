@@ -11,4 +11,4 @@ Built on wordpress, woocommerce, nginx, mysql and docker
 - [X] Cart
 - [X] Checkout
 - [ ] 404 page
-- [ ] Search page
+- [X] Footer search form
