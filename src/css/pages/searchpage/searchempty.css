@@ -1,0 +1,110 @@
+.searchempty {
+
+}
+
+.searchempty__header {
+	margin-bottom: var(--offset);
+}
+
+.searchempty__title {
+	margin: 0;
+	color: var(--c-san-juan);
+	font-size: 1.8rem;
+}
+
+.searchempty__content {
+	padding: var(--offset);
+
+	background-color: var(--c-alice-blue);
+
+	display: flex;
+	flex-direction: column;
+
+	box-shadow: var(--card-shadow);
+	border-radius: var(--card-border-radius);
+}
+
+.searchempty__content p {
+	margin-bottom: var(--offset);
+	color: var(--c-slate-grey);
+}
+
+.searchempty__content .search-form{
+	display: flex;
+}
+
+.searchempty__content .search-form .search-field {
+	max-width: 280px;
+	box-sizing: border-box;
+
+	padding: 5px 10px !important;
+	margin-right: var(--offset-half);
+
+	border: 2px solid rgb(var(--rgb-slate-grey));
+	border-radius: calc(var(--offset-half)/4);
+}
+
+.searchempty__content .search-form .search-submit {
+	padding: 5px 10px;
+	cursor: pointer;
+
+	font-weight: bold;
+
+	color: rgb(var(--rgb-white));
+	background-color: rgb(var(--rgb-slate-grey));
+
+	border: none;
+	border-radius: calc(var(--offset-half)/4);
+	box-sizing: border-box;
+
+	transition: var(--main-transition);
+}
+
+.searchempty__content .search-form .search-submit:hover {
+	background-color: rgb(var(--rgb-san-juan));
+}
+
+@media screen and (width <= 760px){
+	.searchempty__title {
+		font-size: 1.6rem;
+	}
+}
+
+@media screen and (width <= 660px){
+	.searchempty__content .search-form > label {
+		display: flex;
+		width: 100%;
+	}
+
+	.searchempty__content .search-form .search-field {
+		max-width: 100%;
+		width: 100%;
+	}
+}
+
+@media screen and (width <= 460px){
+	.searchempty__content {
+		padding: calc(var(--offset-half) * 1.5);
+	}
+	.searchempty__title {
+		font-size: 1.4rem;
+	}
+
+	.searchempty__content p{
+		line-height: 1.5;
+	}
+
+	.searchempty__content .search-form {
+		flex-direction: column;
+	}
+
+	.searchempty__content .search-form .search-field {
+		margin-right: 0;
+		margin-bottom: var(--offset-half);
+		padding: 10px !important;
+	}
+
+	.searchempty__content .search-form .search-submit {
+		padding: 10px;
+	}
+}

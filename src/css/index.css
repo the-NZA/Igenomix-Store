@@ -53,6 +53,7 @@
 
 @import url("./pages/searchpage/searchpage.css"); /* Import Searchpage styles */
 @import url("./pages/searchpage/searchitem.css"); /* Import Searchitem card styles */
+@import url("./pages/searchpage/searchempty.css"); /* Import Searchempt styles */
 
 @import url("./utils/font.css");		/* Import font styles */
 @import url("./utils/shared.css"); 	/* Import shared style */
