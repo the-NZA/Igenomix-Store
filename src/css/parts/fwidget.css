@@ -80,6 +80,10 @@
 	transition: var(--main-transition);
 }
 
+.fwidget__socicon a .fab {
+	font-size: 18px;
+}
+
 .fwidget__socicon:hover {
 	background-color: rgb(var(--rgb-slate-grey));
 }

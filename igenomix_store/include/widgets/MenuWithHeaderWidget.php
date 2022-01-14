@@ -23,9 +23,9 @@ class MenuWithHeaderWidget extends Widget {
 		$this->setup( 'ignx_menu_with_header', 'Меню с заголовком', 'Отображает заголовок и выбранное меню', array(
 			Field::make( 'text', 'title', __('Title') )
 				->set_required(true),
-			Field::make( 'select', 'menu_select', __('Choose menu'))
+			Field::make( 'select', 'menu_select', __('Выберите меню'))
 				->set_options('getAllMenus')
-				->set_help_text(__('Choose one option'))
+				->set_help_text(__('Выберите один вариант'))
 				->set_classes( 'my-select-class' )
 				->set_required(true)
 		) );
