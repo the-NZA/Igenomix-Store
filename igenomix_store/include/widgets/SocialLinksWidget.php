@@ -54,22 +54,22 @@ class SocialLinksWidget extends Widget {
 		$menu_list = '<ul class="fwidget__socials">';
 
 		if($instance['instagram_url']) {
-			$menu_list .= sprintf('<li class="fwidget__socicon"><a href="%s"><i class="fab fa-instagram"></i></a></li>', $instance['instagram_url']);
+			$menu_list .= sprintf('<li class="fwidget__socicon"><a href="%s" target="_blank" ><i class="fab fa-instagram"></i></a></li>', $instance['instagram_url']);
 		}
 		if($instance['youtube_url']) {
-			$menu_list .= sprintf('<li class="fwidget__socicon"><a href="%s"><i class="fab fa-youtube"></i></a></li>', $instance['youtube_url']);
+			$menu_list .= sprintf('<li class="fwidget__socicon"><a href="%s" target="_blank" ><i class="fab fa-youtube"></i></a></li>', $instance['youtube_url']);
 		}
 		if($instance['twitter_url']) {
-			$menu_list .= sprintf('<li class="fwidget__socicon"><a href="%s"><i class="fab fa-twitter"></i></a></li>', $instance['twitter_url']);
+			$menu_list .= sprintf('<li class="fwidget__socicon"><a href="%s" target="_blank" ><i class="fab fa-twitter"></i></a></li>', $instance['twitter_url']);
 		}
 		if($instance['linkedin_url']) {
-			$menu_list .= sprintf('<li class="fwidget__socicon"><a href="%s"><i class="fab fa-linkedin"></i></a></li>', $instance['linkedin_url']);
+			$menu_list .= sprintf('<li class="fwidget__socicon"><a href="%s" target="_blank" ><i class="fab fa-linkedin"></i></a></li>', $instance['linkedin_url']);
 		}
 		if($instance['whatsapp_number']) {
-			$menu_list .= sprintf('<li class="fwidget__socicon"><a href="https://wa.me/%s"><i class="fab fa-whatsapp"></i></a></li>', $instance['whatsapp_number']);
+			$menu_list .= sprintf('<li class="fwidget__socicon"><a href="https://wa.me/%s" target="_blank" ><i class="fab fa-whatsapp"></i></a></li>', $instance['whatsapp_number']);
 		}
 		if($instance['telegram_name']) {
-			$menu_list .= sprintf('<li class="fwidget__socicon"><a href="https://t.me/%s"><i class="fab fa-telegram"></i></a></li>', $instance['telegram_name']);
+			$menu_list .= sprintf('<li class="fwidget__socicon"><a href="https://t.me/%s" target="_blank" ><i class="fab fa-telegram"></i></a></li>', $instance['telegram_name']);
 		}
 
 		$menu_list .= '</ul>';
