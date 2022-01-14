@@ -103,6 +103,7 @@ function ignx_pre_get_posts($query)
 	if (is_search()) {
 		// Displaying only 1 post for search page
 		$query->set('posts_per_page', 1);
+		$query->set('post_type', 'product');
 	}
 }
 

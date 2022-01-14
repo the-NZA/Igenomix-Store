@@ -1,0 +1,13 @@
+.searchpage {
+	display: grid;
+	grid-template-rows: 1fr min-content;
+	grid-template-areas: 
+		"searchCards"
+		"sitePagi";
+
+	gap: calc(var(--offset) * 2);
+}
+
+.searchpage__cards {
+	grid-area: searchCards;
+}

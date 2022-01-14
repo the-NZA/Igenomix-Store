@@ -32,8 +32,11 @@ get_header(null, ["additional_body_classes" => "site-body--searchpage"]); ?>
 				the_post();
 			?>
 				<div class="searchitem">
-					<?php global $product;
+					<?php
+
+					global $product;
 					$productImage = wp_get_attachment_url($product->image_id, 'full');
+
 					?>
 
 					<h4 class="searchitem__title"><?php echo get_the_title(); ?></h4>
@@ -44,9 +47,7 @@ get_header(null, ["additional_body_classes" => "site-body--searchpage"]); ?>
 
 					<p class="searchitem__snippet"><?php echo $product->get_short_description(); ?></p>
 
-					<button class="searchitem__button">
-						<a href="<?php echo $product->get_permalink(); ?>">Смотреть</a>
-					</button>
+					<a class="searchitem__button" href="<?php echo $product->get_permalink(); ?>">Смотреть</a>
 				</div>
 			<?php
 			endwhile;

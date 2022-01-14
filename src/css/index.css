@@ -51,6 +51,9 @@
 
 @import url("./pages/singlepage/singlepage.css"); /* Import Singlepage styles */
 
+@import url("./pages/searchpage/searchpage.css"); /* Import Searchpage styles */
+@import url("./pages/searchpage/searchitem.css"); /* Import Searchitem card styles */
+
 @import url("./utils/font.css");		/* Import font styles */
 @import url("./utils/shared.css"); 	/* Import shared style */
 /* @import url("./utils/lineicons.css");	Import lineicons font styles */
