@@ -28,6 +28,7 @@
 
 .singlecard__add-to-cart {
 	grid-area: scAdd;
+	margin-top: auto;
 	margin-bottom: var(--offset-half);
 }
 
