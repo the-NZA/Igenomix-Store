@@ -31,5 +31,5 @@ function displayCartItemSubtotal($product, $quantity, $currencySymbol) {
 	}
 	?>
 		Сумма:&nbsp;<span class="regular_price"><?php echo $product->get_price()*$quantity;?></span><?php echo $currencySymbol;?>
-	<?
+	<?php
 }
