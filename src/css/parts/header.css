@@ -48,6 +48,12 @@
 	top: -4px;
 }
 
+.header__menu {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
 .header__menu--active {
 	animation-name: mobmenuAnimationShow;
 	display: block;

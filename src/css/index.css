@@ -4,6 +4,7 @@
 @import url("./common.css");			/* Import common styles */
 
 @import url("./parts/header.css");		/* Import Header styles */
+@import url("./parts/menusearch.css");  /* Import Menu search styles */
 @import url("./parts/asidecart.css");	/* Import Header Asidecart styles */
 @import url("./parts/navlist.css");	/* Import Header Navlist styles */
 @import url("./parts/cartitem.css");	/* Import Header Cart Item styles */

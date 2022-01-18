@@ -1,0 +1,126 @@
+.menusearch {
+	margin-left: calc(var(--offset) - 10px);
+	color: var(--c-slate-grey);
+
+	position: relative;
+}
+
+.menusearch__btn {
+	appearance: none;
+	border: none;
+	cursor: pointer;
+
+	color: var(--c-slate-grey);
+	padding: 10px;
+	box-sizing: border-box;
+
+	background-color: rgba(var(--rgb-pattens-blue), var(--alpha-50));
+	box-shadow: var(--btn-shadow) ;
+	border-radius: 5px;
+	font-size: 1.2rem;
+}
+
+.menusearch__form {
+	display: none;
+
+	padding: var(--offset-half);
+	background-color: var(--c-white);
+	border-radius: calc(var(--offset-half) / 2);
+	box-shadow: var(--card-shadow);
+
+	position: absolute;
+	top: calc( 3 * var(--offset-half));
+	right: 0;
+}
+
+.menusearch__form--active {
+	display: block;
+}
+
+.menusearch__form .search-form {
+	display: flex;
+}
+
+.menusearch__form .search-form .search-field{
+	min-width: 260px;
+	width: 100%;
+
+	padding: 5px 10px;
+	display: block;
+
+	border: 2px solid rgb(var(--rgb-slate-grey));
+	border-radius: calc(var(--offset-half)/4);
+}
+
+.menusearch__form .search-form .search-submit {
+	margin-left: var(--offset-half);
+
+	padding: 5px 10px;
+	cursor: pointer;
+
+	font-weight: bold;
+
+	color: rgb(var(--rgb-white));
+	background-color: rgb(var(--rgb-slate-grey));
+
+	border: none;
+	border-radius: calc(var(--offset-half)/4);
+	box-sizing: border-box;
+
+	transition: var(--main-transition);
+}
+
+.menusearch__form .search-form .search-submit:hover {
+	background-color: rgb(var(--rgb-san-juan));
+}
+
+@media  screen and (width <= 1280px) {
+	.menusearch__btn {
+		display: none;
+	}
+
+	.menusearch__form {
+		display: block;
+		box-sizing: border-box;
+		top: var(--offset-half);
+
+		min-width: calc(var(--site-width) / 4);
+		max-width: calc(var(--site-width) / 4);
+		width: 100%;
+
+		background-color: var(--c-alice-blue);
+	}
+	.menusearch__form .search-form {
+		justify-content: space-between;
+	}
+	
+	.menusearch__form .search-form .search-field {
+		max-width: 230px;
+		min-width: 200px;
+	}
+}
+
+@media  screen and (width <= 360px) {
+	.menusearch__form .search-form {
+		flex-direction: column;
+	}
+
+	.menusearch__form .search-form .search-field {
+		max-width: unset;
+		min-width: 100%;
+		margin-bottom: var(--offset-half);
+	}
+
+	.menusearch__form .search-form .search-submit {
+		margin: 0;
+	}
+}
+
+@media  screen and (width <= 350px) {
+	.menusearch__form {
+		min-width: 100vw;
+		width: 100%;
+		max-width: 100%;
+
+	}
+}
