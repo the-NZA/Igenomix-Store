@@ -51,9 +51,20 @@ function storefront_primary_navigation_wrapper()
 function storefront_primary_navigation_wrapper_close()
 {
 	// echo '</div></div>';
-	echo '</div><button class="header__mobmenu">
-			<div class="header__mobmenubar"></div>
-		</button>';
+?>
+	<div class="header__menusearch menusearch">
+		<button class="menusearch__btn">
+			<i class="fas fa-search"></i>
+		</button>
+
+		<div class="menusearch__form">
+			<?php get_search_form(); ?>
+		</div>
+	</div>
+	</div><button class="header__mobmenu">
+		<div class="header__mobmenubar"></div>
+	</button>
+<?php
 }
 
 function storefront_primary_navigation()
