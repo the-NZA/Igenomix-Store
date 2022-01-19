@@ -68,17 +68,23 @@ function storefront_credit()
 			[<?php echo date("Y"); ?>] &copy; <?php echo get_bloginfo('name'); ?>
 		</div>
 
-		<ul class="copyright__links">
-			<li>
-				<a href="#">Политика обработки и защиты персональных данных</a>
-			</li>
-			<li>
-				<a href="#">Правовые сведения</a>
-			</li>
-			<li>
-				<a href="#">Политика обработки cookie-файлов</a>
-			</li>
-		</ul>
+		<?php
+		$footerMenu = get_nav_menu_locations()['footer_menu'];
+
+		// Check if footer menu exist
+		if (isset($footerMenu)) : ?>
+			<?php $menuItems = wp_get_nav_menu_items($footerMenu); ?>
+
+			<ul class="copyright__links">
+				<?php foreach ($menuItems as $item) : ?>
+
+					<li>
+						<a href="<?php echo $item->url; ?>"><?php echo $item->title; ?></a>
+					</li>
+
+				<?php endforeach; ?>
+			</ul>
+		<?php endif; ?>
 	</div>
 <?php
 }

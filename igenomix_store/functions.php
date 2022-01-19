@@ -264,6 +264,7 @@ add_action('widgets_init', function () {
 add_action('after_setup_theme', function () {
 	// * Register menu location
 	register_nav_menu('header_menu', 'Верхнее меню');
+	register_nav_menu('footer_menu', 'Нижнее меню');
 });
 
 // * Add addional field to wp_nav_menu which allow adding classes for <li> nodes
