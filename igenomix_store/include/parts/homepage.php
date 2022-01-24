@@ -28,12 +28,13 @@ function storefront_product_categories( $args ) {
 				<div class="homepage__cards">
 					<?php
 					foreach($categories as $cat) :
- 						$catImage = get_the_post_thumbnail_url( $cat->term_id, 'full' );
+						$catImgID = get_term_meta($cat->term_id, 'thumbnail_id', true);
+						$catImg = wp_get_attachment_image_url($catImgID, 'thumbnail');
 						$catLink = get_category_link( $cat->term_id );
 					?>
 
 					<article class="categorycard">
-						<img class="categorycard__icon" src="<?php echo $catImage; ?>" alt="<?php echo 'test';?>">
+						<img class="categorycard__icon" src="<?php echo $catImg; ?>">
 						<h4 class="categorycard__title"><?php echo $cat->name;?></h4>
 						<p class="categorycard__snippet"><?php echo $cat->description;?></p>
 						<button class="button_rounded categorycard__button">
