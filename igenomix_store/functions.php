@@ -203,6 +203,18 @@ add_action("init", function () {
 	remove_filter('woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_link_close', 11);
 });
 
+function ignx_config_purchasable($purchasable, $product)
+{
+	$prodPrice = $product->get_price();
+
+	if (!$prodPrice || $prodPrice == 0) {
+		$purchasable = true;
+	}
+
+	return $purchasable;
+}
+add_filter('woocommerce_is_purchasable', 'ignx_config_purchasable', 10, 2);
+
 // * Set number of related products
 add_filter('woocommerce_output_related_products_args', function ($args) {
 	$args['posts_per_page'] = 4; // 4 related products
