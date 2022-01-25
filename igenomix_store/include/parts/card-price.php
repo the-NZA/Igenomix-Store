@@ -31,7 +31,13 @@ function displayCardPrice($product, $currencySymbol)
 			// Display only reguar price
 		?>
 
-			<span class="regular_price"><?php echo price_fmt($regularPrice); ?></span><?php echo $currencySymbol; ?>
+			<?php 
+			// If price set or greater then zero
+			if ($regularPrice && $regularPrice > 0) : ?>
+				<span class="regular_price"><?php echo price_fmt($regularPrice); ?></span><?php echo $currencySymbol; ?>
+			<?php else : ?>
+				<span class="empty_price"><?php echo __("Цена по запросу"); ?></span>
+			<?php endif; ?>
 
 <?php
 		}

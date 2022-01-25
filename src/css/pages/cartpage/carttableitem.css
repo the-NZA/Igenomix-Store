@@ -56,6 +56,7 @@
 
 .carttableitem__price {
 	display: flex;
+	margin-right: var(--offset);
 }
 
 .carttableitem__price .sale_price {
@@ -69,7 +70,7 @@
 }
 
 .carttableitem__quantity {
-	margin-left: var(--offset);
+	
 }
 
 .carttableitem__quantity .quantity input {
@@ -173,9 +174,6 @@
 
 	.carttableitem__price {
 		margin-bottom: var(--offset-half);
-	}
-
-	.carttableitem__quantity {
-		margin-left: 0;
+		margin-right: 0;
 	}
 }

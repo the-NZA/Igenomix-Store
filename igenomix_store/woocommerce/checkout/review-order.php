@@ -22,6 +22,8 @@ defined('ABSPATH') || exit;
 		<?php
 		do_action('woocommerce_review_order_before_cart_contents');
 
+		$currencySymbol = get_woocommerce_currency_symbol();
+
 		foreach (WC()->cart->get_cart() as $cart_item_key => $cart_item) {
 			$_product = apply_filters('woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key);
 
@@ -42,8 +44,16 @@ defined('ABSPATH') || exit;
 
 					<div class="product-total">
 						<?php
-						echo apply_filters('woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal($_product, $cart_item['quantity']), $cart_item, $cart_item_key); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
-						?>
+						// echo apply_filters('woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal($_product, $cart_item['quantity']), $cart_item, $cart_item_key); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
+
+						$prodPrice = $_product->get_price();
+
+						if ($prodPrice && $prodPrice > 0) : ?>
+							<span class="woocommerce-Price-amount amount"><?php echo sprintf("%s %s", $prodPrice, $currencySymbol); ?></span>
+						<?php else : ?>
+							<span class="woocommerce-Price-amount amount"><?php echo __('По запросу'); ?></span>
+						<?php endif; ?>
+
 					</div>
 				</div>
 		<?php
@@ -115,5 +125,5 @@ defined('ABSPATH') || exit;
 				</div>
 
 				<?php do_action('woocommerce_review_order_after_order_total'); ?>
-			</div>
-		</div>
+					</div>
+					</div>
