@@ -288,7 +288,7 @@ function ignx_update_minicart_total($fragments)
 	ob_start();
 ?>
 	<div class="asidecart__summary">
-		<span><?php echo esc_html__('Subtotal:', 'woocommerce'); ?></span> <?php echo WC()->cart->subtotal . get_woocommerce_currency_symbol(); ?>
+		<span><?php echo esc_html__('Subtotal:', 'woocommerce'); ?></span> <?php echo price_fmt(WC()->cart->subtotal) . get_woocommerce_currency_symbol(); ?>
 	</div>
 
 <?php

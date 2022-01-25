@@ -37,7 +37,7 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 					</h4>
 
 					<p class="quantity cartitem__quantity">
-						<?php echo sprintf('%s &times; %s%s', $cart_item['quantity'], $cart_item['line_total'], $currency_symbol); ?>
+						<?php echo sprintf('%s &times; %s%s', $cart_item['quantity'], price_fmt($cart_item['line_total']), $currency_symbol); ?>
 					</p>
 
 					<?php echo wc_get_formatted_cart_item_data( $cart_item ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>

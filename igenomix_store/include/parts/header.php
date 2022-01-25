@@ -165,7 +165,7 @@ function ignx_header_cart_aside()
 
 function woocommerce_widget_shopping_cart_subtotal()
 {
-	echo '<span>' . esc_html__('Subtotal:', 'woocommerce') . '</span> ' . WC()->cart->subtotal . get_woocommerce_currency_symbol(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	echo '<span>' . esc_html__('Subtotal:', 'woocommerce') . '</span> ' . price_fmt(WC()->cart->subtotal) . get_woocommerce_currency_symbol(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 }
 
 function woocommerce_widget_shopping_cart_button_view_cart()

@@ -1,35 +1,37 @@
 <?php
 
-function displayCartItemPrice($product, $currencySymbol) {
-	if(!$product || !$currencySymbol) {
+function displayCartItemPrice($product, $currencySymbol)
+{
+	if (!$product || !$currencySymbol) {
 		return;
 	}
 
-	if($product->is_on_sale()) {
+	if ($product->is_on_sale()) {
 		$regularPrice = $product->get_regular_price();
 		$salePrice = $product->get_sale_price();
 		// Display regular and sale prices
-		?>
+?>
 
-		Цена:&nbsp;<span class="regular_price regular_price--onsale"><?php echo $regularPrice; ?></span> <span class="sale_price"><?php echo $salePrice; ?></span><?php echo $currencySymbol;?>
+		Цена:&nbsp;<span class="regular_price regular_price--onsale"><?php echo price_fmt($regularPrice); ?></span> <span class="sale_price"><?php echo price_fmt($salePrice); ?></span><?php echo $currencySymbol; ?>
 
-		<?php
+	<?php
 	} else {
 		$regularPrice = $product->get_regular_price();
 		// Display only reguar price
-		?>
+	?>
 
-		<span class="regular_price"><?php echo $regularPrice;?></span><?php echo $currencySymbol;?>
+		<span class="regular_price"><?php echo price_fmt($regularPrice); ?></span><?php echo $currencySymbol; ?>
 
-		<?php
+	<?php
 	}
 }
 
-function displayCartItemSubtotal($product, $quantity, $currencySymbol) {
-	if(!$product || !$currencySymbol || !$quantity) {
+function displayCartItemSubtotal($product, $quantity, $currencySymbol)
+{
+	if (!$product || !$currencySymbol || !$quantity) {
 		return;
 	}
 	?>
-		Сумма:&nbsp;<span class="regular_price"><?php echo $product->get_price()*$quantity;?></span><?php echo $currencySymbol;?>
-	<?php
+	Сумма:&nbsp;<span class="regular_price"><?php echo price_fmt($product->get_price() * $quantity); ?></span><?php echo $currencySymbol; ?>
+<?php
 }
