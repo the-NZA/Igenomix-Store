@@ -31,9 +31,20 @@ function page_custom_fields()
 {
 	Container::make('post_meta', 'Дополнительные настройки')
 		->where('post_type', '=', 'page')
+		->where('post_template', '!=', 'template-homepage.php')
 		->add_fields(array(
 			Field::make('textarea', 'page_description', 'Описание страницы'),
+		));
 
+	// * Homepage templated fields
+	Container::make('post_meta', 'Дополнительные настройки')
+		->where('post_type', '=', 'page')
+		->where('post_template', '=', 'template-homepage.php')
+		->add_fields(array(
+			Field::make('textarea', 'page_description', 'Описание страницы'),
+			Field::make('image', 'homehero_image', 'Изображение hero section')
+				->set_value_type('url')
+				->set_required(true),
 		));
 }
 
