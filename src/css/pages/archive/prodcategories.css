@@ -10,23 +10,22 @@
 	box-shadow: var(--card-shadow);
 	background-color: rgb(var(--rgb-mandys-pink));
 	transition: var(--main-transition);
-}
 
-.prodcatcard:hover {
-	background-color: var(--c-mandys-pink-highlighted);
-}
-
-.prodcatcard__link {
 	color: var(--c-white);
-	/* text-shadow: 0px 0px 1px rgba(var(--rgb-san-juan), var(--alpha-50)); */
 	font-weight: bolder;
 	text-decoration: none;
 	text-transform: uppercase;
 	font-size: 1.2rem;
 
-	display: block;
-	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	padding: calc(var(--offset) * 1.5) var(--offset);
+	text-align: center;
+}
+
+.prodcatcard:hover {
+	background-color: var(--c-mandys-pink-highlighted);
 }
 
 .prodcatcard:first-of-type {
@@ -70,7 +69,7 @@
 		gap: var(--offset-half);
 	}
 
-	.prodcatcard__link {
+	.prodcatcard{
 		padding: var(--offset);
 		font-size: 1.1rem;
 	}

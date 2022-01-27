@@ -64,12 +64,9 @@ $isShop = is_shop();
 				<?php foreach ($categories as $cat) :
 					$catLink = get_category_link($cat->term_id);
 				?>
-
-					<div class="prodcatcard">
-						<a href="<?php echo $catLink; ?>" class="prodcatcard__link">
-							<?php echo $cat->name; ?>
-						</a>
-					</div>
+					<a href="<?php echo $catLink; ?>" class="prodcatcard">
+						<?php echo $cat->name; ?>
+					</a>
 
 				<?php endforeach; ?>
 			</div>
