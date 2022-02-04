@@ -214,6 +214,7 @@ add_action("init", function () {
 	remove_filter('woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_link_close', 11);
 });
 
+// * Setting for purchasable products status
 function ignx_config_purchasable($purchasable, $product)
 {
 	$prodPrice = $product->get_price();
