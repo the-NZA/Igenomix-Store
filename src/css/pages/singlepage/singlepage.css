@@ -35,7 +35,7 @@
 	box-shadow: var(--card-shadow);
 	border-radius: calc(var(--offset-half) / 2);
 
-	background-color: rgba(var(--rgb-white), var(--alpha-50));
+	background-color: rgba(var(--rgb-white), var(--alpha-75));
 }
 
 .singlepage__title {
@@ -69,4 +69,42 @@
 
 .singlepage .edit-link a:hover {
 	text-decoration: underline;
+}
+
+@media screen and (width <= 1000px){
+	.singlepage__header {
+		min-height: calc(var(--site-width) / 4);
+	}
+}
+
+@media screen and (width <= 900px){
+	.singlepage__header {
+		min-height: unset;
+	}
+
+	.singlepage__headerwrap	{
+		position: static;
+		transform: none;
+
+		min-width: unset;
+		max-width: 100%;
+	}
+
+	.singlepage__title {
+		font-size: 1.8rem;
+	}
+}
+
+@media screen and (width <= 580px){
+	.singlepage__header {
+		padding: calc(var(--offset-half) * 1.5);
+	}
+
+	.singlepage__headerwrap	{
+		padding: calc(var(--offset-half) * 1.5);
+	}
+
+	.singlepage__title {
+		font-size: 1.6rem;
+	}
 }
