@@ -38,6 +38,35 @@
 	margin-bottom: var(--offset);
 }
 
+.wc_payment_methods .wc_payment_method.payment_method_yookassa_epl {
+
+}
+
+.wc_payment_methods .wc_payment_method.payment_method_yookassa_epl label{
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+
+	line-height: 1;
+	margin-bottom: 0;
+}
+
+.wc_payment_methods .wc_payment_method.payment_method_yookassa_epl label::before {
+	content: "" !important;
+	display: none !important;
+}
+
+.wc_payment_methods .wc_payment_method.payment_method_yookassa_epl label img {
+	margin-right: var(--offset-half);
+	width: 32px;
+	height: 32px;
+	transform: scale(1.2);
+}
+
+.wc_payment_methods .payment_box.payment_method_yookassa_epl {
+	display: none !important;
+}
+
 @media screen and (width <= 460px){
 	.checkoutreviews__payment .form-row.place-order button {
 		width: 100%;
