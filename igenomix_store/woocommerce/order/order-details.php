@@ -82,8 +82,8 @@ if ($show_downloads) {
 			}
 			?>
 			<?php if ($order->get_customer_note()) : ?>
-				<div>
-					<div><?php esc_html_e('Note:', 'woocommerce'); ?></div>
+				<div class="chthankfooter__item">
+					<div class="chthankfooter__title"><?php esc_html_e('Note:', 'woocommerce'); ?></div>
 					<div><?php echo wp_kses_post(nl2br(wptexturize($order->get_customer_note()))); ?></div>
 				</div>
 			<?php endif; ?>
