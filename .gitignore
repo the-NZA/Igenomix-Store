@@ -33,3 +33,6 @@ wordpress
 # wordpress/wp-content/themes/*
 # !wordpress/wp-content/themes/igenomix_store
 # wordpress/wp-content/themes/igenomix_store/node_modules
+
+### WP copy ###
+/wordpress copy/

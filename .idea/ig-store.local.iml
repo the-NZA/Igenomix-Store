@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="Go" enabled="true" />
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/wordpress copy/wp-includes/css/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/wordpress copy/wp-includes/js/tinymce/plugins/wordpress" />
+      <excludeFolder url="file://$MODULE_DIR$/wordpress copy/wp-includes/js/tinymce/skins/wordpress" />
+      <excludeFolder url="file://$MODULE_DIR$/wordpress copy/wp-includes/js/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/db" />
+      <excludeFolder url="file://$MODULE_DIR$/wordpress" />
+      <excludeFolder url="file://$MODULE_DIR$/wordpress copy" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

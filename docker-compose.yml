@@ -16,13 +16,14 @@ services:
   #     - 8080:8080
 
   wordpress:
-    image: wordpress:5.8.1-php8.0-fpm-alpine
+    image: wordpress:6.0-php8.0-fpm
     container_name: ig_store_wp
     restart: always
     depends_on: 
       - mysql
     volumes: 
       - ./wordpress:/var/www/html
+      - ./wp-config.php:/var/www/html/wp-config.php
       - ./igenomix_store:/var/www/html/wp-content/themes/igenomix_store/
       - ./etc/custom.ini:/usr/local/etc/php/conf.d/custom.ini
     env_file: .env
