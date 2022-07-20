@@ -42,7 +42,7 @@
 }
 
 .header__logo a::after {
-	content: "Shop";
+	content: "Store";
 	display: block;
 	position: relative;
 	top: -4px;
