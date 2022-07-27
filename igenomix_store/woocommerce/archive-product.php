@@ -69,6 +69,10 @@ $isShop = is_shop();
 					</a>
 
 				<?php endforeach; ?>
+
+				<a href="#" class="prodcatcard prodcatcard--all">
+				    Все исследования
+               </a>
 			</div>
 		</section>
 <?php endif;
