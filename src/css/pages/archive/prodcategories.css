@@ -24,8 +24,16 @@
 	text-align: center;
 }
 
+.prodcatcard--all {
+	background-color: rgb(var(--rgb-bermuda-grey));
+}
+
 .prodcatcard:hover {
 	background-color: var(--c-mandys-pink-highlighted);
+}
+
+.prodcatcard--all:hover {
+	background-color: rgb(var(--rgb-san-juan));
 }
 
 .prodcatcard:first-of-type {
