@@ -42,6 +42,10 @@ function page_custom_fields()
 		->where('post_template', '=', 'template-homepage.php')
 		->add_fields(array(
 			Field::make('textarea', 'page_description', 'Описание страницы'),
+			Field::make('textarea', 'homesection_categories', 'Описание секции категорий')
+				->set_required(true),
+			Field::make('textarea', 'homesection_products', 'Описание секции популярных товаров')
+				->set_required(true),
 			Field::make('image', 'homehero_image', 'Изображение hero section')
 				->set_value_type('url')
 				->set_required(true),

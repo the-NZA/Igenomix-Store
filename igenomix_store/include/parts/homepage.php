@@ -20,8 +20,9 @@ function storefront_product_categories( $args ) {
 
 			<div class="wrapper">
 				<h2 class="homepage__title">Категории</h2>
-				<p class="homepage__subtitle">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum excepturi
-					iure, quam vel ipsa culpa aliquid quo nam ipsum dignissimos veniam sunt dolorem quibusdam!</p>
+				<p class="homepage__subtitle">
+					<?php echo carbon_get_the_post_meta('homesection_categories'); ?>
+				</p>
 				
 				<?php do_action( 'storefront_homepage_after_product_categories_title' );?>
 
@@ -76,8 +77,9 @@ function storefront_popular_products( $args ) {
 
 			<div class="wrapper">
 				<h2 class="homepage__title">Популярные продукты</h2>
-				<p class="homepage__subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-					reprehenderit minima impedit omnis alias cupiditate.</p>
+				<p class="homepage__subtitle">
+					<?php echo carbon_get_the_post_meta('homesection_products'); ?>
+				</p>
 
 				<?php do_action( 'storefront_homepage_after_popular_products_title' );?>
 
