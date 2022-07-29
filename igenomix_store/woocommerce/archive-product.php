@@ -70,7 +70,7 @@ $isShop = is_shop();
 
 				<?php endforeach; ?>
 
-				<a href="<?php echo get_permalink(116);?>" class="prodcatcard prodcatcard--all">
+				<a href="<?php echo get_permalink(get_page_by_path('shop/all'));?>" class="prodcatcard prodcatcard--all">
 				    Все исследования
                </a>
 			</div>
