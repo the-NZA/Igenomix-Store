@@ -21,7 +21,15 @@ get_header(); ?>
     </section>
     <!-- Site title END -->
 
-    <section class="allproducts__list">
+    <section class="allproducts__list wrapper">
+        <div class="allproducts__header">
+            <div class="allprod">
+                <div class="allprod__title">Название</div>
+                <div class="allprod__price">Цена</div>
+                
+            </div>
+        </div>
+        
         <?php
             // Get all categories 
             $categories = get_categories([
@@ -53,10 +61,14 @@ get_header(); ?>
                     $products = wc_get_products( $args );
                 ?>
 
-                <?php foreach($products as $prod) : ?>
+                <?php foreach($products as $prod) : 
+                    $prodLink = $prod->get_permalink();
+                    ?>
                     <div class="allproducts__product allprod">
                         <div class="allprod__title">
-                            <?php echo $prod->get_title(); ?>
+                            <a href="<?php echo $prodLink; ?>">
+                                <?php echo $prod->get_title(); ?>
+                            </a>
                         </div>
 
                         <div class="allprod__price">
@@ -64,7 +76,7 @@ get_header(); ?>
                         </div>
 
                         <div class="allprod__link">
-                            <a href="<?php echo $prod->get_permalink(); ?>" target="_blank">Подробнее</a>
+                            <a href="<?php echo $prodLink; ?>" target="_blank">Подробнее</a>
                         </div>
                     </div>
                 <?php endforeach; ?>

@@ -1,0 +1,28 @@
+.allprod {
+	display: grid;
+	grid-template-columns: 1fr 100px 100px;
+	gap: var(--offset);
+
+	align-items: center;
+
+	background-color: rgba(var(--rgb-slate-grey), var(--alpha-10));
+	padding: 5px;
+}
+
+.allprod:not(:last-child) {
+	margin-bottom: var(--offset-half);
+}
+
+.allprod__title {
+	margin: 0;
+}
+
+.allprod a {
+	color: var(--c-san-juan);
+	text-decoration: none;
+	transition: var(--main-transition);
+}
+
+.allprod a:hover {
+	color: var(--c-black);
+}

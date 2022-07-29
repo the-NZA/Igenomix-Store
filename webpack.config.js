@@ -112,6 +112,10 @@ module.exports = function (env, opt) {
 				filename: "searchpage.html",
 				template: path.resolve(__dirname, "src/searchpage.html"),
 			}),
+			new HtmlWebpackPlugin({
+				filename: "products-all.html",
+				template: path.resolve(__dirname, "src/products-all.html"),
+			}),
 			new MiniCssExtractPlugin(),
 			new CopyPlugin({
 				patterns: [

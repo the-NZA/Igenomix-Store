@@ -1,0 +1,36 @@
+.allproducts {
+
+}
+
+.allproducts__header {
+	font-size: 1.1rem;
+	font-weight: bold;
+
+	margin-bottom: var(--offset-half);
+	padding-bottom: var(--offset-half);
+
+	border-bottom: 1px solid var(--c-black);
+}
+
+.allproducts__header .allprod {
+	background-color: transparent;
+	padding: 0 5px;
+}
+
+.allproducts__cat:not(:last-child) {
+  margin-bottom: var(--offset);
+}
+
+.allprocuts__cat_title {
+	margin: 0 0 var(--offset-half) 0;
+	font-size: 1.2rem;
+}
+
+.allprocuts__cat_title a {
+	color: var(--c-black);
+	text-decoration: none;
+}
+
+.allprocuts__cat_title a:hover {
+	text-decoration: underline;
+}

@@ -56,6 +56,9 @@
 @import url("./pages/searchpage/searchitem.css"); /* Import Searchitem card styles */
 @import url("./pages/searchpage/searchempty.css"); /* Import Searchempt styles */
 
+@import url("./pages/allproducts/allproducts.css"); /* Import Allproducts page styles */
+@import url("./pages/allproducts/allprod.css"); /* Import Allproducts card styles */
+
 @import url("./utils/font.css");		/* Import font styles */
 @import url("./utils/shared.css"); 	/* Import shared style */
 /* @import url("./utils/lineicons.css");	Import lineicons font styles */
