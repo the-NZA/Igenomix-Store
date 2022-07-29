@@ -34,3 +34,15 @@
 .allprocuts__cat_title a:hover {
 	text-decoration: underline;
 }
+
+@media screen and (width <= 600px) {
+	.allproducts__header {
+		display: none;
+	}
+}
+
+@media screen and (width <= 450px) {
+	.allprocuts__cat_title {
+		font-size: 1rem;
+	}
+}

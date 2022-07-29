@@ -26,3 +26,26 @@
 .allprod a:hover {
 	color: var(--c-black);
 }
+
+
+@media screen and (width <=	768px) {
+	.allprod {
+		gap: var(--offset-half);
+	}
+}
+
+@media screen and (width  <= 600px) {
+	.allprod {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, min-content);
+		padding: var(--offset-half);
+	}
+
+	.allprod__title {
+		grid-column: 1 / span 2;
+	}
+
+	.allprod__link {
+		justify-self: end;
+	}
+}
