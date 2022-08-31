@@ -216,6 +216,9 @@ add_action("init", function () {
 	// * Product card hooks
 	remove_filter('woocommerce_before_shop_loop_item', 'woocommerce_template_loop_product_link_open', 10);
 	remove_filter('woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_link_close', 11);
+
+	// * Remove privacy text at checkout page
+	remove_action( 'woocommerce_checkout_terms_and_conditions', 'wc_checkout_privacy_policy_text', 20 );
 });
 
 // * Setting for purchasable products status
@@ -333,4 +336,40 @@ add_filter('woocommerce_widget_cart_is_hidden', 'filter_function_name_4461');
 function filter_function_name_4461($args_l)
 {
 	return false;
+}
+
+// * Add custom checkbox for checkout page
+add_action( 'woocommerce_review_order_before_submit', 'ignx_privacy_checkbox', 25 );
+function ignx_privacy_checkbox() {
+	woocommerce_form_field( 'privacy_policy_agreement_checkbox', array(
+		'type'          => 'checkbox',
+		'class'         => array( 'form-row' ),
+		'label_class'   => array( 'woocommerce-form__label-for-checkbox' ),
+		'input_class'   => array( 'woocommerce-form__input-checkbox' ),
+		'required'      => true,
+		'label'         => 'Я согласен на обработку моих персональных данных',
+	));
+
+	woocommerce_form_field( 'privacy_policy_checkbox', array(
+		'type'          => 'checkbox',
+		'class'         => array( 'form-row' ),
+		'label_class'   => array( 'woocommerce-form__label-for-checkbox' ),
+		'input_class'   => array( 'woocommerce-form__input-checkbox' ),
+		'required'      => true,
+		'label'			=> 'С <a href="' . get_privacy_policy_url() . '">Политикой в отношении обработки персональных данных</a>  ознакомлен и согласен'
+	));
+
+	// 'label'         => 'Принимаю <a href="' . get_privacy_policy_url() . '">Политику конфиденциальности</a>',
+}
+ 
+// * Validate custom checkbox for checkout page
+add_action( 'woocommerce_checkout_process', 'ignx_privacy_checkbox_error', 25 );
+function ignx_privacy_checkbox_error() {
+	if ( empty( $_POST[ 'privacy_policy_agreement_checkbox' ] ) ) {
+		wc_add_notice( 'Ваш нужно согласиться на обработку персональных данных.', 'error' );
+	}
+
+	if ( empty( $_POST[ 'privacy_policy_checkbox' ] ) ) {
+		wc_add_notice( 'Ваш нужно принять политику конфиденциальности.', 'error' );
+	}
 }
