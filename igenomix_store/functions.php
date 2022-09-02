@@ -358,18 +358,16 @@ function ignx_privacy_checkbox() {
 		'required'      => true,
 		'label'			=> '<span>С <a href="' . get_privacy_policy_url() . '">Политикой в отношении обработки персональных данных</a>  ознакомлен и согласен</span>'
 	));
-
-	// 'label'         => 'Принимаю <a href="' . get_privacy_policy_url() . '">Политику конфиденциальности</a>',
 }
  
 // * Validate custom checkbox for checkout page
 add_action( 'woocommerce_checkout_process', 'ignx_privacy_checkbox_error', 25 );
 function ignx_privacy_checkbox_error() {
 	if ( empty( $_POST[ 'privacy_policy_agreement_checkbox' ] ) ) {
-		wc_add_notice( 'Ваш нужно согласиться на обработку персональных данных.', 'error' );
+		wc_add_notice( 'Вам нужно согласиться на обработку персональных данных.', 'error' );
 	}
 
 	if ( empty( $_POST[ 'privacy_policy_checkbox' ] ) ) {
-		wc_add_notice( 'Ваш нужно принять политику конфиденциальности.', 'error' );
+		wc_add_notice( 'Вам нужно принять политику конфиденциальности.', 'error' );
 	}
 }
