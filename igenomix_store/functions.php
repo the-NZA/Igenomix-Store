@@ -347,7 +347,7 @@ function ignx_privacy_checkbox() {
 		'label_class'   => array( 'woocommerce-form__label-for-checkbox' ),
 		'input_class'   => array( 'woocommerce-form__input-checkbox' ),
 		'required'      => true,
-		'label'         => 'Я согласен на обработку моих персональных данных',
+		'label'         => '<span>Я согласен на обработку моих персональных данных</span>',
 	));
 
 	woocommerce_form_field( 'privacy_policy_checkbox', array(
@@ -356,7 +356,7 @@ function ignx_privacy_checkbox() {
 		'label_class'   => array( 'woocommerce-form__label-for-checkbox' ),
 		'input_class'   => array( 'woocommerce-form__input-checkbox' ),
 		'required'      => true,
-		'label'			=> 'С <a href="' . get_privacy_policy_url() . '">Политикой в отношении обработки персональных данных</a>  ознакомлен и согласен'
+		'label'			=> '<span>С <a href="' . get_privacy_policy_url() . '">Политикой в отношении обработки персональных данных</a>  ознакомлен и согласен</span>'
 	));
 
 	// 'label'         => 'Принимаю <a href="' . get_privacy_policy_url() . '">Политику конфиденциальности</a>',

@@ -39,7 +39,6 @@
 }
 
 .wc_payment_methods .wc_payment_method.payment_method_yookassa_epl {
-
 }
 
 .wc_payment_methods .wc_payment_method.payment_method_yookassa_epl label{
@@ -64,7 +63,29 @@
 }
 
 .wc_payment_methods .payment_box.payment_method_yookassa_epl {
-	display: none !important;
+
+}
+
+.checkoutreviews__payment .form-row.place-order p.form-row .woocommerce-input-wrapper {
+	display: block;
+}
+
+.checkoutreviews__payment .form-row.place-order p.form-row .woocommerce-input-wrapper label {
+	word-break: break-word;
+}
+
+.checkoutreviews__payment .form-row.place-order p.form-row input.input-checkbox{
+	width: var(--offset-half);
+	height: var(--offset-half);
+}
+
+.checkoutreviews__payment .form-row.place-order p.form-row a {
+	color: rgb(var(--rgb-slate-grey));
+	text-underline-offset: 2px;
+}
+
+.checkoutreviews__payment .form-row.place-order p.form-row a:hover {
+	color: rgb(var(--rgb-san-juan));
 }
 
 @media screen and (width <= 460px){
@@ -72,3 +93,4 @@
 		width: 100%;
 	}
 }
+
